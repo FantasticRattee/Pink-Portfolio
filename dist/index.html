@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111216" />
+    <meta name="description" content="ผลงานภาพยนตร์ รายการ สารคดี และงานสื่อของอรรถพร อัสสะบำรุงรัตน์" />
+    <title>อรรถพร — Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23101115'/%3E%3Ctext x='31' y='47' fill='white' font-family='Arial' font-size='45' font-weight='700' text-anchor='middle'%3EA%3C/text%3E%3Ccircle cx='52' cy='52' r='6' fill='%232859ff'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.mjs"></script>
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="topbar">
+        <a class="wordmark" href="#home" aria-label="กลับไปหน้าแรก">อรรถพร<span class="wordmark-dot">.</span></a>
+        <div class="topbar-right">
+          <span class="topbar-label" data-i18n="topbar">ผลงาน / 15 ชิ้น</span>
+          <button class="language-button" id="languageButton" type="button" aria-label="Switch to English">EN</button>
+        </div>
+      </header>
+
+      <main id="home" class="gallery-page">
+        <div class="page-intro">
+          <p class="eyebrow" data-i18n="eyebrow">ภาพยนตร์ • รายการ • ความคิดสร้างสรรค์</p>
+          <p class="page-hint" data-i18n="hint">ลากหรือเลื่อนเพื่อสำรวจ · ใช้ปุ่มลูกศรได้</p>
+        </div>
+
+        <section class="gallery" aria-label="ผลงาน">
+          <div class="stage" id="stage" aria-roledescription="carousel" tabindex="0" aria-label="ผลงาน เลื่อนด้วยปุ่มลูกศรซ้ายและขวา">
+            <div class="stage-track" id="stageTrack"></div>
+          </div>
+
+          <div class="project-caption" aria-live="polite">
+            <div class="project-caption-top">
+              <span class="project-counter" id="projectCounter">01 / 15</span>
+              <span class="project-category" id="projectCategory"></span>
+            </div>
+            <div class="project-caption-main">
+              <div>
+                <h1 id="projectTitle"></h1>
+                <p id="projectTeaser"></p>
+              </div>
+              <button class="detail-button" id="detailButton" type="button"><span data-i18n="view">ดูรายละเอียด</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bottombar">
+        <div class="footer-instruction" data-i18n="footer">ชี้เมาส์เพื่อดู · คลิกเพื่อเปิด</div>
+        <div class="nav-controls">
+          <button class="nav-button" id="previousButton" type="button" aria-label="ผลงานก่อนหน้า"><span aria-hidden="true">←</span></button>
+          <div class="progress-track" aria-hidden="true"><span id="progressFill"></span></div>
+          <button class="nav-button" id="nextButton" type="button" aria-label="ผลงานถัดไป"><span aria-hidden="true">→</span></button>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
+      <div class="detail-shell">
+        <button class="dialog-close" id="closeDialog" type="button" aria-label="ปิดรายละเอียด"><span aria-hidden="true">×</span></button>
+        <div class="detail-media-panel">
+          <div class="detail-image-wrap" id="detailImageWrap"></div>
+          <div class="video-chooser" id="videoChooser" hidden></div>
+        </div>
+        <div class="detail-content" id="detailContent" role="region" aria-label="รายละเอียดผลงาน" tabindex="0">
+          <div class="detail-overline"><span id="detailNumber"></span><span id="detailCategory"></span></div>
+          <h2 id="detailTitle"></h2>
+          <p class="detail-lead" id="detailTeaser"></p>
+          <p class="detail-scroll-prompt" data-i18n="scrollMore">เลื่อนลงเพื่ออ่านรายละเอียดต่อ ↓</p>
+          <div class="detail-rule"></div>
+          <div class="detail-section"><h3 data-i18n="about">เกี่ยวกับผลงาน</h3><p id="detailDescription"></p></div>
+          <div class="detail-section" id="contributionSection"><h3 data-i18n="role">บทบาท</h3><div id="detailContribution"></div></div>
+          <div class="detail-extras" id="detailExtras" hidden></div>
+          <div class="detail-nav">
+            <button type="button" id="detailPrevious"><span aria-hidden="true">←</span><span data-i18n="previous">ก่อนหน้า</span></button>
+            <button type="button" id="detailNext"><span data-i18n="next">ถัดไป</span><span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
