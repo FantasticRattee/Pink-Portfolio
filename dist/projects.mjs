@@ -98,8 +98,8 @@ export const projects = [
       en: 'The first experiences that shaped each guest',
     },
     description: {
-      th: 'ทอล์กโชว์ที่พาผู้ชมไปรู้จัก “ครั้งแรก” ของแขกรับเชิญ ทั้งก้าวแรกในวงการ ความรู้สึกเมื่อทำผลงานครั้งแรก และจุดเริ่มต้นในชีวิตส่วนตัว เพื่อค้นหาแรงบันดาลใจและบทเรียนที่ซ่อนอยู่ในเรื่องเหล่านั้น รายการเปิดมุมมองใหม่และเผยตัวตนแขกรับเชิญ เพื่อให้ผู้ชมได้เรียนรู้และกล้าเริ่มต้นใหม่ ตอนนี้พูดคุยกับคุณมัส (Marchwasow) ซึ่งเป็นอินฟลูเอนเซอร์ ศิลปิน และนักแสดง โดยขณะจัดทำโครงการเป็น trainee ของ Wanlove Music บรรยากาศเป็นกันเองเหมือนฟังเพื่อนเล่าเรื่อง สีน้ำตาลให้ความอบอุ่นและเรียบง่าย สีเหลืองเพิ่มความสนุกและพลัง ส่วนสีดำเสริมความน่าเชื่อถือ',
-      en: 'This talk show explores meaningful first experiences, from entering the entertainment industry and making an early piece of work to personal beginnings, and the inspiration and lessons behind them. It offers new perspectives and reveals more of the guest’s personality, inviting viewers to learn and begin again. This episode features Marchwasow, an influencer, artist, and actor who was a Wanlove Music trainee when the project was made. The conversational set uses brown for warmth and simplicity, yellow for playful energy, and black for credibility.',
+      th: 'ทอล์กโชว์ที่พาผู้ชมไปรู้จัก “ครั้งแรก” ของแขกรับเชิญ ทั้งก้าวแรกในวงการ ความรู้สึกเมื่อทำผลงานครั้งแรก และจุดเริ่มต้นในชีวิตส่วนตัว เพื่อค้นหาแรงบันดาลใจและบทเรียนที่ซ่อนอยู่ในเรื่องเหล่านั้น รายการเปิดมุมมองใหม่และเผยตัวตนแขกรับเชิญ เพื่อให้ผู้ชมได้เรียนรู้และกล้าเริ่มต้นใหม่ ตอนนี้พูดคุยกับคุณมัส มนัสสิตา จารุศะศิ (Marchwasow) ซึ่งเป็นอินฟลูเอนเซอร์ ศิลปิน และนักแสดง โดยขณะจัดทำโครงการเป็น trainee ของ Wanlove Music บรรยากาศเป็นกันเองเหมือนฟังเพื่อนเล่าเรื่อง สีน้ำตาลให้ความอบอุ่นและเรียบง่าย สีเหลืองเพิ่มความสนุกและพลัง ส่วนสีดำเสริมความน่าเชื่อถือ',
+      en: 'This talk show explores meaningful first experiences, from entering the entertainment industry and making an early piece of work to personal beginnings, and the inspiration and lessons behind them. It offers new perspectives and reveals more of the guest’s personality, inviting viewers to learn and begin again. This episode features Marchwasow (มนัสสิตา จารุศะศิ), an influencer, artist, and actor who was a Wanlove Music trainee when the project was made. The conversational set uses brown for warmth and simplicity, yellow for playful energy, and black for credibility.',
     },
     contribution: {
       th: 'รับผิดชอบกล้องตัวที่ 3 และจัดฉากรายการ',
@@ -136,7 +136,7 @@ export const projects = [
       th: ['ทำหน้าที่เลขานุการและจัดทำ breakdown/rundown', 'จัดพื้นที่สัมมนา', 'ช่วยแผนกต้อนรับและฝ่ายลงทะเบียน'],
       en: ['Served as secretary and prepared the breakdown/rundown', 'Arranged the seminar venue', 'Supported reception and registration'],
     },
-    alt: { th: 'ภาพปกข้อเสนอสัมนารายการโทรทัศน์', en: 'Television seminar proposal artwork' },
+    alt: { th: 'ภาพคอลลาจรายการโทรทัศน์บนปกงานสัมมนา “รายการโทรทัศน์ตกยุคแล้วหรือยัง?”', en: 'Collage of Thai television programmes on the “Is Television Becoming Outdated?” seminar cover' },
   },
   {
     id: 'resource-wrong-place',
@@ -251,8 +251,8 @@ export const projects = [
       en: 'A music video planned around camera angles',
     },
     description: {
-      th: 'มิวสิกวิดีโอเพลง “ถ้าฉันคิดถึงเธอขึ้นมา” ที่เล่าเรื่องผ่านการแสดงและมุมกล้องที่วางแผนไว้ใน shotlist กับ breakdown ผลงานมีทั้งวิดีโอฉบับเต็มและคลิปเบื้องหลังการถ่ายทำ',
-      en: 'A music video for “If I Start Missing You” that tells its story through performance and camera angles planned in the shot list and production breakdown. The project includes the finished video and behind-the-scenes footage.',
+      th: 'มิวสิกวิดีโอเพลง “ถ้าฉันคิดถึงเธอขึ้นมา” ที่เล่าเรื่องผ่านการแสดงและมุมกล้องที่วางแผนไว้ใน shotlist กับ breakdown ชมมิวสิกวิดีโอฉบับเต็มได้ในหน้ารายละเอียด',
+      en: 'A music video for “If I Start Missing You” that tells its story through performance and camera angles planned in the shot list and production breakdown. The complete music video is available in this detail view.',
     },
     contribution: {
       th: 'เป็นนักแสดงหลักในมิวสิกวิดีโอและมีส่วนร่วมในการทำ breakdown',

@@ -33,4 +33,10 @@ Railway currently auto-deploys pushes to `main`. Its repository root directory i
 5. **Verify Railway's update.** The existing service should auto-deploy the pushed commit. Inspect its deployment logs/status and confirm the Active deployment links to that exact GitHub commit. Use manual redeploy only when auto-deploy failed or did not trigger; do not create a second service or domain.
 6. **Test production.** Check the public site returns HTTP 200, inspect the changed UI at the annotated viewport, and check changed assets. For video changes, verify HTTP 206 byte-range responses and actual playback. Report the GitHub commit, Railway status, public link, tests, and any remaining limitation.
 
+## Final signoff loop
+
+Before reporting that an update is finished, review **every applicable item** in the current request and `requirements.md` against the actual implementation and the relevant source slides, reports, and media. Automated tests alone do not prove the content is complete. Check Thai and English copy, requested headings and removals, project media, scrolling, and the affected desktop and narrow layouts. Verify the published files and Railway commit after deployment.
+
+If the final review finds an omission, wrong fact, broken interaction, or mismatch with the source, fix it locally and repeat the affected content review, tests, browser checks, pre-push audit, GitHub push, Railway verification, and public check. Repeat this cycle until no known applicable requirement or defect remains unresolved. Do not call the work complete while a check is failing or a deployment is still unverified. In the final report, state the checks performed and any specific limitation that could not be verified.
+
 If a requirement affects scope, design, or behavior and is unclear, ask the user before editing. For small details, state an assumption and proceed. An explicit request to stop at Local or GitHub overrides the full deployment sequence above.

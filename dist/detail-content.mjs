@@ -75,7 +75,10 @@ export const expandedDetails = {
           bilingual('ฝ่ายศิลป์เลือกแอปเปิลเพราะภาพจำผลไม้อาบยาพิษใน Snow White จากผลสด มันค่อยมีรอยกัดและช้ำจนหนอนชอนไชและเน่า สภาพนี้สะท้อนสุขภาพกับตัวตนของกานต์สินีที่ถูกครอบงำ หนอนยังสื่อการเน่าเสีย', 'Art direction chose the apple for its poisoned-fruit association in Snow White. Fresh at first, it bruises, is bitten, and decays as worms burrow through it. Its condition mirrors Kantsinee’s gradual takeover, while the worms evoke decay.'),
           bilingual('ประกาศคนหายที่ติดทับกัน: ใบของกานต์สินีทับใบหญิงลึกลับ สื่อเหตุการณ์ซ้ำและการถูกแทนที่', 'Overlapping missing posters: Kantsinee’s notice covers the mysterious woman’s, suggesting recurrence and replacement.'),
           bilingual('กระจก: เงาสะท้อนที่ทำไม่ตรงกับตัวละครเผยตัวตนอีกคนที่เข้ามาแทรกซึม', 'Mirror: A reflection that does not match the character’s actions hints at another identity inside her.'),
-          bilingual('วัว: จากเรื่องเล่าความเมตตาที่ถูกทรยศ กลายเป็นภาพของการช่วยเหลือที่ดูจริงแต่เป็นกับดัก', 'Cow: A reference to kindness betrayed becomes an image of help that appears genuine but leads into a trap.'),
+          nested('วัวเป็นสัญลักษณ์ของความเมตตาที่ถูกหลอกใช้และการช่วยเหลือที่แท้จริงเป็นกับดัก', 'The cow represents kindness that is exploited and help that turns out to be a trap.', [
+            bilingual('ที่มาคือนิทานวัวให้หนูที่เหนื่อยล้าขี่หลัง แต่หนูกระโดดข้ามเส้นชัยก่อนจนวัวถูกทรยศ', 'In the fable behind the design, a cow carries a tired rat, only for the rat to leap across the finish line first and betray it.'),
+            bilingual('ในเรื่อง หญิงสาวเห็นแสงจากเบื้องบนและคิดว่ามีคนยื่นมือช่วยด้วยความเมตตา แต่แสงนั้นกลับล่อให้เธอไปยังสถานที่ลึกลับ', 'In the film, a woman sees a light above and mistakes it for a compassionate offer of help. It instead lures her into a mysterious place.'),
+          ]),
         ],
       },
       {
@@ -308,7 +311,7 @@ export const expandedDetails = {
     ],
   },
   'mv-tha-chan-khit-thueng-thoe': {
-    source: bilingual('Coverpage/Screenshot 2569-09-26 at 22.59.56.png, Shotlist.pages และ Breakdown.pages (ภาพตัวอย่างในไฟล์), มิวสิกวิดีโอฉบับเต็มและคลิปเบื้องหลัง', 'Coverpage screenshot, Shotlist.pages and Breakdown.pages (embedded previews), full music video and behind-the-scenes clip'),
+    source: bilingual('Coverpage/Screenshot 2569-09-26 at 22.59.56.png, Shotlist.pages และ Breakdown.pages (ภาพตัวอย่างในไฟล์), มิวสิกวิดีโอฉบับเต็ม', 'Coverpage screenshot, Shotlist.pages and Breakdown.pages (embedded previews), full music video'),
     sections: [
       {
         heading: bilingual('ลำดับเหตุการณ์ที่วางใน Shotlist', 'Sequence planned in the shot list'),
