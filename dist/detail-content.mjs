@@ -23,12 +23,13 @@ export const expandedDetails = {
         ],
       },
       {
-        heading: bilingual('โลกยุค 80s และ Costume & Makeup', '1980s world and Costume & Makeup'),
+        heading: bilingual('โลกยุค 80s และตัวละคร', '1980s world and characters'),
         bullets: [
           nested(
             'ฉากและพร็อป: ห้องนอน โต๊ะเครื่องแป้ง โต๊ะทีวี และประกาศคนหายถูกออกแบบให้มีรายละเอียดแบบยุค 80s',
             'Sets and props: The bedroom, vanity, television corner, and missing-person notices are designed around 1980s details.',
             [
+              bilingual('ฝ่ายศิลป์ประสานการออกแบบฉากและพร็อปกับทีม Costume & Makeup พร้อมคุมโทนสีของฉากและของใช้ให้ไปในทิศทางเดียวกัน', 'Art direction coordinates sets and props with Costume & Makeup, keeping the colours of spaces and objects consistent.'),
               bilingual('แป้งโยคี ครีมกวนอิม และแป้งเภสัชเป็นของใช้สำหรับดูแลผดผื่นในยุคนั้น ส่วนลิปสติกสีเขียว หวี ตลับแป้ง และแจกันบอกชีวิตประจำวันของตัวละคร', 'Yoki powder, Guan Im cream, and Phesat powder evoke period skin care. Green lipstick, a comb, compact, and vase place the character in daily life.'),
               bilingual('โทรทัศน์ วิทยุ เทปเพลง และโปสเตอร์หนังสื่อวิธีดูละคร ฟังข่าว และสะสมสิ่งที่ชอบในยุค 80s ป้ายคนหายใช้ฟอนต์ ข้อมูล ภาพถ่าย และสีให้เข้าช่วงเวลา', 'A television, radio, cassette tapes, and film posters evoke period viewing and listening. The missing-person poster uses era-specific type, details, photographs, and colour.'),
             ]
@@ -38,9 +39,9 @@ export const expandedDetails = {
             'Costume colours and hairstyles distinguish character ideas.',
             [
               bilingual('กานต์สินีสวมเสื้อเหลืองเพื่อบุคลิกร่าเริง กางเกงน้ำตาลและต่างหูสี่เหลี่ยมสื่อธาตุดินตามแรงบันดาลใจ Prometheus แต่งหน้าธรรมชาติและถักเปียบนผมตรงให้ดูเรียบร้อย', 'Kantsinee wears yellow for her bright personality. Brown trousers and square earrings refer to earth and the Prometheus motif. Natural makeup and a braid over straight hair complete her look.'),
-              bilingual('หญิงลึกลับได้แรงบันดาลใจจาก Prometheus และภาพมนุษย์ต่างดาวในแนวคิด Ancient Astronaut ชุดขาวสื่อความบริสุทธิ์หรือความเป็นมนุษย์ต่างดาว สีแดงสื่อพลัง ส่วนเมกอัพระยะท้ายใช้โหนกแก้มสูง หน้าตอบ และหนอนเพื่อบอกการแปรสภาพ', 'The mysterious woman draws on Prometheus and Ancient Astronaut imagery. White suggests purity or an alien presence, red suggests power, and the final makeup uses high cheekbones, a hollow face, and worms to signal transformation.'),
+              bilingual('หญิงลึกลับได้แรงบันดาลใจจาก Prometheus ในฐานะเทพเจ้าเล่ห์ผู้ปั้นมนุษย์จากดิน และภาพวาดโบราณที่สไลด์ใช้ประกอบแนวคิด Ancient Astronaut ชุดขาวสื่อความบริสุทธิ์หรือความเป็นมนุษย์ต่างดาว สีแดงสื่อพลัง ส่วนเมกอัพระยะท้ายใช้โหนกแก้มสูง หน้าตอบ และหนอนเพื่อบอกการแปรสภาพ', 'The mysterious woman draws on Prometheus as a trickster and creator of humans from clay, alongside ancient paintings used by the deck to illustrate the Ancient Astronaut idea. White suggests purity or an alien presence, red suggests power, and the final makeup uses high cheekbones, a hollow face, and worms to signal transformation.'),
               bilingual('ทหารอ้างอิงชุดอเมริกันช่วงสงครามเย็นที่โคราช และเรื่อง Romulus กับ Remus เพื่อเชื่อมความเจริญกับความรุนแรง ส่วนนักข่าวใส่สูทน้ำเงินเข้มและเปิดหน้าผากให้ดูน่าเชื่อถือ', 'The soldier references Cold War American uniforms in Korat and the Romulus and Remus story to connect progress with violence. The reporter wears a navy suit and swept-back hair for credibility.'),
-              bilingual('ชาวบ้านคนแรกใช้เสื้อชมพูลายทางเสริมไหล่ เอี๊ยมยีนส์ เมกอัพชมพู และผมลอนมาม่า เพื่อสื่อแฟชั่นและความมั่นใจของผู้หญิงยุค 80s', 'The first villager wears a pink striped top with padded shoulders, denim overalls, pink makeup, and crimped hair to evoke 1980s fashion and confidence.'),
+              bilingual('ชาวบ้านคนแรกใช้เสื้อชมพูลายทางเสริมไหล่เพื่อสื่อความมั่นใจและกระแสผลักดันสิทธิเท่าเทียมของผู้หญิงตามคำอธิบายในสไลด์ จับคู่เอี๊ยมยีนส์ เมกอัพชมพู และผมลอนมาม่าแบบยุค 80s', 'The first villager’s pink striped top has padded shoulders, which the deck links to women’s confidence and the push for equal rights. Denim overalls, pink makeup, and crimped hair complete the 1980s look.'),
               bilingual('ชาวบ้านคนที่สองใช้เสื้อดอกกุหลาบสีส้มกับยีนส์ทรงสบาย แต่งตาฟ้า ปากแดงแบบพังก์ และผมลอนใหญ่ คนที่สามใช้ชุดม่วงลายดอก ยีนส์เอวสูง ตาและแก้มสีชมพู ปากแดง และผมตรง', 'The second villager pairs an orange rose-print shirt with relaxed jeans, blue eyeshadow, punk-red lips, and large curls. The third wears purple florals, high-waisted jeans, pink eyes and cheeks, red lips, and straight hair.'),
             ]
           ),
@@ -71,7 +72,7 @@ export const expandedDetails = {
       {
         heading: bilingual('สัญลักษณ์ที่เล่าเรื่อง', 'Story symbols'),
         bullets: [
-          bilingual('แอปเปิลเริ่มจากผลสด ต่อมามีรอยกัดและช้ำจนหนอนชอนไชและเน่า สภาพของผลไม้สะท้อนสุขภาพกับตัวตนของกานต์สินีที่ค่อยถูกครอบงำ หนอนยังสื่อความสกปรกและการเน่าเสีย', 'The apple begins fresh, then bruises, is bitten, and decays as worms burrow through it. Its condition mirrors Kantsinee’s gradual physical and personal takeover. The worms also evoke decay.'),
+          bilingual('ฝ่ายศิลป์เลือกแอปเปิลเพราะภาพจำผลไม้อาบยาพิษใน Snow White จากผลสด มันค่อยมีรอยกัดและช้ำจนหนอนชอนไชและเน่า สภาพนี้สะท้อนสุขภาพกับตัวตนของกานต์สินีที่ถูกครอบงำ หนอนยังสื่อการเน่าเสีย', 'Art direction chose the apple for its poisoned-fruit association in Snow White. Fresh at first, it bruises, is bitten, and decays as worms burrow through it. Its condition mirrors Kantsinee’s gradual takeover, while the worms evoke decay.'),
           bilingual('ประกาศคนหายที่ติดทับกัน: ใบของกานต์สินีทับใบหญิงลึกลับ สื่อเหตุการณ์ซ้ำและการถูกแทนที่', 'Overlapping missing posters: Kantsinee’s notice covers the mysterious woman’s, suggesting recurrence and replacement.'),
           bilingual('กระจก: เงาสะท้อนที่ทำไม่ตรงกับตัวละครเผยตัวตนอีกคนที่เข้ามาแทรกซึม', 'Mirror: A reflection that does not match the character’s actions hints at another identity inside her.'),
           bilingual('วัว: จากเรื่องเล่าความเมตตาที่ถูกทรยศ กลายเป็นภาพของการช่วยเหลือที่ดูจริงแต่เป็นกับดัก', 'Cow: A reference to kindness betrayed becomes an image of help that appears genuine but leads into a trap.'),
@@ -95,8 +96,8 @@ export const expandedDetails = {
       {
         heading: bilingual('ทำไมบทประพันธ์นี้ตรงกับเพลงที่จะทำ', 'Why the source story fits the chosen song'),
         bullets: [
-          bilingual('ทีมเลือกความสัมพันธ์ก้อยกับดาวจาก Hormones Season 2 เพราะบทประพันธ์พูดถึงความรักวัยรุ่นหลายรูปแบบ รวมถึงความสัมพันธ์หญิงรักหญิงที่ทั้งคู่ยังอยู่ระหว่างเพื่อนกับคนรัก', 'The team chose Koi and Dao from Hormones Season 2 because its teenage stories include a girl-love relationship poised between friendship and romance.'),
-          bilingual('ดาวผิดหวังจากความรักครั้งก่อน ส่วนก้อยคอยอยู่ข้าง ๆ และปลอบเธอ ความใกล้ชิดในฉากนวดคอและฉากบนเตียงทำให้ความรู้สึกที่ซ่อนอยู่ชัดขึ้น', 'Dao is hurt by a former relationship, while Koi stays beside her. Intimate moments in the bath and on the bed make their unspoken feelings clearer.'),
+          bilingual('ทีมเลือกความสัมพันธ์ก้อยกับดาวจาก Hormones Season 2 เพราะบทประพันธ์เล่าความรักวัยรุ่นทั้งชายหญิง ชายชาย และหญิงหญิง โดยความสัมพันธ์ของทั้งคู่ยังอยู่ระหว่างเพื่อนกับคนรัก', 'The team chose Koi and Dao from Hormones Season 2 because its teenage stories include heterosexual, male-male, and female-female relationships. Koi and Dao are still between friendship and romance.'),
+          bilingual('ดาวผิดหวังจากความรักครั้งก่อน ส่วนก้อยคอยอยู่ข้าง ๆ และปลอบเธอ ฉากนวดคอตอนอาบน้ำและฉากจูบบนเตียงทำให้ความรู้สึกที่ซ่อนอยู่ชัดขึ้น', 'Dao is hurt by a former relationship, while Koi stays beside her. A neck massage while bathing and a kiss on the bed make their unspoken feelings clearer.'),
           bilingual('เพลง “กระแซะ” สื่อการค่อย ๆ ขยับเข้าหากัน การสัมผัสจึงเริ่มอย่างลังเลเพราะกลัวเสียความเป็นเพื่อน แล้วค่อยชัดขึ้นเมื่อทั้งคู่รับรู้ว่ารู้สึกตรงกัน', 'The song “กระแซะ” evokes moving closer little by little. Their touch begins hesitantly for fear of losing the friendship, then grows more certain when the feeling is shared.'),
           bilingual('งานยังอ้างอิง MV “ห้องเธอ” และ “คงต้องบอกให้รู้” เพื่อออกแบบ Girl Love ใหม่ โดยใช้คอนเซปต์ “รสชาติของความรัก” ธีม Friend Zone และอารมณ์โรแมนติก เย้ายวน อ่อนโยน แต่ยังคลุมเครือ', 'The work also draws on “ห้องเธอ” and “คงต้องบอกให้รู้” to develop its Girl Love scene around “the taste of love,” a friend-zone theme, and a romantic, sensual, tender yet ambiguous mood.'),
         ],
@@ -114,7 +115,7 @@ export const expandedDetails = {
         heading: bilingual('ภาษาภาพและโจทย์การสื่อสาร', 'Visual plan and challenge'),
         bullets: [
           bilingual('สไลด์วาง high-angle และ eye-level ร่วมกับ medium-long shot, medium shot, medium close-up, close-up และ extreme close-up เพื่อพาผู้ชมจากพื้นที่ร่วมไปสู่สายตาและสัมผัสเล็ก ๆ', 'The slides combine high-angle and eye-level views with medium-long, medium, medium close-up, close-up, and extreme close-up shots to move from shared space into small glances and touches.'),
-          bilingual('ภาพสะท้อนในกระจกสร้างพื้นที่กำกวมให้ผู้ชมมองความสัมพันธ์ได้มากกว่าหนึ่งแบบ ส่วนการมอง สัมผัสแผล นวดคอ จับมือ เสียงพูดเรื่องเค้ก รสเค้ก และกลิ่นสตรอเบอร์รีทำให้ความรักผ่านประสาทสัมผัสทั้งห้า', 'Mirror reflections create an ambiguous space. Gaze, tending a wound, a neck massage, hand holding, dialogue about cake, its taste, and strawberry scent carry the relationship through all five senses.'),
+          bilingual('ภาพสะท้อนในกระจกสร้างพื้นที่กำกวมให้ผู้ชมมองความสัมพันธ์ได้มากกว่าหนึ่งแบบ การมอง สัมผัสแผล นวดคอ ปาดครีมจากริมฝีปาก จับมือ เสียงพูดเรื่องเค้ก รสเค้ก และกลิ่นสตรอเบอร์รีทำให้ความรักผ่านประสาทสัมผัสทั้งห้า', 'Mirror reflections create an ambiguous space. Gaze, tending a wound, a neck massage, wiping cream from a lip, hand holding, dialogue about cake, its taste, and strawberry scent carry the relationship through all five senses.'),
           bilingual('แสง warm light และสีแดงกับเหลืองสื่อความอบอุ่น ความรัก และความเย้ายวน โจทย์คือทำให้ผู้ชมอ่านความสัมพันธ์ที่กำลังก้ำกึ่งได้โดยไม่ต้องพูดตรง ๆ ว่าทั้งคู่เป็นเพื่อนหรือคนรัก', 'Warm light with red and yellow conveys comfort, romance, and desire. The visual challenge is to make their uncertain relationship legible without having either character label it.'),
         ],
       },
@@ -133,17 +134,9 @@ export const expandedDetails = {
       {
         heading: bilingual('Mood & Tone', 'Mood & Tone'),
         bullets: [
-          bilingual('ภาพรวมตั้งใจให้สนุก สดใส และคึกคักเหมือนเดินอยู่ในงานวัดไทย แต่จังหวะเกม กราฟิก และเอฟเฟกต์เสียงเป็นแบบอาเคดร่วมสมัย', 'The mood is lively, colourful, and festive like a Thai fairground, while the pacing, graphics, and sound effects feel contemporary and arcade-like.'),
-          bilingual('โทนแดง เหลือง และทองเชื่อมความเป็นไทยกับพลังของเกม ฉาก LED ใช้ลวดลายไทยย้อนยุคที่ออกแบบใหม่ ส่วนเสื้อผ้าพิธีกรกับแขกรับเชิญผสมผ้าขาวม้าและลายไทย', 'Red, yellow, and gold connect Thai visual identity with the energy of the games. The LED set reworks retro Thai patterns, while hosts and guests wear pha khao ma and Thai-patterned clothing.'),
+          bilingual('ภาพรวมตั้งใจให้สนุก สดใส มีมุกตลก และคึกคักเหมือนเดินอยู่ในงานวัดไทย ผู้ชมได้ลุ้นไปพร้อมแขกรับเชิญ และรายการเป็นกันเองกับทั้งแขกและผู้ชม ขณะที่จังหวะเกม กราฟิก และเอฟเฟกต์เสียงเป็นแบบอาเคดร่วมสมัย', 'The mood is lively, colourful, and comic like a Thai fairground. Viewers share the suspense with the guests, and the show aims to feel welcoming to both guests and viewers. Game pacing, graphics, and sound effects feel contemporary and arcade-like.'),
+          bilingual('โทนแดง เหลือง และทองเชื่อมความเป็นไทยกับพลังของเกม ฉาก LED ใช้ลวดลายไทยย้อนยุคที่ออกแบบใหม่ ส่วนเสื้อผ้าพิธีกรกับแขกรับเชิญใช้สีสด ผ้าขาวม้า ลายไทยหรือลายดอกไม้', 'Red, yellow, and gold connect Thai visual identity with the energy of the games. The LED set reworks retro Thai patterns, while hosts and guests wear bright colours, pha khao ma, and Thai or floral patterns.'),
           bilingual('ภาพขนมไทย สุภาษิตไทย ปาลูกโป่ง และพร็อปงานวัดทำให้วัฒนธรรมเป็นส่วนหนึ่งของการเล่นจริง ไม่ได้อยู่เพียงในฉากหลัง', 'Thai desserts, proverb puzzles, balloon darts, and fairground props make culture part of the play itself rather than only the backdrop.'),
-        ],
-      },
-      {
-        heading: bilingual('ภาพและเสียงของรายการ', 'Look and sound'),
-        bullets: [
-          bilingual('ฉาก LED ลายไทยย้อนยุคที่ปรับให้ร่วมสมัย สีแดง–เหลือง–ทอง และกราฟิก CG สร้างโลกอาเคด', 'Contemporary-retro Thai patterns on LED, red-yellow-gold colour, and CG form the arcade world.'),
-          bilingual('พิธีกรและแขกรับเชิญใช้ผ้าขาวม้าหรือเสื้อผ้าลายไทย เอฟเฟกต์เสียงทันสมัยช่วยจับจังหวะเกม', 'Pha khao ma and Thai-pattern clothing connect the host and guests to the theme. Modern sound effects pace the games.'),
-          bilingual('ฉากและพร็อปมีรายละเอียดมาก จึงต้องประสานภาพบนจอ เสียง และคิวการเล่น', 'The prop-heavy set requires coordination among screen graphics, sound, and game cues.'),
         ],
       },
       {
@@ -174,13 +167,13 @@ export const expandedDetails = {
     sections: [],
   },
   'resource-wrong-place': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 4, สารคดีฉบับเต็ม', 'Portfolio overview PDF p. 4, full documentary'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 4, สารคดีฉบับเต็ม, ข้อมูลเบื้องหลังการผลิตจากผู้จัดทำ', 'Portfolio overview PDF p. 4, full documentary, production account supplied by the creator'),
     sections: [
       {
         heading: bilingual('เสียงจากพื้นที่จริง', 'Voices from the field'),
         bullets: [
           bilingual('ดร.สนธิ คชวัฒน์ให้มุมผู้เชี่ยวชาญด้านสิ่งแวดล้อม', 'Dr. Sonti Kotchawat contributes an environmental-expert perspective.'),
-          bilingual('คุณทวีป ทวีสินอุดมจาก ต.คิดดี โปรดักส์ ให้มุมผู้ทำงานในบริษัทที่เกี่ยวข้องกับขยะ', 'Thaweep Thawisin of T.Kit Dee Products contributes a waste-business perspective.'),
+          bilingual('คุณทวีป ทวีสินอุดมจาก ต.คิดดี โปรดักส์ ให้มุมผู้ทำงานในบริษัทที่เกี่ยวข้องกับขยะ', 'Khun Thaweep of T. Kit Dee Products contributes a waste-business perspective.'),
           bilingual('น้าอุ้ม คนขับรถขยะเล่ามุมมองผู้ทำงานหน้างาน', 'Na Oom, a garbage-truck driver, shares a frontline worker’s perspective.'),
         ],
       },
@@ -189,7 +182,7 @@ export const expandedDetails = {
         bullets: [
           bilingual('เวลาทำงานของน้าอุ้มกับตารางทีมไม่ตรงกัน ติดต่อประสานงานได้ยาก แม้ทีมมีเบอร์โทรศัพท์ จึงไปพบที่บริษัทเพื่อสอบถามช่วงเวลาที่สะดวกก่อนนัดถ่ายทำ', 'Na Oom’s work hours did not align with the team’s schedule. Even with a phone number, coordination was difficult, so the team visited the company to arrange a suitable filming time.'),
           bilingual('สถานที่ถ่ายทำในบริเวณโรงงานขยะมีกลิ่นแรงและอากาศร้อน เพราะหลายพื้นที่เป็นกลางแจ้ง ทีมต้องทำงานภาคสนามให้ทันภายใต้สภาพแวดล้อมนี้', 'The waste-facility location was hot and had a strong smell, with much of the work outdoors. The crew had to complete the field shoot under those conditions.'),
-          bilingual('ช่วงใกล้ส่งงาน งานค้นข้อมูลบางส่วนยังไม่เสร็จ และมีสมาชิกบางคนมาร่วมถ่ายทำช้า งานหลายหน้าที่จึงกระจุกอยู่กับสมาชิกประมาณสี่คน', 'Near the deadline, some assigned research remained unfinished and some members arrived late to filming. Multiple production duties therefore fell to roughly four crew members.'),
+          bilingual('การแบ่งงานไม่เป็นไปตามแผน สมาชิกบางส่วนไม่ได้ส่งงานที่รับผิดชอบและมาถึงเมื่อการถ่ายทำใกล้เสร็จ ส่งผลให้สมาชิกประมาณสี่คนต้องรับหลายหน้าที่', 'The division of work did not go to plan. Some assigned work was not delivered, and some members arrived when filming was nearly finished. Multiple duties therefore fell to roughly four crew members.'),
           bilingual('เวลาตัดต่อจำกัด ทำให้ผลลัพธ์บางส่วนไม่เป็นไปตามที่ทีมคาดหวัง จึงต้องคัดประเด็นและจัดลำดับเนื้อหาให้ชัดที่สุด', 'Editing time was limited, so some parts did not turn out as the team had hoped. They had to prioritise and sequence the material carefully.'),
         ],
       },
@@ -205,10 +198,14 @@ export const expandedDetails = {
       {
         heading: bilingual('สารหลักและบุคลิกของช่อง', 'Channel message and personality'),
         bullets: [
-          bilingual('พิวพิวเป็นเต่าซูคาต้าที่เลี้ยงอยู่จริง ชื่อ “เต่าคุณหนู” มาจากนิสัยที่ชอบให้ป้อนอาหาร พาไปเดิน และดูแลใกล้ชิด ทำให้ชื่อช่องมีบุคลิกน่ารักและจำง่าย', 'Piew Piew is the owner’s sulcata tortoise. The “princess tortoise” name reflects her preference for being fed, taken on walks, and cared for closely, giving the channel a memorable character.'),
+          bilingual('พิวพิวเป็นเต่าซูคาต้าที่เลี้ยงอยู่จริง ชื่อ “เต่าคุณหนู” มาจากนิสัยที่ชอบให้ป้อนอาหาร พาไปเดิน และดูแลใกล้ชิด ความมึน ๆ และพฤติกรรมแปลกชวนขำทำให้ช่องมีบุคลิกน่ารักและจำง่าย', 'Piew Piew is the owner’s sulcata tortoise. The “princess tortoise” name reflects her preference for being fed, taken on walks, and cared for closely. Her quirky, slightly dazed behaviour adds humour and makes the channel memorable.'),
           bilingual('สไลด์เลือก TikTok เพราะคลิปสั้นและคลิปสัตว์เลี้ยงเหมาะกับการค้นพบคอนเทนต์เฉพาะกลุ่มและการรับชมเพื่อผ่อนคลาย นี่เป็นเหตุผลเชิงกลยุทธ์ ไม่ใช่ผลยอดเข้าชมที่วัดแล้ว', 'The deck chooses TikTok because short pet clips may reach niche audiences and offer relaxing viewing. This is a strategic rationale, not a measured reach result.'),
+          bilingual('สไลด์คาดว่าการที่ผู้ชมบันทึกคลิปไว้ดูซ้ำอาจช่วยให้ระบบแนะนำคลิปต่อบนหน้า For You และพาคอนเทนต์จากกลุ่มเฉพาะไปถึงผู้ชมใหม่ ข้อนี้เป็นสมมติฐานด้านการเผยแพร่ของแผน ไม่ใช่ผลที่วัดจากช่องแล้ว', 'The deck proposes that saved clips might help TikTok recommend them again on For You and bring niche content to new viewers. This is a distribution hypothesis, not a measured channel result.'),
           bilingual('Key Message คือ “โลกช้า ๆ ของเต่าที่ทำให้คุณหยุดพัก ผ่านคอนเทนต์อบอุ่นที่สร้างความผูกพัน” สโลแกนคือ “คลิปผ่อนคลายทำให้ใจคุณช้าลง” และ 3 คำประจำแบรนด์คือ “น่ารัก คุณหนู มีเอกลักษณ์”', 'The key message presents a slow tortoise world that invites a pause and builds connection through warm content. The slogan says relaxing clips slow the viewer’s mind, and the three brand words are “cute, princess-like, distinctive.”'),
-          bilingual('รูปแบบที่วางไว้มี 1 Day with Sulcata, How-to สำหรับผู้เลี้ยงมือใหม่, เรื่องเล่าพฤติกรรมพิวพิว และ ASMR เสียงกิน เดิน ขูดพื้น หรือเล่นน้ำ', 'Planned formats include 1 Day with Sulcata, beginner how-to clips, stories about Piew Piew’s behaviour, and ASMR of eating, walking, scratching, or playing in water.'),
+          nested('รูปแบบที่วางไว้มี 1 Day with Sulcata, How-to สำหรับผู้เลี้ยงมือใหม่ เรื่องเล่าพฤติกรรมพิวพิว และ ASMR เสียงกิน เดิน ขูดพื้น หรือเล่นน้ำ', 'Planned formats include 1 Day with Sulcata, beginner how-to clips, stories about Piew Piew’s behaviour, and ASMR of eating, walking, scratching, or playing in water.', [
+            bilingual('ตัวอย่าง How-to ในสไลด์ถามว่าเต่าซูคาต้ากินอะไรได้หรือห้ามกินอะไร ผู้เลี้ยงมือใหม่มักพลาดเรื่องใดบ้าง และจะจัดบ้านเต่าในอาคารอย่างไร', 'The deck’s how-to examples ask what sulcata tortoises can or cannot eat, which mistakes beginners make, and how to set up an indoor habitat.'),
+            bilingual('ตัวอย่างอุปกรณ์ที่แผนอยากแนะนำมีบ้านเต่า อาหารเม็ด ผลิตภัณฑ์อาบน้ำ และไฟกกอุณหภูมิ โดยยังเป็นหัวข้อคอนเทนต์ ไม่ใช่การรับรองว่าสินค้าแต่ละชนิดเหมาะกับเต่าทุกตัว', 'Suggested equipment topics include a tortoise house, feed pellets, bathing products, and a warming lamp. These are content ideas, not endorsements for every animal.'),
+          ]),
         ],
       },
       {
@@ -220,8 +217,8 @@ export const expandedDetails = {
             bilingual('จุดอ่อนคือจังหวะของเต่าอาจช้า คลิปอาจซ้ำ และคุณภาพเสียงต้องดีพอให้ ASMR เป็นจุดขาย', 'Weaknesses are a slow pace, possible repetition, and the need for clear audio to make ASMR distinctive.'),
             bilingual('โอกาสคือแนะนำอุปกรณ์หรือทดลอง affiliate ส่วนความเสี่ยงคือกระแสสัตว์เลี้ยงเปลี่ยนเร็วและจำนวนคู่แข่งอาจเพิ่ม', 'Opportunities include equipment recommendations or affiliate links. Risks include changing pet trends and more competitors.'),
           ]),
-          bilingual('Red Ocean ในแผนคือคอนเทนต์เต่าตลกหรือไวรัล ความรู้ทั่วไป ร้านขายอุปกรณ์ และคลิปสัตว์เลี้ยงเพื่อผ่อนคลายแบบกว้าง ๆ ขณะที่ Blue Ocean เสนอเสียง ASMR ใกล้ตัว ความผูกพัน การเลี้ยงจริง และบรรยากาศช้า ๆ อบอุ่น', 'The plan’s Red Ocean includes viral tortoise clips, general advice, pet-equipment sellers, and broad relaxing animal content. Its proposed Blue Ocean is close-up ASMR, owner connection, real care experience, and a slow, cozy mood.'),
-          bilingual('Positioning Map แยกแกนความบันเทิงหรือความรู้กับความผ่อนคลายแบบ ASMR และแยกคอนเทนต์ไวรัลออกจากเนื้อหาที่สร้างความผูกพัน', 'The positioning map contrasts entertainment or instruction with relaxing ASMR, and quick viral content with material that builds a closer bond.'),
+          bilingual('Red Ocean ในแผนคือคลิปเต่าตลกหรือไวรัล ความรู้ทั่วไปที่ไม่ลงลึก เนื้อหาวิชาการเกี่ยวกับสัตว์ ร้านขายอาหารและอุปกรณ์สัตว์ Exotic และคลิปสัตว์เลี้ยงผ่อนคลายแบบกว้าง ๆ ส่วน Blue Ocean เสนอ ASMR เต่าซูคาต้าที่เสียงชัดใกล้ตัว การเลี้ยงจริง ความอบอุ่นและความผูกพัน โดยเน้นประสบการณ์มากกว่าคลิปไวรัล', 'The plan’s Red Ocean includes viral tortoise clips, shallow general tips, academic pet education, Exotic pet food and equipment sellers, and broad relaxing animal videos. Its proposed Blue Ocean is detailed sulcata ASMR, real care, warmth, and connection, centred on experience rather than virality.'),
+          bilingual('Positioning Map ในสไลด์เปรียบเทียบช่องเต่าตลกหรือไวรัล @taotechnic08 ช่องให้ความรู้ Moomoo Moonoi และช่องผ่อนคลาย ข้าวเหนียว&หมูปิ้ง ก่อนวางพิวพิวให้ผู้ชมรู้สึกผูกพัน ได้ยินเสียงชัด และเหมือนได้อยู่กับเต่าจริง ๆ', 'The slide’s positioning map compares viral tortoise account @taotechnic08, educational account Moomoo Moonoi, and relaxing account ข้าวเหนียว&หมูปิ้ง. It positions Piew Piew around connection, clear sound, and the feeling of spending time with a real tortoise.'),
         ],
       },
       {
@@ -232,17 +229,24 @@ export const expandedDetails = {
           bilingual('การแนะนำสินค้าและอุปกรณ์สำหรับเต่าบก', 'Product and equipment recommendations for land tortoises.'),
           bilingual('กิจกรรมและการพาเต่าไปเที่ยวสถานที่ต่าง ๆ', 'Activities and visits to different places with the tortoise.'),
           bilingual('ข้อควรระวังและสิ่งที่คนเริ่มเลี้ยงเต่าบกต้องเตรียมรับมือ', 'Care cautions and what first-time land tortoise owners should prepare for.'),
-          bilingual('ประวัติและวิวัฒนาการของเต่าบก เช่น ชื่อวิทยาศาสตร์ กลุ่มของซูคาต้า ซากฟอสซิล และความต่างระหว่างเต่าบกกับเต่าน้ำ', 'Land tortoise history and evolution, including scientific names, sulcata classification, fossils, and differences between land and aquatic turtles.'),
+          bilingual('ประวัติและวิวัฒนาการของเต่าบก ตั้งแต่ชื่อวิทยาศาสตร์ ประเภทและสายพันธุ์ของซูคาต้า ซากฟอสซิล ไปจนถึงคำถามว่าเต่าน้ำกับเต่าบกกลุ่มใดเกิดก่อนและพัฒนามาอย่างไร', 'Land tortoise history and evolution, including scientific names, the sulcata’s type and related species, fossils, and the question of whether land or aquatic turtles arose first and how they developed.'),
         ],
       },
       {
         heading: bilingual('ตัวอย่างโครงเรื่องจากสไลด์', 'Story frameworks from the deck'),
         bullets: [
           nested('Hero’s Journey ใช้เรื่องกระดองพิวพิวที่ดูผิดปกติเป็นตัวอย่างโครงเรื่อง ไม่ใช่คำวินิจฉัยจากผลงาน', 'The Hero’s Journey example follows concern about Piew Piew’s shell. It is a story outline, not a diagnosis made by the portfolio.', [
-            bilingual('เรื่องเริ่มจากการเลี้ยงในร่ม สังเกตกระดองนูน ลองพาไปรับแดด แล้วปรึกษาสัตวแพทย์ ก่อนปรับอาหารและวิธีเลี้ยงตามคำแนะนำในเรื่อง', 'The story moves from indoor care to noticing a raised shell, trying more sunlight, consulting a veterinarian, and changing diet and care as described in the example.'),
+            bilingual('เรื่องเริ่มจากเลี้ยงพิวพิวในร่มจนสังเกตว่ากระดองนูนคล้ายพีระมิด การพาไปรับแดดยังไม่ทำให้เปลี่ยนแปลง เจ้าของจึงปรึกษาสัตวแพทย์เฉพาะทาง', 'The example begins with indoor care and a shell raised like a pyramid. Taking Piew Piew into the sun does not change it, so the owner consults a specialist veterinarian.'),
+            bilingual('ในเรื่อง สัตวแพทย์อธิบายว่าการได้รับแดดและอาหารเกี่ยวข้องกัน รวมถึงผลไม้ที่มีน้ำตาลสูงหรืออาหารเม็ดที่มีโปรตีนมากเกินไป หลังปรับวิธีเลี้ยง ตัวอย่างปิดด้วยสุขภาพและกระดองที่ดีขึ้น นี่เป็นเนื้อเรื่องในสไลด์ ไม่ใช่คำแนะนำรักษาเต่าจริง', 'In the deck’s story, the veterinarian explains that sunlight and diet both matter, including too much high-sugar fruit or protein-rich feed. After care changes, the example ends with better health and shell appearance. This is slide narrative, not veterinary advice.'),
           ]),
-          bilingual('Hook–Story–Offer ใช้โจทย์ผมร่วงและฝุ่นในห้องเป็นตัวอย่างการเปิดปัญหา เล่าประสบการณ์ แล้วนำเสนอเครื่องดูดฝุ่นพร้อมชวนผู้ชมคอมเมนต์ ตัวอย่างนี้สาธิตวิธีเล่าเรื่อง ไม่ใช่โฆษณาที่พิสูจน์ยอดขาย', 'Hook–Story–Offer uses hair shedding and room dust as an example. It opens with a problem, tells an experience, introduces a cordless vacuum, and invites comments. This demonstrates the format, not a verified sales result.'),
-          bilingual('Before–After–Bridge ตัวอย่างแรกเล่าปัญหากลิ่นตัวพิวพิวก่อนเสนอเจลอาบน้ำสัตว์ Exotic ตัวอย่างที่สองเล่าความกลัวการสูญเสียสัตว์เลี้ยง ก่อนเชื่อมไปสู่การดูแลและใช้เวลาที่มีร่วมกันอย่างดีที่สุด', 'The first Before–After–Bridge example moves from Piew Piew’s bathing problem to an Exotic pet wash. The second moves from fear of losing a pet to caring well and making the most of their time together.'),
+          nested('Hook–Story–Offer ในสไลด์ยกตัวอย่างโฆษณาเครื่องดูดฝุ่น ไม่ใช่คลิปเกี่ยวกับพิวพิว', 'The deck demonstrates Hook–Story–Offer with a vacuum advertisement, not a Piew Piew clip.', [
+            bilingual('Hook เริ่มจากผมร่วงเต็มห้อง ฝุ่นฟุ้งและผมติดไม้กวาด Story เล่าความลำบากที่ต้องกวาดทุกวัน', 'The hook is hair shed around a room, rising dust, and strands caught in a broom. The story describes having to sweep every day.'),
+            bilingual('Offer ในบทเสนอเครื่องดูดฝุ่นไร้สาย Han River ราคา “สามแบงก์แดงนิด ๆ” พร้อมสายชาร์จ และกล่าวว่าใช้ได้นานหลายชั่วโมง ดูดฝุ่นไม่ฟุ้ง ก่อนชวนคอมเมนต์เพื่อรับโค้ดส่วนลด ทั้งหมดเป็นคำกล่าวในตัวอย่างสคริปต์ ไม่ใช่ผลทดสอบสินค้าหรือยอดขาย', 'The scripted offer names a Han River cordless vacuum at a little over three red banknotes, with a charging cable. It claims hours of use and less airborne dust, then invites comments for a discount code. These are example-script claims, not verified product tests or sales.'),
+          ]),
+          nested('Before–After–Bridge ในสไลด์มีทั้งตัวอย่างสินค้าสัตว์เลี้ยงและเรื่องความผูกพัน', 'The deck has two Before–After–Bridge examples, one about a pet product and one about attachment.', [
+            bilingual('ตัวอย่างแรกเริ่มจากพิวพิวมีกลิ่นหลังเหยียบเศษอาหารหรือของเสีย แล้วเสนอเจลอาบน้ำสัตว์ Exotic ชื่อ Babe พร้อมคำกล่าวเรื่องสารสกัดธรรมชาติ ไม่แสบตา ขจัดคราบและลดกลิ่น คำกล่าวเหล่านี้เป็นเนื้อหาเสนอขายในสไลด์ ยังไม่ใช่ผลทดสอบ', 'The first starts with odour after Piew Piew steps in food or waste. It offers Babe Exotic pet wash with scripted claims about natural extracts, avoiding eye irritation, cleaning stains, and reducing odour. These are sales-copy claims, not test results.'),
+            bilingual('ตัวอย่างที่สองเล่าว่าพิวพิวเคยตาอักเสบ ซึมและไม่กินอาหาร จนเจ้าของกลัวการสูญเสีย จากนั้นเชื่อมไปสู่การดูแล ให้ความรัก และใช้เวลาที่มีร่วมกันให้ดีที่สุด โดยปิดด้วยการยอมให้ตัวเองเสียใจและค่อยระลึกถึงความทรงจำดี ๆ', 'The second recalls Piew Piew’s eye inflammation, low energy, and loss of appetite, which brought fear of losing a pet. It then turns to care, affection, and making the most of shared time, ending with permission to grieve and remember good moments.'),
+          ]),
           bilingual('ตัวอย่างสินค้าหรือคำแนะนำด้านสุขภาพในสไลด์เป็นแนวทางเขียนคอนเทนต์ ไม่ใช่การรับรองประสิทธิภาพหรือคำแนะนำสัตวแพทย์', 'Product and animal-health references in these examples are writing concepts, not validated product claims or veterinary advice.'),
         ],
       },
@@ -256,7 +260,7 @@ export const expandedDetails = {
           bilingual('8 พ.ค. 21:00 น. ประวัติเต่าบกตอนที่ 2 ความยาวที่วางไว้ 2:00 นาที', '8 May at 21:00, land tortoise history part 2, planned duration 2:00.'),
           bilingual('11 พ.ค. 20:00 น. ต้นไม้และดอกไม้ที่เต่ากินได้และปลูกง่าย ความยาวที่วางไว้ 1:30 นาที', '11 May at 20:00, easy-to-grow plants and flowers proposed as tortoise food, planned duration 1:30.'),
           bilingual('12 พ.ค. 21:00 น. ประวัติเต่าบกตอนที่ 3 ความยาวที่วางไว้ 2:00 นาที', '12 May at 21:00, land tortoise history part 3, planned duration 2:00.'),
-          bilingual('ตารางเว้นบางวันไว้พัก ตัดคลิป และคิดวิธีถ่าย แผนตั้งใจให้ตอนประวัติเต่าบกต่อเนื่องแต่มีหัวข้ออื่นคั่น ตารางนี้เป็นแผนเผยแพร่ ไม่ยืนยันว่าคลิปทั้งหมดถูกโพสต์ตามกำหนด', 'Several days are left open for rest, editing, and planning shoots. The history series is intended to stay regular while other topics appear between episodes. This is a publishing plan, not confirmation that every clip went live.'),
+          bilingual('ตารางเว้นวันที่ 29–30 เม.ย. และ 2–3, 5, 7, 9–10 พ.ค. ไว้โดยไม่มีโพสต์ เพื่อพัก ตัดคลิป และคิดวิธีถ่าย แผนตั้งใจให้ตอนประวัติเต่าบกต่อเนื่องแต่มีหัวข้ออื่นคั่น ตารางนี้เป็นแผนเผยแพร่ ไม่ยืนยันว่าคลิปทั้งหมดถูกโพสต์ตามกำหนด', 'The calendar leaves 29–30 April and 2–3, 5, 7, and 9–10 May without posts for rest, editing, and shoot planning. The history series is intended to stay regular with other topics between episodes. This is a plan, not confirmation that every clip went live.'),
         ],
       },
     ],
@@ -280,9 +284,9 @@ export const expandedDetails = {
         heading: bilingual('การทำงานและระบบที่วางแผน', 'Planned functions and systems'),
         bullets: [
           bilingual('สไลด์เสนอให้หลอดไฟฉาย UV-C ไปยังพื้นที่โดยรอบเพื่อจัดการเชื้อบนพื้นผิวหรือในอากาศ โดยยังไม่มีผลการวัดประสิทธิภาพในผลงาน', 'The slides propose UV-C exposure for surrounding surfaces and air, but the project provides no measured disinfection results.'),
-          bilingual('ต้นแบบที่อธิบายในสไลด์มีรีโมตเปิดปิด ปรับระดับแสง และตั้งเวลา เพื่อลดการเดินไปกดสวิตช์', 'The described prototype includes remote power and brightness controls and a timer to reduce trips to the switch.'),
-          bilingual('โมดูล IoT ที่เสนอเก็บข้อมูลสภาพแวดล้อม เช่น ความชื้น แล้วส่งต่อให้อุปกรณ์อื่นวิเคราะห์', 'The proposed IoT module gathers environmental data such as humidity and sends it to other devices for analysis.'),
-          bilingual('โมดูล AI ที่เสนอใช้ข้อมูลจากเซ็นเซอร์เพื่อปรับแสงตามสภาพพื้นที่ ส่วนแนวคิด Big Data ใช้รูปแบบการใช้พลังงานมาช่วยแนะนำการประหยัด', 'The proposed AI module uses sensor information to adjust lighting. The Big Data idea would analyze energy use and recommend savings.'),
+          bilingual('แบบการทำงานในสไลด์เสนอรีโมตเปิดปิด ปรับระดับแสง และตั้งเวลา เพื่อลดการเดินไปกดสวิตช์ ยังไม่ได้แสดงอุปกรณ์ที่ทดสอบการทำงานแล้ว', 'The slides propose remote power and brightness controls and a timer to reduce trips to the switch. They do not show a tested working device.'),
+          bilingual('โมดูล IoT ที่เสนอจะเก็บข้อมูลสภาพแวดล้อม เช่น ความชื้นและปริมาณเชื้อโรคในอากาศ แล้วส่งต่อให้อุปกรณ์อื่นวิเคราะห์ สไลด์ไม่ได้แสดงผลการวัดจริงจากเซ็นเซอร์', 'The proposed IoT module would gather environmental data such as humidity and airborne pathogen levels, then pass it to other devices for analysis. The deck does not show actual sensor measurements.'),
+          bilingual('โมดูล AI ที่เสนอจะใช้ข้อมูลจากเซ็นเซอร์เพื่อปรับแสงตามสภาพพื้นที่และค่าที่เกี่ยวกับเชื้อโรค ส่วนแนวคิด Big Data จะใช้รูปแบบการใช้พลังงานเพื่อแนะนำการประหยัด ทั้งสองอย่างยังเป็นแนวคิดในสไลด์', 'The proposed AI module would use sensor data about the environment and pathogen levels to adjust lighting. The Big Data idea would analyse energy use and suggest savings. Both remain slide concepts.'),
           bilingual('แผนยังกล่าวถึงการลดแสงเมื่อมีคนอยู่ในพื้นที่ แต่ไม่ได้แสดงระบบตรวจคนหรือการทดสอบความปลอดภัยที่ทำงานจริง', 'The plan also mentions dimming light when someone is present, without showing a working occupancy safeguard or safety test.'),
         ],
       },

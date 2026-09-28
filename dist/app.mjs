@@ -79,6 +79,7 @@ const detailCategory = document.querySelector('#detailCategory');
 const detailTitle = document.querySelector('#detailTitle');
 const detailTeaser = document.querySelector('#detailTeaser');
 const detailDescription = document.querySelector('#detailDescription');
+const aboutSection = document.querySelector('#aboutSection');
 const detailContribution = document.querySelector('#detailContribution');
 const contributionSection = document.querySelector('#contributionSection');
 const progressFill = document.querySelector('#progressFill');
@@ -297,6 +298,7 @@ function showProjectDetails(index) {
   detailTitle.textContent = project.title[language];
   detailTeaser.textContent = project.teaser[language];
   detailDescription.textContent = project.description[language];
+  aboutSection.hidden = Boolean(project.hideAbout);
   const role = project.contribution?.[language];
   const roleBullets = project.contributionBullets?.[language];
   contributionSection.hidden = !role && !roleBullets?.length;

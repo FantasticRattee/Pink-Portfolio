@@ -98,8 +98,8 @@ export const projects = [
       en: 'The first experiences that shaped each guest',
     },
     description: {
-      th: 'ทอล์กโชว์ที่พาผู้ชมไปรู้จัก “ครั้งแรก” ของแขกรับเชิญ ทั้งก้าวแรกในวงการ ความรู้สึกเมื่อทำผลงานครั้งแรก และจุดเริ่มต้นในชีวิตส่วนตัว เพื่อค้นหาแรงบันดาลใจและบทเรียนที่ซ่อนอยู่ในเรื่องเหล่านั้น ตอนนี้พูดคุยกับคุณมัช (Marchwasow) ซึ่งเป็นอินฟลูเอนเซอร์ ศิลปิน และนักแสดง โดยขณะจัดทำโครงการเป็น trainee ของ Wanlove Music รายการใช้บรรยากาศอบอุ่น เป็นกันเองเหมือนฟังเพื่อนเล่าเรื่อง พร้อมโทนสีน้ำตาล เหลือง และดำ',
-      en: 'This talk show explores meaningful first experiences, from entering the entertainment industry and making an early piece of work to personal beginnings, and the inspiration and lessons behind them. This episode features Marchwasow, an influencer, artist, and actor who was a Wanlove Music trainee when the project was made. A warm, conversational setting uses brown, yellow, and black.',
+      th: 'ทอล์กโชว์ที่พาผู้ชมไปรู้จัก “ครั้งแรก” ของแขกรับเชิญ ทั้งก้าวแรกในวงการ ความรู้สึกเมื่อทำผลงานครั้งแรก และจุดเริ่มต้นในชีวิตส่วนตัว เพื่อค้นหาแรงบันดาลใจและบทเรียนที่ซ่อนอยู่ในเรื่องเหล่านั้น รายการเปิดมุมมองใหม่และเผยตัวตนแขกรับเชิญ เพื่อให้ผู้ชมได้เรียนรู้และกล้าเริ่มต้นใหม่ ตอนนี้พูดคุยกับคุณมัส (Marchwasow) ซึ่งเป็นอินฟลูเอนเซอร์ ศิลปิน และนักแสดง โดยขณะจัดทำโครงการเป็น trainee ของ Wanlove Music บรรยากาศเป็นกันเองเหมือนฟังเพื่อนเล่าเรื่อง สีน้ำตาลให้ความอบอุ่นและเรียบง่าย สีเหลืองเพิ่มความสนุกและพลัง ส่วนสีดำเสริมความน่าเชื่อถือ',
+      en: 'This talk show explores meaningful first experiences, from entering the entertainment industry and making an early piece of work to personal beginnings, and the inspiration and lessons behind them. It offers new perspectives and reveals more of the guest’s personality, inviting viewers to learn and begin again. This episode features Marchwasow, an influencer, artist, and actor who was a Wanlove Music trainee when the project was made. The conversational set uses brown for warmth and simplicity, yellow for playful energy, and black for credibility.',
     },
     contribution: {
       th: 'รับผิดชอบกล้องตัวที่ 3 และจัดฉากรายการ',
@@ -125,8 +125,8 @@ export const projects = [
       en: 'Exploring viewing habits and the future of television programmes',
     },
     description: {
-      th: 'สัมมนา “รายการโทรทัศน์ตกยุคแล้วหรือยัง?” ชวนตั้งคำถามถึงพฤติกรรมการรับชมของคนแต่ละรุ่นที่เปลี่ยนไป ความสนใจในแพลตฟอร์มสตรีมมิง และแนวทางที่สถานีโทรทัศน์จะปรับตัวให้ทันผู้ชมยุคใหม่ การสนทนาเปิดมุมมองต่ออนาคตของรายการโทรทัศน์และโอกาสเข้าสู่อุตสาหกรรมสื่อ โดยเล่าเรื่องให้สนุกและเข้าถึงประเด็นได้ง่าย',
-      en: 'The seminar “Is Television Becoming Outdated?” asks how viewing habits differ across generations, why streaming has gained attention, and how broadcasters can respond to newer audiences. It also discusses the future of television programmes and opportunities to enter the media industry in an accessible, engaging format.',
+      th: 'สัมมนา “รายการโทรทัศน์ตกยุคแล้วหรือยัง?” ชวนตั้งคำถามถึงพฤติกรรมการรับชมของคนแต่ละรุ่นที่เปลี่ยนไป วิเคราะห์เหตุที่คนรุ่นใหม่สนใจแพลตฟอร์มสตรีมมิงมากขึ้น และชวนคิดว่าสถานีโทรทัศน์จะปรับตัวให้ทันผู้ชมยุคใหม่อย่างไร การสนทนาเปิดมุมมองต่ออนาคตของรายการโทรทัศน์และโอกาสเข้าสู่อุตสาหกรรมสื่อ โดยเล่าเรื่องให้สนุกและเข้าถึงประเด็นได้ง่าย',
+      en: 'The seminar “Is Television Becoming Outdated?” asks how viewing habits differ across generations, explores why younger viewers increasingly choose streaming, and considers how broadcasters could respond. It also discusses the future of television programmes and opportunities to enter the media industry in an accessible, engaging format.',
     },
     contribution: {
       th: 'ทำหน้าที่เลขานุการ จัดทำ breakdown และ rundown จัดพื้นที่สัมมนา และช่วยแผนกต้อนรับและฝ่ายลงทะเบียน',
@@ -151,8 +151,8 @@ export const projects = [
       en: 'Are you making the most of the resources you have?',
     },
     description: {
-      th: 'สารคดีให้ความรู้เรื่องขยะที่ผู้คนไม่ต้องการและการจัดการขยะที่อาจสร้างคุณค่าให้คนอีกกลุ่ม เช่น โรงงานขยะหรือผู้เก็บขยะ จุดมุ่งหมายคือชวนคิดเรื่องการใช้ทรัพยากรอย่างคุ้มค่า การปลูกฝังการแยกขยะ และความใส่ใจสิ่งแวดล้อม ผ่านบทสัมภาษณ์ผู้เชี่ยวชาญด้านสิ่งแวดล้อม ผู้ดูแลกิจการที่เกี่ยวข้องกับขยะ และคนขับรถขยะ',
-      en: 'A documentary about unwanted waste, how it is managed, and the value it may still offer to people who work with it, including factories and waste collectors. Interviews with an environmental specialist, a business representative, and a waste-truck driver encourage more thoughtful resource use, waste sorting, and care for the environment.',
+      th: 'สารคดีให้ความรู้เรื่องขยะที่ผู้คนไม่ต้องการและการจัดการขยะที่อาจสร้างคุณค่าให้คนอีกกลุ่ม เช่น โรงงานขยะหรือผู้เก็บขยะ จุดมุ่งหมายคือชวนคิดเรื่องการใช้ทรัพยากรอย่างคุ้มค่า การแยกขยะ และความใส่ใจสิ่งแวดล้อม ข้อมูลมาจากบทสัมภาษณ์ ดร.สนธิ คชวัฒน์ ผู้เชี่ยวชาญด้านสิ่งแวดล้อม คุณทวีป ทวีสินอุดมจาก ต.คิดดี โปรดักส์ และน้าอุ้ม คนขับรถขยะ',
+      en: 'A documentary about unwanted waste, how it is managed, and the value it may still offer to factories and waste collectors. It encourages thoughtful resource use, waste sorting, and environmental care through interviews with environmental specialist Dr. Sonti Kotchawat, Khun Thaweep of T. Kit Dee Products, and Na Oom, a garbage-truck driver.',
     },
     contribution: {
       th: 'กำกับ ประสานงาน ค้นข้อมูล ลงพื้นที่สัมภาษณ์ ถ่ายทำ และตัดต่อ',
@@ -177,8 +177,8 @@ export const projects = [
       en: 'Small stalls that help a city make a living',
     },
     description: {
-      th: 'สารคดีเล่าอาหารข้างทางกรุงเทพฯ ในฐานะภาพจำของเมืองและหนึ่งในเสน่ห์ทางวัฒนธรรมไทย ร้านเล็ก ๆ ขายอาหารราคาเข้าถึงง่ายแต่เต็มไปด้วยรอยยิ้มและมีลูกค้าประจำ ความผูกพันกับอาหารข้างทางจึงเป็นทั้งวิถีชีวิตและโอกาสสร้างรายได้ให้ผู้ขายและคนรอบข้าง เรื่องเล่าผ่านบรรยากาศริมถนนและบทสัมภาษณ์คุณแนท เจ้าของร้านอาหารอีสานข้างทาง',
-      en: 'This documentary presents Bangkok street food as part of the city’s identity and a source of Thai cultural appeal. Small, affordable stalls serve regular customers and support livelihoods. Street scenes and an interview with Khun Nat, an Isan food stall owner, tell the story of the people behind the meals.',
+      th: 'สารคดีเล่าอาหารข้างทางกรุงเทพฯ ในฐานะภาพจำของเมืองและ soft power อย่างหนึ่งของไทย ร้านเล็ก ๆ ขายอาหารราคาเข้าถึงง่าย แต่รอยยิ้มและความผูกพันกับลูกค้าประจำสร้างความอบอุ่นที่ประเมินเป็นเงินไม่ได้ อาหารข้างทางจึงเป็นทั้งวิถีชีวิตและโอกาสสร้างรายได้ให้ผู้ขายและคนรอบข้าง เรื่องเล่าผ่านบรรยากาศริมถนนและบทสัมภาษณ์คุณแนท เจ้าของร้านอาหารอีสานข้างทาง',
+      en: 'This documentary presents Bangkok street food as part of the city’s identity and a form of Thai soft power. Small, affordable stalls serve regular customers, with smiles and relationships that offer warmth beyond a monetary value. They also support livelihoods. Street scenes and an interview with Khun Nat, an Isan food stall owner, tell the story of the people behind the meals.',
     },
     contribution: {
       th: 'ร่วมคิด creative พากย์เสียง ใส่คำบรรยาย ลงพื้นที่สัมภาษณ์ และถ่ายทำ',
@@ -192,6 +192,7 @@ export const projects = [
   },
   {
     id: 'piew-piew-turtle',
+    hideAbout: true,
     image: 'assets/covers/piew-piew-slide-cover.jpg',
     previewVideo: 'assets/videos/piew-piew-turtle.mp4',
     fullVideos: [
@@ -202,8 +203,8 @@ export const projects = [
     title: { th: 'พิวพิวเต่าคุณหนู', en: 'Piew Piew, the Princess Tortoise' },
     category: { th: 'กลยุทธ์คอนเทนต์ · TikTok', en: 'Content strategy · TikTok' },
     teaser: {
-      th: 'ผลงานอินฟลู TikTok ด้าน Exotic Pet Lifestyle ที่มีเต่าซูคาต้าเป็นตัวเอก',
-      en: 'A TikTok Exotic Pet Lifestyle creator concept starring a sulcata tortoise',
+      th: 'ผลงานอินฟลู TikTok ด้าน Exotic Pet Lifestyle สัตว์เลี้ยงเป็นเต่าซูคาต้า',
+      en: 'An Exotic Pet Lifestyle TikTok creator project featuring a sulcata tortoise',
     },
     description: {
       th: 'แนวคิดอินฟลูเอนเซอร์สาย Exotic Pet Lifestyle ที่ใช้ชีวิตของเต่าซูคาต้า “พิวพิว” เป็นแกนของช่อง TikTok งานวางตัวตนและตำแหน่งแบรนด์ ข้อความหลัก สโลแกน วิเคราะห์ SWOT และ Red–Blue Ocean ออกแบบคอนเทนต์ตาม Hero’s Journey, Hook–Story–Offer และ Before–After–Bridge พร้อมเสาหลักคอนเทนต์ 6 ด้านและ Content Calendar',
@@ -224,8 +225,8 @@ export const projects = [
       en: 'An advertisement for a lamp concept',
     },
     description: {
-      th: 'คลิปโฆษณาแนวคิดหลอดไฟ UV-C “น้องกลมดิ๊ก” ในข้อเสนอผลิตภัณฑ์ หลอดไฟถูกออกแบบให้ควบคุมการเปิดปิดและปรับแสงด้วยรีโมต ตั้งเวลาใช้งาน และใช้ข้อมูลจากเซ็นเซอร์เพื่อปรับการทำงาน แนวคิดมุ่งให้การดูแลความสะอาดสะดวกขึ้นโดยลดการใช้สารเคมีและแรงงาน คุณสมบัติด้านการฆ่าเชื้อ ประหยัดพลังงาน และความปลอดภัยเป็นข้อเสนอในสไลด์ ไม่ใช่ผลทดสอบของอุปกรณ์จริง',
-      en: 'An advertisement for “Nong Klom Dik,” a proposed UV-C lamp. The concept includes remote power and brightness controls, a timer, and sensor-informed operation. It aims to make cleaning more convenient while reducing chemical use and effort. Claims about disinfection, energy savings, and safety are part of the proposal, not results verified on a working device.',
+      th: 'คลิปโฆษณาแนวคิดหลอดไฟ UV-C “น้องกลมดิ๊ก” ในข้อเสนอผลิตภัณฑ์ หลอดไฟถูกวางให้ควบคุมการเปิดปิดและปรับแสงด้วยรีโมต ตั้งเวลา และใช้ข้อมูลความชื้นกับปริมาณเชื้อโรคในอากาศที่เสนอให้เซ็นเซอร์วัดเพื่อปรับการทำงาน แนวคิดมุ่งให้การดูแลความสะอาดสะดวกขึ้นโดยลดการใช้สารเคมีและแรงงาน คุณสมบัติด้านการฆ่าเชื้อ ประหยัดพลังงาน และความปลอดภัยเป็นข้อเสนอในสไลด์ ไม่ใช่ผลทดสอบของอุปกรณ์จริง',
+      en: 'An advertisement for “Nong Klom Dik,” a proposed UV-C lamp. The concept includes remote power and brightness controls, a timer, and sensor inputs for humidity and airborne pathogen levels to adjust its operation. It aims to make cleaning more convenient while reducing chemical use and effort. Claims about disinfection, energy savings, and safety are proposals, not results verified on a working device.',
     },
     contribution: {
       th: 'ร่วมคิดและออกแบบแนวคิด รับบทพนักงานบริษัท เขียนบทและซัพพอร์ตการถ่ายทำ',
