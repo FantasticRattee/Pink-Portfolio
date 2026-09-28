@@ -568,6 +568,7 @@ document.querySelector('#closeDialog').addEventListener('click', () => dialog.cl
 languageButton.addEventListener('click', () => setLanguage(language === 'th' ? 'en' : 'th'));
 
 dialog.addEventListener('close', () => {
+  if (dialog.open) return;
   detailImageWrap.querySelector('video')?.pause();
   if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
 });
