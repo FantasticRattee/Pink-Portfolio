@@ -119,6 +119,14 @@ Source: S4 and `หลอดไฟกลมดิ๊ก proposal.pdf`, PDF pages
 
 Source: S4, `Breakdown.pages`, `Shotlist.pages`, and the supplied finished MV.
 
+### FR-012 — White project information panel
+
+- Use a white background for the information side of every project detail, with dark readable headings and body text. Keep secondary labels dark enough to remain legible on white, use quiet light dividers, and limit blue to small accents and interactive states for a clean, restrained look.
+- Apply the light treatment to About and Role text, expanded bullets and nested bullets, source notes, navigation, the Katsumidori data board, and slide-viewer controls. The image and video side may retain a dark surround so varied source media remains clear.
+- Preserve keyboard focus visibility, scrolling, video controls, slide navigation, and readable layouts at the annotated 626×735 viewport as well as desktop and narrow mobile sizes.
+
+Source: User's Railway browser annotation on the project information panel, 29 September 2026.
+
 ## Non-functional requirements and constraints
 
 ### NFR-001 — Bilingual and readable
@@ -142,6 +150,7 @@ Implement and verify changes in the local `site` checkout, review the staged pub
 - **AC-005:** The three พิวพิวเต่าคุณหนู video selectors have the requested content labels, its generic About and personal Role sections are absent, and its full slide-backed strategy remains available in readable form.
 - **AC-006:** On desktop and narrow viewports, every revised project detail can scroll to its final section without overlap, and the revised video and image assets load.
 - **AC-007:** Local tests pass, staged public files pass the pre-push review, GitHub `main` matches the committed local revision, Railway's Active deployment matches that GitHub commit, and the public page and changed media are checked after deployment.
+- **AC-008:** All 15 detail information panels use white with readable dark text in Thai and English. Analytical boards and slide controls remain legible, each dialog scrolls to its final content without media/text overlap, and focused controls stay visible at the annotated, desktop, and mobile viewports.
 
 ## Source verification during implementation
 
