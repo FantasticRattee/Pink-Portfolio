@@ -1,0 +1,150 @@
+# Portfolio content revision requirements
+
+Status: Active project requirements
+
+## Goal
+
+Revise the public portfolio so each project explains the work accurately and fully enough to understand its concept, source material, production, and the portfolio owner's verified contribution. Keep the writing easy to scan. Use the supplied presentations, reports, scripts, and finished media as evidence rather than expanding brief copy by invention.
+
+These requirements come from four conversation screenshots in the private `../Fix - Requirements/1/` folder, dated 28 September 2026. The source PDFs and original media stay outside this public Git repository. The separate `AGENTS.md` governs the Local → GitHub → Railway update and verification sequence.
+
+## Scope and sources
+
+- Applies to the bilingual card copy, project detail text, cover/media presentation, and video labels in `dist/`. Update Thai and English together while preserving the Thai meaning and any requested exact Thai wording.
+- The screenshot source key is: `S1` = `Screenshot 2569-09-28 at 18.08.15.png`, `S2` = `...18.08.33.png`, `S3` = `...18.08.48.png`, and `S4` = `...18.08.57.png`.
+- Primary content sources include `รายละเอียดผลงาน.pdf`, `กาฝาก proposal.pdf`, `My love scene proposal.pdf`, `Arcade.pdf`, `รายงานสรุปผล.pdf` for SIAM Arcade, `First thing first proposal.pdf`, `สคริปต์ First thing first.pdf`, `Proposal สัมนา.pdf`, `พิวพิวเต่าคุณหนู.pdf`, `หลอดไฟกลมดิ๊ก proposal.pdf`, and the MV `Shotlist.pages` and `Breakdown.pages`. Source footage is available in the matching project folders.
+- The replacement television seminar cover is the image named **Cover page** in the [user-identified Google Drive folder](https://drive.google.com/drive/folders/13_GAE4R0a9UMY8PPnGAjOSJiZ7wHA1oJ). The user identified this image after the initial screenshot request, so `IMG_7783.JPG` is not the selected replacement.
+
+## Functional requirements
+
+### FR-001 — Content quality across projects
+
+- Cover every distinct, relevant fact requested in the screenshots and supported by the source material. A short bullet with a nested bullet is acceptable when it makes a complete point clearer. Avoid long paragraphs that hide separate facts, and avoid repeating the same point in multiple sections.
+- Explain plans as plans, proposed product functions as proposals, and completed work as completed work. Attribute a personal role only where supplied documents or the user's explicit correction support it.
+- Do not use a semicolon (`;`) or an arrow glyph (`→`, `←`, `↗`, etc.) to connect explanatory copy for any project. Write the relationship in words. Navigation icons and controls are outside this prose rule.
+- Make the detail view readable at the annotated desktop size and on narrow screens. The user must be able to scroll to all expanded content without a cover image or video obscuring text.
+
+Source: S1, S2, S3, S4 and the existing detail-view request recorded in `project-context.md`.
+
+### FR-002 — กาฝาก
+
+- Rename **เรื่องย่อและแนวคิด** to **Concept**. Explain the deck's “THAI ANALOG HORROR WITH OLD BELIEFS IN THE 1980S” framing, the mysterious woman and infection, the cuckoo/alien-parasite idea, and how the story uses period beliefs. Describe 1980s HIV rumors or stigma as incorrect beliefs of the characters or time, never as medical facts.
+- Expand **โลกยุค 80s และตัวละคร** with the source's costume, hair, makeup, color, and character rationales, rather than a short general summary.
+- Expand **สัญลักษณ์ที่เล่าเรื่อง** using the presentation's art-direction and Symbols material without claiming an unverified personal Art Director credit.
+- Rename **โจทย์และผลการถ่ายทำ** to **ปัญหาและอุปสรรคในการถ่ายทำ** and cover all source-reported production obstacles.
+
+Source: S1 and `กาฝาก proposal.pdf`, especially PDF pages 2–5, 7–16, and 21–26.
+
+### FR-003 — My Love Scene
+
+- Expand **เกี่ยวกับผลงาน** to introduce the Love Scene of ดาว and ก้อย as friends becoming lovers, its *Hormones Season 2* inspiration, the MVs **ห้องเธอ** and **คงต้องบอกให้รู้**, Girl Love and Friend Zone framing, **รสชาติของความรัก**, the song **กระแซะ**, romantic and tender tension, and the warm red/yellow visual treatment. Separate source inspirations from the finished scene.
+- After **บทบาท**, **add** the heading **ทำไมบทประพันธ์นี้ตรงกับเพลงที่จะทำ**. Use all relevant slide evidence about why the chosen song matches the characters' gradual closeness and risk of crossing the friendship boundary. The screenshot explicitly says to add this heading.
+- Remove the old headings **เรื่องและแรงบันดาลใจ** and **Concept และอารมณ์**, moving any useful source facts into the revised structure.
+- Expand **สัญลักษณ์ในฉาก** and **ภาษาภาพและโจทย์การสื่อสาร** from the deck's Symbol Metaphor and The Picture Compositions/shot-type slides.
+
+Source: S1–S2 and `My love scene proposal.pdf`, especially PDF pages 2–14.
+
+### FR-004 — SIAM Arcade
+
+- Change the Thai card teaser to **เกมส์โชว์สุดมันส์ในบรรยากาศงานวัดไทยร่วมสมัย**. Express the same meaning in English.
+- Change the Thai contribution wording to **ดูแลไมค์ของพิธีกรและผู้ร่วมรายการ** wherever that contribution appears.
+- Remove **สามช่วงการแข่งขัน** as a detail heading and replace it with **Mood & Tone**, covering the source's atmosphere and visual design.
+- Expand **แนวคิดและรูปแบบ** using the deck and report: Thai culture presented with modern game-show energy, proverb and Thai dessert games, balloon play, temple-fair influences, lively red/yellow/gold palette, retro Thai visuals, and patterned costume/set choices where documented.
+- Rename **สิ่งที่เกิดขึ้นระหว่างผลิต** to **ความท้าทายของงานนี้**. Include source-reported short rehearsal/shoot time, overruns and edit cuts, and prop-heavy production. Remove the sentence treating the full recording and report as proof the work was completed.
+
+Source: S2, `Arcade.pdf`, and the SIAM Arcade `รายงานสรุปผล.pdf`.
+
+### FR-005 — First Thing First
+
+- Change the preview/media label to **คลิปเบื้องหลังการผลิตรายการ**.
+- Expand **เกี่ยวกับผลงาน** around guests' meaningful first experiences, personal and career beginnings, lessons and inspiration, the friendly/warm set, the brown/yellow/black palette, and the documented guest and music affiliations. Check names and affiliations against the source before publishing.
+- Remove **แนวคิดรายการ**, **ลำดับรายการ**, and **ภาพ ฉาก และกราฟิก** as detail headings. Preserve relevant facts in the revised description or remaining sections without repetition.
+- Rename **โจทย์การผลิต** to **ความท้าทายของงานนี้**. Explain the small crew, dependence on each assigned role, limited rehearsal/setup time, and the need to keep camera 3 steady, to the extent documented.
+
+Source: S2, `First thing first proposal.pdf`, and `สคริปต์ First thing first.pdf`.
+
+### FR-006 — รายการโทรทัศน์ตกยุคแล้วหรือยัง?
+
+- Replace the Thai card teaser with **ชวนมองพฤติกรรมผู้ชมและรายการโทรทัศน์ในอนาคต** and update English accordingly.
+- Rewrite **เกี่ยวกับผลงาน** to explain the seminar question, viewing habits across age groups, online/streaming competition, how television producers or stations might adapt, and the discussion's accessible tone. Distinguish questions and possibilities from measured findings.
+- Change the contribution wording to **ช่วยแผนกต้อนรับและฝ่ายลงทะเบียน**.
+- Remove the detail headings **คำถามหลัก**, **รูปแบบการสนทนา**, **ผู้ฟังและการออกแบบพื้นที่**, and **การประเมินที่วางไว้**. Retain useful, verified context in the revised description without preserving those headings.
+- Label the available event video **คลิปเบื้องหลังการสัมมนา**. Do not suggest that an atmosphere clip is a complete recording of the discussion.
+- Replace the project's cover with **Cover page** from the user-identified Drive folder above. Use a local, web-ready copy in the site and verify that it loads on both card and detail views. Keep unrelated Drive files and source PDFs out of the public repository.
+
+Source: S2, `Proposal สัมนา.pdf`, the supplied seminar footage, and the user's later annotation selecting the Drive **Cover page** image.
+
+### FR-007 — ทรัพยากรผิดที่ผิดเวลา
+
+- Replace the Thai card teaser with **คุณใช้ทรัพยากรที่มีอย่างคุ้มค่าแล้วหรือยัง?**.
+- Expand **เกี่ยวกับผลงาน** to describe discarded material's possible value, waste sorting, resource conservation, environmental impact, and the documented interviews with the environmental expert, the factory representative, and น้าอุ้ม. Check personal names and affiliations against the source before publishing.
+- Remove **แก่นของสารคดี** as a heading. In **เสียงจากพื้นที่จริง**, describe น้าอุ้ม concisely as a garbage-truck driver speaking from firsthand work, without the extra claim that interviews form the film's core.
+- Add **ความท้าทายของงานนี้** with the user's account in S3 of scheduling and communication difficulties, smell and heat on the factory visit, a missing crew member, and four people covering multiple production duties. Present these as the user's production account, without implying that every detail was independently documented in the report.
+
+Source: S3, `รายละเอียดผลงาน.pdf`, and the supplied documentary footage.
+
+### FR-008 — Street Food
+
+- Replace the Thai card teaser with **ร้านเล็กๆ แต่เลี้ยงชีพทั้งเมือง**.
+- Expand **เกี่ยวกับผลงาน** to cover Bangkok street food as part of the city's identity and soft power, affordable small stalls, regular customers, vendors' livelihoods, and the source interview with คุณแนท, the Isan-food vendor.
+- Remove the old detail headings **เมืองที่เล่าผ่านอาหาร** and **เรื่องเล่าของผู้ขาย**. Keep any unique verified facts in readable remaining copy.
+
+Source: S3, `รายละเอียดผลงาน.pdf`, and the supplied Street Food documentary.
+
+### FR-009 — พิวพิวเต่าคุณหนู
+
+- Rewrite the card teaser around the actual exotic-pet lifestyle/influencer concept with the sulcata tortoise as the channel's character, consistent with the strategy deck.
+- Remove the personal **บทบาท** presentation for this project as explicitly requested.
+- Remove the current detail headings **ช่องที่มีตัวตนชัด**, **หกเสาหลักคอนเทนต์**, **วิธีคิดเรื่องเล่า**, and **กลยุทธ์และปฏิทิน**. Reorganize the full strategy into scannable sections or nested bullets covering Key Message, Slogan, Brand Positioning Statement, SWOT, Red–Blue Ocean, Hero’s Journey, Hook–Story–Offer, Before–After–Bridge, all six content pillars, and the Content Calendar with planned posting dates. Do not imply planned posts or revenue were achieved unless a source confirms that.
+- Rename the three full-video selectors from **คลิป 1**, **คลิป 2**, **คลิป 3** to **คอนเทนต์ 1**, **คอนเทนต์ 2**, **คอนเทนต์เพิ่มเติม** and equivalent English labels.
+
+Source: S3–S4 and `พิวพิวเต่าคุณหนู.pdf`, PDF pages 1–10.
+
+### FR-010 — กลมดิ๊ก / LightClean
+
+- Describe the work as a **คลิปโฆษณาหลอดไฟ** rather than a comedy-tagged card teaser. Expand **เกี่ยวกับผลงาน** with the **น้องกลมดิ๊ก** UV-C lamp concept and its proposed convenience, remote operation, and other functions actually in the proposal.
+- Change the contribution to **เขียนบทและซัพพอร์ตการถ่ายทำ**, as the user specified.
+- Remove the existing detail headings **แนวคิดผลิตภัณฑ์** and **วิธีนำเสนอเป็นโฆษณา**. Move any unique, relevant facts into the revised description or other readable sections.
+- Offer the complete advertising video in the detail view rather than only a short hover preview.
+- Preserve the proposal's distinction between an imagined product and a tested device. Do not claim proven disinfection, safety, or a physically built product. Include the source's UV-C exposure caution where product functions are described.
+
+Source: S4 and `หลอดไฟกลมดิ๊ก proposal.pdf`, PDF pages 1–8.
+
+### FR-011 — ถ้าฉันคิดถึงเธอขึ้นมา
+
+- Offer the completed music video in the detail view, separate from any short hover preview or behind-the-scenes clip.
+- Change the Thai card teaser to **มิวสิกวิดีโอที่ถ่ายตาม Camera Angle**, with a natural equivalent in English.
+- Add the user's specified personal contribution: **เป็นนักแสดงหลักใน MV และมีส่วนร่วมในการทำ Breakdown**.
+- Remove the existing detail headings **เรื่องเล่าผ่านความทรงจำ**, **แผนภาพและมุมกล้อง**, and **วัสดุการผลิตที่มีอยู่**. Replace them with a source-grounded, concise account of the actual Breakdown and Shotlist, including the planned shots, framing, locations, props, and production logic. Do not invent a schedule or assert conflicting shot counts as settled facts.
+
+Source: S4, `Breakdown.pages`, `Shotlist.pages`, and the supplied finished MV.
+
+## Non-functional requirements and constraints
+
+### NFR-001 — Bilingual and readable
+
+All changed visible copy, accessibility text, and relevant video labels have Thai and English versions. The detail view groups facts into short bullets or small paragraphs, allows scrolling through the full content, and remains legible without media covering text.
+
+### NFR-002 — Public evidence boundary
+
+Use web-ready derivatives for source images and videos. Do not publish raw PDFs, source workbooks, student identifiers, private profiles, or unrelated original media. Do not describe proposed outcomes or speculative product claims as proven results.
+
+### NFR-003 — Existing deployment path
+
+Implement and verify changes in the local `site` checkout, review the staged public commit, push to the existing GitHub `main`, and verify the existing Railway service deploys that exact commit. See `AGENTS.md` for the authoritative sequence.
+
+## Acceptance criteria
+
+- **AC-001:** Every requested project has the specified heading changes, card teaser or media label changes, and source-backed expanded details in Thai and English. The My Love Scene song-fit heading is added, while the specified old headings are absent.
+- **AC-002:** No explanatory project copy in either language contains semicolon or arrow glyph sentence connectors. The text reads naturally after their removal.
+- **AC-003:** The selected TV seminar cover visibly comes from the Drive **Cover page** file. Card and detail media load. The seminar footage is identified as behind-the-scenes or event footage, not a full discussion recording.
+- **AC-004:** The complete LightClean ad and completed **ถ้าฉันคิดถึงเธอขึ้นมา** MV can be opened and seeked from their project details. Hover excerpts remain separate. If the supplied material has no distinct complete LightClean ad, report that specific source gap rather than presenting an excerpt as the complete work.
+- **AC-005:** The three พิวพิวเต่าคุณหนู video selectors have the requested content labels, its personal role section is absent, and its full slide-backed strategy remains available in readable form.
+- **AC-006:** On desktop and narrow viewports, every revised project detail can scroll to its final section without overlap, and the revised video and image assets load.
+- **AC-007:** Local tests pass, staged public files pass the pre-push review, GitHub `main` matches the committed local revision, Railway's Active deployment matches that GitHub commit, and the public page and changed media are checked after deployment.
+
+## Source verification during implementation
+
+- Confirm the exact Drive **Cover page** image identity and retrieve it from the user-identified folder before replacing the seminar cover. The user has identified the folder and filename, so this is an asset verification task rather than an open design choice.
+- Check the LightClean source footage for a complete ad that is distinct from the short preview. If no longer source exists, do not present the preview as a complete video and report the missing source precisely.
+- The MV Breakdown and Shotlist appear to contain differing shot counts or timings. Use the individual documented shots and avoid a single total or timeline until reconciled.

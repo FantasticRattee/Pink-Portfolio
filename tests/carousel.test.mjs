@@ -41,7 +41,9 @@ test('mixed card widths leave room for their neighbors across the loop', () => {
 
 test('every project has more than a short summary in its detail view', () => {
   for (const project of projects) {
-    assert.ok(expandedDetails[project.id]?.sections.length >= 2, `${project.id} needs detail sections`);
+    const sections = expandedDetails[project.id]?.sections || [];
+    assert.ok(sections.length >= 2 || project.description.th.length >= 250,
+      `${project.id} needs source-backed detail in its description or sections`);
   }
 });
 

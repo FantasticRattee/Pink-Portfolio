@@ -3,42 +3,48 @@ const nested = (th, en, children) => ({ th, en, children });
 
 export const expandedDetails = {
   kafak: {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 1; กาฝาก proposal หน้า PDF 2–26 (ส่วนงานออกแบบและเพลงอธิบายตามสไลด์)', 'Portfolio overview PDF p. 1; Kafak proposal PDF pp. 2–26 (design and music described as documented in the deck)'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 1, กาฝาก proposal หน้า PDF 2–26 (ส่วนงานออกแบบและเพลงอธิบายตามสไลด์)', 'Portfolio overview PDF p. 1, Kafak proposal PDF pp. 2–26 (design and music described as documented in the deck)'),
     sections: [
       {
-        heading: bilingual('เรื่องย่อและแนวคิด', 'Story and concept'),
+        heading: bilingual('Concept', 'Concept'),
         bullets: [
           nested(
             'เรื่องย่อ: หมู่บ้านยุค 1980s มีหญิงปริศนาหายตัว ผู้คนลือว่าเชื้อบางอย่างทำให้รูปลักษณ์และพฤติกรรมเปลี่ยนไป',
             'Story: A mysterious woman disappears from a 1980s village, while rumours blame an unknown infection for changes in people’s appearance and behaviour.',
             [
-              bilingual('กานต์สินีพบหญิงลึกลับ แล้วเรื่องค่อยชี้ว่าเบื้องหลังอาจเป็นสิ่งเหนือธรรมชาติ ไม่ใช่โรคระบาดทั่วไป', 'Kantsinee encounters a strange woman; the story hints at a supernatural cause rather than an ordinary epidemic.'),
+              bilingual('กานต์สินีพบหญิงลึกลับ แล้วเรื่องค่อยชี้ว่าเบื้องหลังอาจเป็นสิ่งเหนือธรรมชาติ ไม่ใช่โรคระบาดทั่วไป', 'Kantsinee encounters a strange woman. The story hints at a supernatural cause rather than an ordinary epidemic.'),
             ]
           ),
-          bilingual('แรงบันดาลใจ: นำความเข้าใจผิดเรื่อง HIV ในอดีตมาเป็นบริบทของความกลัวและการตีตรา ผสมแนวคิดสิ่งแปลกปลอมแทรกซึมจากนิยาย “กาเหว่าที่บางเพลง” — ความเข้าใจผิดนั้นไม่ใช่ข้อเท็จจริงทางการแพทย์', 'Inspiration: Historical misconceptions about HIV shape the village’s fear and stigma, alongside the idea of an intruding presence from “กาเหว่าที่บางเพลง.” Those misconceptions are not medical facts.'),
+          nested('แนวคิด “THAI ANALOG HORROR WITH OLD BELIEFS IN THE 1980S” ผสมความเชื่อเก่ากับความสยองขวัญแบบภาพและเสียงยุคแอนะล็อก', '“THAI ANALOG HORROR WITH OLD BELIEFS IN THE 1980S” blends period beliefs with analogue horror.', [
+            bilingual('สไลด์หยิบความเข้าใจผิดในยุค 1980s ที่กลัวว่า HIV ติดต่อผ่านการสัมผัสหรือการหายใจร่วมกันมาเป็นบริบทของการตีตรา ความเชื่อนี้ผิด ไม่ใช่ข้อเท็จจริงทางการแพทย์', 'The deck uses the historical, false belief that HIV spreads through touch or shared air to portray fear and stigma. That belief is medically incorrect.'),
+            bilingual('อีกแรงบันดาลใจคือ “กาเหว่าที่บางเพลง” ของ ม.ร.ว. คึกฤทธิ์ ปราโมช ซึ่งเล่าหมู่บ้านที่ถูกอำนาจนอกโลกครอบงำและหญิงในหมู่บ้านตั้งครรภ์พร้อมกันอย่างอธิบายไม่ได้ ทีมจึงนำความคิดเรื่องสิ่งแปลกปลอมแทรกซึมมาตีความใหม่', 'Another inspiration is M.R. Kukrit Pramoj’s “กาเหว่าที่บางเพลง,” in which an extraterrestrial force affects a village and its women become pregnant inexplicably. The team reinterprets the idea of an intruding presence.'),
+          ]),
           bilingual('ธีมและอารมณ์: “โรคระบาดปริศนาในหมู่บ้านพิศวง” ใช้ความจริงปนเหนือธรรมชาติ ความไม่แน่นอน ความตึงเครียด และสีโทนเย็น', 'Theme and mood: A “mysterious epidemic in a strange village,” mixing realism with the supernatural, uncertainty, tension, and a cool palette.'),
         ],
       },
       {
-        heading: bilingual('โลกยุค 80s และตัวละคร', '1980s world and characters'),
+        heading: bilingual('โลกยุค 80s และ Costume & Makeup', '1980s world and Costume & Makeup'),
         bullets: [
           nested(
             'ฉากและพร็อป: ห้องนอน โต๊ะเครื่องแป้ง โต๊ะทีวี และประกาศคนหายถูกออกแบบให้มีรายละเอียดแบบยุค 80s',
             'Sets and props: The bedroom, vanity, television corner, and missing-person notices are designed around 1980s details.',
             [
-              bilingual('แป้งและครีมยุคนั้น ลิปสติกสีเขียว หวี ตลับแป้ง วิทยุ เทปเพลง และโปสเตอร์หนังช่วยบอกเวลาและวิถีชีวิต', 'Period cosmetics, green lipstick, combs, a compact, radio, cassette tapes, and film posters place the story in its era.'),
+              bilingual('แป้งโยคี ครีมกวนอิม และแป้งเภสัชเป็นของใช้สำหรับดูแลผดผื่นในยุคนั้น ส่วนลิปสติกสีเขียว หวี ตลับแป้ง และแจกันบอกชีวิตประจำวันของตัวละคร', 'Yoki powder, Guan Im cream, and Phesat powder evoke period skin care. Green lipstick, a comb, compact, and vase place the character in daily life.'),
+              bilingual('โทรทัศน์ วิทยุ เทปเพลง และโปสเตอร์หนังสื่อวิธีดูละคร ฟังข่าว และสะสมสิ่งที่ชอบในยุค 80s ป้ายคนหายใช้ฟอนต์ ข้อมูล ภาพถ่าย และสีให้เข้าช่วงเวลา', 'A television, radio, cassette tapes, and film posters evoke period viewing and listening. The missing-person poster uses era-specific type, details, photographs, and colour.'),
             ]
           ),
           nested(
             'เครื่องแต่งกายใช้สีและทรงผมแยกบุคลิกของตัวละคร',
             'Costume colours and hairstyles distinguish character ideas.',
             [
-              bilingual('กานต์สินี: เหลือง–น้ำตาล แต่งหน้าธรรมชาติ; สีและต่างหูทรงเหลี่ยมโยงกับดินในแรงบันดาลใจ Prometheus', 'Kantsinee: Yellow and brown with natural makeup; the colours and square earrings refer to the clay motif in the Prometheus inspiration.'),
-              bilingual('หญิงลึกลับ: ชุดขาว–แดงและเมกอัพกึ่งมนุษย์ต่างดาว; ชาวบ้านใช้เสื้อเสริมไหล่ ยีนส์ สีสด และผมลอนแบบยุค 80s', 'Mysterious woman: White-red costume and alien-like makeup; villagers use shoulder pads, denim, vivid colours, and period curls.'),
-              bilingual('นักข่าวใช้สูทน้ำเงินเข้ม; ชุดทหารอ้างอิงภาพยุคสงครามเย็นและตำนาน Romulus ในขั้นออกแบบ', 'A navy suit signals the reporter; the soldier design references Cold War imagery and the Romulus story.'),
+              bilingual('กานต์สินีสวมเสื้อเหลืองเพื่อบุคลิกร่าเริง กางเกงน้ำตาลและต่างหูสี่เหลี่ยมสื่อธาตุดินตามแรงบันดาลใจ Prometheus แต่งหน้าธรรมชาติและถักเปียบนผมตรงให้ดูเรียบร้อย', 'Kantsinee wears yellow for her bright personality. Brown trousers and square earrings refer to earth and the Prometheus motif. Natural makeup and a braid over straight hair complete her look.'),
+              bilingual('หญิงลึกลับได้แรงบันดาลใจจาก Prometheus และภาพมนุษย์ต่างดาวในแนวคิด Ancient Astronaut ชุดขาวสื่อความบริสุทธิ์หรือความเป็นมนุษย์ต่างดาว สีแดงสื่อพลัง ส่วนเมกอัพระยะท้ายใช้โหนกแก้มสูง หน้าตอบ และหนอนเพื่อบอกการแปรสภาพ', 'The mysterious woman draws on Prometheus and Ancient Astronaut imagery. White suggests purity or an alien presence, red suggests power, and the final makeup uses high cheekbones, a hollow face, and worms to signal transformation.'),
+              bilingual('ทหารอ้างอิงชุดอเมริกันช่วงสงครามเย็นที่โคราช และเรื่อง Romulus กับ Remus เพื่อเชื่อมความเจริญกับความรุนแรง ส่วนนักข่าวใส่สูทน้ำเงินเข้มและเปิดหน้าผากให้ดูน่าเชื่อถือ', 'The soldier references Cold War American uniforms in Korat and the Romulus and Remus story to connect progress with violence. The reporter wears a navy suit and swept-back hair for credibility.'),
+              bilingual('ชาวบ้านคนแรกใช้เสื้อชมพูลายทางเสริมไหล่ เอี๊ยมยีนส์ เมกอัพชมพู และผมลอนมาม่า เพื่อสื่อแฟชั่นและความมั่นใจของผู้หญิงยุค 80s', 'The first villager wears a pink striped top with padded shoulders, denim overalls, pink makeup, and crimped hair to evoke 1980s fashion and confidence.'),
+              bilingual('ชาวบ้านคนที่สองใช้เสื้อดอกกุหลาบสีส้มกับยีนส์ทรงสบาย แต่งตาฟ้า ปากแดงแบบพังก์ และผมลอนใหญ่ คนที่สามใช้ชุดม่วงลายดอก ยีนส์เอวสูง ตาและแก้มสีชมพู ปากแดง และผมตรง', 'The second villager pairs an orange rose-print shirt with relaxed jeans, blue eyeshadow, punk-red lips, and large curls. The third wears purple florals, high-waisted jeans, pink eyes and cheeks, red lips, and straight hair.'),
             ]
           ),
-          bilingual('เมกอัพโรคสมมติวางเป็นสามระยะ: ผื่นเล็กน้อย → ลามแขนและคอ → ทั่วหน้าและตัว เป็นภาษาภาพของเรื่อง ไม่ใช่คำอธิบายอาการ HIV จริง', 'The fictional illness makeup progresses in three stages: small marks → arms and neck → face and body. This is a visual device for the story, not a description of real HIV symptoms.'),
+          bilingual('เมกอัพโรคสมมติวางเป็นสามระยะ เริ่มจากรอยผื่นเล็กน้อยหลังหูและแขน ขยายไปทั้งสองแขนกับคอ แล้วปรากฏทั่วหน้าและตัว นี่เป็นภาษาภาพในหนัง ไม่ใช่คำอธิบายอาการของ HIV จริง', 'The fictional illness makeup has three stages: small marks behind the ears and on the arms, wider marks on both arms and neck, and finally marks across face and body. This is film imagery, not a description of real HIV symptoms.'),
         ],
       },
       {
@@ -57,7 +63,7 @@ export const expandedDetails = {
             [
               bilingual('กลอนกาเหว่าที่อัดเสียงใหม่เปรียบการฝากไข่กับสิ่งที่เติบโตอยู่ในร่างคน', 'A newly recorded cuckoo verse compares nesting in another bird’s home with something growing inside a human host.'),
               bilingual('“ห้องหุ่น” ในเฟส 1–2 ให้ความหลอนคล้ายฝันและภาพคนที่ถูกควบคุม', '“ห้องหุ่น” in phases 1–2 evokes dreamlike horror and a controlled person.'),
-              bilingual('“คู่กรรม” ในเฟส 3 สื่อความผูกพันที่แยกไม่ออก; “ใจรัก” ช่วงเอเลี่ยนโยงคำสัญญากับภาพนก', '“คู่กรรม” in phase 3 suggests an inseparable bond; “ใจรัก” in the alien sequence connects a promise with bird imagery.'),
+              bilingual('“คู่กรรม” ในเฟส 3 สื่อความผูกพันระหว่างตัวละครกับปรสิตที่แยกไม่ออก ส่วน “ใจรัก” ในช่วงเอเลี่ยนโยงคำสัญญาเข้ากับภาพนกที่มารับตัว', '“คู่กรรม” in phase 3 suggests the inseparable bond between character and parasite. “ใจรัก” links a promise with bird imagery in the alien sequence.'),
             ]
           ),
         ],
@@ -65,16 +71,16 @@ export const expandedDetails = {
       {
         heading: bilingual('สัญลักษณ์ที่เล่าเรื่อง', 'Story symbols'),
         bullets: [
-          bilingual('แอปเปิลและหนอน: จากผลสด → รอยกัดและรอยช้ำ → เน่า สื่อสุขภาพและตัวตนของกานต์สินีที่ค่อยถูกบางสิ่งกลืนกิน', 'Apple and worms: Fresh fruit → bite marks and bruises → rot mirror Kantsinee’s gradual physical and personal takeover.'),
+          bilingual('แอปเปิลเริ่มจากผลสด ต่อมามีรอยกัดและช้ำจนหนอนชอนไชและเน่า สภาพของผลไม้สะท้อนสุขภาพกับตัวตนของกานต์สินีที่ค่อยถูกครอบงำ หนอนยังสื่อความสกปรกและการเน่าเสีย', 'The apple begins fresh, then bruises, is bitten, and decays as worms burrow through it. Its condition mirrors Kantsinee’s gradual physical and personal takeover. The worms also evoke decay.'),
           bilingual('ประกาศคนหายที่ติดทับกัน: ใบของกานต์สินีทับใบหญิงลึกลับ สื่อเหตุการณ์ซ้ำและการถูกแทนที่', 'Overlapping missing posters: Kantsinee’s notice covers the mysterious woman’s, suggesting recurrence and replacement.'),
           bilingual('กระจก: เงาสะท้อนที่ทำไม่ตรงกับตัวละครเผยตัวตนอีกคนที่เข้ามาแทรกซึม', 'Mirror: A reflection that does not match the character’s actions hints at another identity inside her.'),
           bilingual('วัว: จากเรื่องเล่าความเมตตาที่ถูกทรยศ กลายเป็นภาพของการช่วยเหลือที่ดูจริงแต่เป็นกับดัก', 'Cow: A reference to kindness betrayed becomes an image of help that appears genuine but leads into a trap.'),
         ],
       },
       {
-        heading: bilingual('โจทย์และผลการถ่ายทำ', 'Production constraints and outcome'),
+        heading: bilingual('ปัญหาและอุปสรรคในการถ่ายทำ', 'Filming challenges'),
         bullets: [
-          bilingual('สถานที่: หาบ้านที่ให้ความรู้สึกยุค 80s ยาก จึงใช้บ้านสมาชิกทีมและตกแต่งเพิ่ม; มีเสียงสัตว์และลำโพงหมู่บ้านรบกวน', 'Location: A home that felt like the 1980s was hard to find, so the team dressed a member’s house; animals and village loudspeakers created noise.'),
+          bilingual('สถานที่: หาบ้านที่ให้ความรู้สึกยุค 80s ยาก จึงใช้บ้านสมาชิกทีมและตกแต่งเพิ่ม ระหว่างถ่ายมีเสียงสัตว์กับลำโพงหมู่บ้านรบกวน', 'Location: A home with a 1980s feel was hard to find, so the team dressed a member’s house. Animals and village loudspeakers created noise during filming.'),
           bilingual('แสงและเวลา: บางฉากต้องถ่ายก่อนพระอาทิตย์ตกเพื่อใช้แสงธรรมชาติ', 'Light and time: Some scenes had to finish before sunset to use natural light.'),
           bilingual('คนและตาราง: นักแสดงมากกว่ากำลังเมกอัพ สมาชิกฝ่ายอื่นช่วยกัน และใช้ agenda กับ breakdown จัดเวลาที่แต่ละคนไม่ตรงกัน', 'Crew and schedule: Other departments supported a small makeup team, while an agenda and breakdown coordinated mismatched availability.'),
           bilingual('รายงานหลังงานระบุว่าถ่ายทำตามแผนโดยรวม มีการปรับหน้างานเล็กน้อย', 'The retrospective says filming broadly followed the plan, with small on-set adjustments.'),
@@ -84,288 +90,254 @@ export const expandedDetails = {
     ],
   },
   'my-love-scene': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 1–2; My Love Scene proposal หน้า PDF 1–14 (ภาพปกหน้าแรกตัดข้อมูลนักศึกษาออก); คลิปผลงาน', 'Portfolio overview PDF pp. 1–2; My Love Scene proposal PDF pp. 1–14 (student details removed from the first-page cover); finished scene video'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 1–2, My Love Scene proposal หน้า PDF 1–14 (ภาพปกหน้าแรกตัดข้อมูลนักศึกษาออก), คลิปผลงาน', 'Portfolio overview PDF pp. 1–2, My Love Scene proposal PDF pp. 1–14 (student details removed from the first-page cover), finished scene video'),
     sections: [
       {
-        heading: bilingual('เรื่องและแรงบันดาลใจ', 'Story and inspiration'),
+        heading: bilingual('ทำไมบทประพันธ์นี้ตรงกับเพลงที่จะทำ', 'Why the source story fits the chosen song'),
         bullets: [
-          bilingual('ดาวเจ็บจากความรักครั้งก่อน; ก้อยซึ่งเป็นเพื่อนสนิทเข้ามาปลอบ จนความใกล้ชิดเริ่มขยับเกินคำว่าเพื่อน', 'Dao is hurt after an earlier relationship; her close friend Koi comforts her as their closeness begins moving beyond friendship.'),
-          bilingual('งานตีความความสัมพันธ์ก้อย–ดาวจาก Hormones Season 2 และรับอิทธิพลจาก MV “ห้องเธอ” กับ “คงต้องบอกให้รู้” เป็นฉาก Girl Love แบบใหม่', 'The team reinterprets Koi and Dao from Hormones Season 2, drawing on the music videos “ห้องเธอ” and “คงต้องบอกให้รู้” for a new Girl Love scene.'),
-          bilingual('เพลง “กระแซะ” ใน proposal เป็นภาพเปรียบของการค่อย ๆ ขยับเข้าใกล้กัน', 'The proposal uses the song “กระแซะ” as an image of two people gradually moving closer.'),
-        ],
-      },
-      {
-        heading: bilingual('คอนเซปต์และอารมณ์', 'Concept and mood'),
-        bullets: [
-          bilingual('“รสชาติของความรัก” กับธีม Friend Zone ทำให้ฉากโรแมนติก เย้ายวน อ่อนโยน และยังคลุมเครือ', '“The taste of love” and the friend-zone theme make the scene romantic, sensual, tender, and still ambiguous.'),
-          bilingual('แสงอบอุ่น สีแดง–เหลือง และประสาทสัมผัสทั้งภาพ สัมผัส เสียง รส และกลิ่น ถ่ายทอดความรู้สึกแทนคำอธิบายตรง ๆ', 'Warm light, red-yellow tones, and sight, touch, sound, taste, and smell convey feeling without direct exposition.'),
+          bilingual('ทีมเลือกความสัมพันธ์ก้อยกับดาวจาก Hormones Season 2 เพราะบทประพันธ์พูดถึงความรักวัยรุ่นหลายรูปแบบ รวมถึงความสัมพันธ์หญิงรักหญิงที่ทั้งคู่ยังอยู่ระหว่างเพื่อนกับคนรัก', 'The team chose Koi and Dao from Hormones Season 2 because its teenage stories include a girl-love relationship poised between friendship and romance.'),
+          bilingual('ดาวผิดหวังจากความรักครั้งก่อน ส่วนก้อยคอยอยู่ข้าง ๆ และปลอบเธอ ความใกล้ชิดในฉากนวดคอและฉากบนเตียงทำให้ความรู้สึกที่ซ่อนอยู่ชัดขึ้น', 'Dao is hurt by a former relationship, while Koi stays beside her. Intimate moments in the bath and on the bed make their unspoken feelings clearer.'),
+          bilingual('เพลง “กระแซะ” สื่อการค่อย ๆ ขยับเข้าหากัน การสัมผัสจึงเริ่มอย่างลังเลเพราะกลัวเสียความเป็นเพื่อน แล้วค่อยชัดขึ้นเมื่อทั้งคู่รับรู้ว่ารู้สึกตรงกัน', 'The song “กระแซะ” evokes moving closer little by little. Their touch begins hesitantly for fear of losing the friendship, then grows more certain when the feeling is shared.'),
+          bilingual('งานยังอ้างอิง MV “ห้องเธอ” และ “คงต้องบอกให้รู้” เพื่อออกแบบ Girl Love ใหม่ โดยใช้คอนเซปต์ “รสชาติของความรัก” ธีม Friend Zone และอารมณ์โรแมนติก เย้ายวน อ่อนโยน แต่ยังคลุมเครือ', 'The work also draws on “ห้องเธอ” and “คงต้องบอกให้รู้” to develop its Girl Love scene around “the taste of love,” a friend-zone theme, and a romantic, sensual, tender yet ambiguous mood.'),
         ],
       },
       {
         heading: bilingual('สัญลักษณ์ในฉาก', 'Symbols in the scene'),
         bullets: [
-          bilingual('พวงกุญแจสีรุ้งสื่อถึงตัวตนและการยอมรับของก้อย', 'A rainbow keychain speaks to Koi’s identity and acceptance.'),
-          bilingual('เส้นแบ่งบนพื้นกับหมอนข้างแสดงระยะระหว่างเพื่อนกับคนรัก; การข้ามเส้นหรือขยับหมอนเปลี่ยนความหมายของพื้นที่', 'A floor line and bolster mark the friendship boundary; crossing the line or moving the pillow changes the space between them.'),
-          bilingual('เค้กช็อกโกแลตเป็นรสขมจากความเจ็บปวดเดิม ส่วนสตรอว์เบอร์รีเป็นรสหวานอมเปรี้ยวของรักครั้งใหม่', 'Chocolate cake represents past bitterness; strawberry suggests the sweet-tart feeling of new love.'),
-          bilingual('การถอดแหวนถูกวางเป็นภาพเปรียบของความใกล้ชิด ไม่ต้องอธิบายด้วยบทพูด', 'Removing a ring is planned as a metaphor for intimacy without explanatory dialogue.'),
+          bilingual('พวงกุญแจสีรุ้งที่ก้อยห้อยกับกางเกงสื่อความภูมิใจและการยอมรับตัวตนของเธอ แม้ยังไม่ได้บอกรักดาวตรง ๆ', 'The rainbow keychain on Koi’s trousers signals pride and acceptance of her identity, even before she tells Dao how she feels.'),
+          bilingual('เส้นแบ่งบนพื้นสื่อขอบเขตระหว่างเพื่อนกับคนรัก หมอนข้างที่วางระหว่างทั้งคู่ให้ความใกล้ชิดยังมีระยะ เมื่อดาวยกหมอนออกจึงเป็นการตัดสินใจก้าวข้ามขอบเขต', 'The line on the floor marks the boundary between friends and lovers. A bolster keeps them close but apart. Dao moving it away signals a decision to cross that boundary.'),
+          bilingual('เค้กช็อกโกแลตใช้รสขมแทนความเจ็บปวดและความทรงจำรักเก่า ส่วนเค้กสตรอเบอร์รีใช้หวานอมเปรี้ยวแทนรักใหม่ของวัยรุ่น ซอสที่ไหลลงกลางเค้กเป็นภาพเปรียบของความรู้สึกที่ล้นออกมาในฉากรัก', 'Chocolate cake stands for past pain and bitter memories. Strawberry cake suggests the sweet-tart novelty of teenage love, while its flowing sauce becomes a metaphor for feelings overflowing in the love scene.'),
+          bilingual('ก้อยสวมแหวนเป็นส่วนหนึ่งของตัวตน การถอดแหวนในฉากรักจึงเปรียบกับการปลดเสื้อผ้าและยอมให้ความสัมพันธ์ใกล้ชิดขึ้น', 'Koi’s ring is part of her outward identity. Removing it in the love scene stands in for undressing and allowing greater intimacy.'),
         ],
       },
       {
         heading: bilingual('ภาษาภาพและโจทย์การสื่อสาร', 'Visual plan and challenge'),
         bullets: [
-          bilingual('แผนภาพใช้ high angle, eye-level, ภาพกลาง ภาพใกล้มาก และเงาสะท้อน เพื่อสลับบริบทกับรายละเอียดของสายตา/สัมผัส', 'The visual plan mixes high-angle and eye-level views, medium and extreme close-ups, and reflections to shift between context, gaze, and touch.'),
-          bilingual('ความยากคือทำให้ผู้ชมอ่านความสัมพันธ์ที่กำลังก้ำกึ่งได้ โดยไม่บอกตรง ๆ ว่าทั้งคู่เป็นเพื่อนหรือคนรัก', 'The challenge is to make an in-between relationship legible without stating whether the two remain friends or have become lovers.'),
-          bilingual('proposal วางให้สัญลักษณ์ แสง สี และองค์ประกอบภาพไปในทิศทางเดียวกัน; คลิปฉบับเสร็จมีให้ดูแยกจากแผนนี้', 'The proposal aligns symbols, light, colour, and composition; the finished clip is available separately from that plan.'),
+          bilingual('สไลด์วาง high-angle และ eye-level ร่วมกับ medium-long shot, medium shot, medium close-up, close-up และ extreme close-up เพื่อพาผู้ชมจากพื้นที่ร่วมไปสู่สายตาและสัมผัสเล็ก ๆ', 'The slides combine high-angle and eye-level views with medium-long, medium, medium close-up, close-up, and extreme close-up shots to move from shared space into small glances and touches.'),
+          bilingual('ภาพสะท้อนในกระจกสร้างพื้นที่กำกวมให้ผู้ชมมองความสัมพันธ์ได้มากกว่าหนึ่งแบบ ส่วนการมอง สัมผัสแผล นวดคอ จับมือ เสียงพูดเรื่องเค้ก รสเค้ก และกลิ่นสตรอเบอร์รีทำให้ความรักผ่านประสาทสัมผัสทั้งห้า', 'Mirror reflections create an ambiguous space. Gaze, tending a wound, a neck massage, hand holding, dialogue about cake, its taste, and strawberry scent carry the relationship through all five senses.'),
+          bilingual('แสง warm light และสีแดงกับเหลืองสื่อความอบอุ่น ความรัก และความเย้ายวน โจทย์คือทำให้ผู้ชมอ่านความสัมพันธ์ที่กำลังก้ำกึ่งได้โดยไม่ต้องพูดตรง ๆ ว่าทั้งคู่เป็นเพื่อนหรือคนรัก', 'Warm light with red and yellow conveys comfort, romance, and desire. The visual challenge is to make their uncertain relationship legible without having either character label it.'),
         ],
       },
     ],
   },
   'siam-arcade': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 2; Arcade.pdf หน้า PDF 1 (ภาพปก); รายงานสรุปผล SIAM Arcade หน้า PDF 15–24', 'Portfolio overview PDF p. 2; Arcade.pdf p. 1 (cover); SIAM Arcade production report PDF pp. 15–24'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 2, Arcade.pdf หน้า PDF 1 (ภาพปก), รายงานสรุปผล SIAM Arcade หน้า PDF 15–24', 'Portfolio overview PDF p. 2, Arcade.pdf p. 1 (cover), SIAM Arcade production report PDF pp. 15–24'),
     sections: [
       {
         heading: bilingual('แนวคิดและรูปแบบ', 'Concept and format'),
         bullets: [
-          bilingual('วาไรตี้เกมโชว์นำวัฒนธรรมไทยมาผสมความเร็วและภาพแบบอาเคดในบรรยากาศงานวัด', 'A variety game show mixes Thai culture with arcade pacing and a fairground atmosphere.'),
-          bilingual('รายงานวางความยาวราว 25 นาที ผู้เข้าแข่งขันสองทีมสีแดง–น้ำเงิน ทีมละสองคน และสามช่วงเกม', 'The report plans roughly 25 minutes with two red/blue teams of two contestants and three game rounds.'),
+          bilingual('SIAM Arcade เป็นวาไรตี้เกมโชว์ที่นำวัฒนธรรมไทยมาผสมความสนุกแบบอาเคด ให้ผู้เข้าแข่งขันและผู้ชมได้เล่นกับสุภาษิตไทย ขนมไทย และเกมงานวัดในบรรยากาศร่วมสมัย', 'SIAM Arcade is a variety game show that blends Thai culture with arcade-style fun. Contestants and viewers encounter Thai proverbs, desserts, and fairground games in a contemporary setting.'),
+          bilingual('แผนรายการยาวประมาณ 25 นาที มีผู้เข้าแข่งขันสองทีมสีแดงกับสีน้ำเงิน ทีมละสองคน เริ่มจากช่วงทำความคุ้นเคย แล้วเล่นเกมทายภาพและคำจากตัวอักษร ก่อนปาลูกโป่งในเกมโบนัส', 'The planned 25-minute show features two teams of two, red and blue. It begins with a warm-up, moves to visual and letter puzzles, and ends with a balloon-dart bonus.'),
         ],
       },
       {
-        heading: bilingual('สามช่วงการแข่งขัน', 'Three rounds of play'),
+        heading: bilingual('Mood & Tone', 'Mood & Tone'),
         bullets: [
-          bilingual('ช่วงวอร์มอัพให้ทีมสีแดงและสีน้ำเงินคุ้นกับเกมและพิธีกร', 'A warm-up helps the red and blue teams settle into the show.'),
-          bilingual('เกมหลักใช้ภาพปริศนาและคำตอบจากชุดตัวอักษรเพื่อสะสมคะแนน', 'The main round uses image puzzles and letter clues to build scores.'),
-          bilingual('เกมโบนัสปาลูกโป่งแบบงานวัดเพิ่มทั้งแต้มพิเศษและบทลงโทษที่ทำให้ผลพลิกได้', 'A fairground balloon-dart bonus adds extra points and playful penalties that can change the result.'),
+          bilingual('ภาพรวมตั้งใจให้สนุก สดใส และคึกคักเหมือนเดินอยู่ในงานวัดไทย แต่จังหวะเกม กราฟิก และเอฟเฟกต์เสียงเป็นแบบอาเคดร่วมสมัย', 'The mood is lively, colourful, and festive like a Thai fairground, while the pacing, graphics, and sound effects feel contemporary and arcade-like.'),
+          bilingual('โทนแดง เหลือง และทองเชื่อมความเป็นไทยกับพลังของเกม ฉาก LED ใช้ลวดลายไทยย้อนยุคที่ออกแบบใหม่ ส่วนเสื้อผ้าพิธีกรกับแขกรับเชิญผสมผ้าขาวม้าและลายไทย', 'Red, yellow, and gold connect Thai visual identity with the energy of the games. The LED set reworks retro Thai patterns, while hosts and guests wear pha khao ma and Thai-patterned clothing.'),
+          bilingual('ภาพขนมไทย สุภาษิตไทย ปาลูกโป่ง และพร็อปงานวัดทำให้วัฒนธรรมเป็นส่วนหนึ่งของการเล่นจริง ไม่ได้อยู่เพียงในฉากหลัง', 'Thai desserts, proverb puzzles, balloon darts, and fairground props make culture part of the play itself rather than only the backdrop.'),
         ],
       },
       {
         heading: bilingual('ภาพและเสียงของรายการ', 'Look and sound'),
         bullets: [
           bilingual('ฉาก LED ลายไทยย้อนยุคที่ปรับให้ร่วมสมัย สีแดง–เหลือง–ทอง และกราฟิก CG สร้างโลกอาเคด', 'Contemporary-retro Thai patterns on LED, red-yellow-gold colour, and CG form the arcade world.'),
-          bilingual('พิธีกรและแขกรับเชิญใช้ผ้าขาวม้าหรือเสื้อผ้าลายไทย; เอฟเฟกต์เสียงทันสมัยช่วยจังหวะเกม', 'Pha khao ma and Thai-pattern clothing connect the host and guests to the theme; modern sound effects pace the games.'),
+          bilingual('พิธีกรและแขกรับเชิญใช้ผ้าขาวม้าหรือเสื้อผ้าลายไทย เอฟเฟกต์เสียงทันสมัยช่วยจับจังหวะเกม', 'Pha khao ma and Thai-pattern clothing connect the host and guests to the theme. Modern sound effects pace the games.'),
           bilingual('ฉากและพร็อปมีรายละเอียดมาก จึงต้องประสานภาพบนจอ เสียง และคิวการเล่น', 'The prop-heavy set requires coordination among screen graphics, sound, and game cues.'),
         ],
       },
       {
-        heading: bilingual('สิ่งที่เกิดขึ้นระหว่างผลิต', 'Production lessons'),
+        heading: bilingual('ความท้าทายของงานนี้', 'Production challenges'),
         bullets: [
-          bilingual('เวลาซ้อมและถ่ายทำจำกัด; งานถ่ายเกินแผนทำให้ต้องตัดช่วงที่ไม่จำเป็นในขั้นหลังผลิต', 'Rehearsal and filming time were tight; the overrun led the team to trim nonessential material in post-production.'),
-          bilingual('กราฟิก LED/CG บางช่วงขึ้นไม่ตรง cue รายงานเสนอให้ทีมสื่อสารลำดับเกมและจังหวะเปลี่ยนช่วงให้ชัดขึ้น', 'Some LED/CG cues landed early or late; the report recommends clearer communication around game flow and transitions.'),
-          bilingual('มีคลิปรายการฉบับเต็มและรายงานสรุปขั้นตอนผลิตเป็นหลักฐานของงานที่เสร็จแล้ว', 'A full show recording and production report document the finished work.'),
+          bilingual('เวลาซ้อมและถ่ายทำมีจำกัด เมื่อการถ่ายทำเกินเวลาที่วางไว้ ทีมจึงต้องตัดบางช่วงที่ไม่จำเป็นในขั้นหลังผลิต', 'Rehearsal and filming time were limited. When the shoot ran over schedule, the team trimmed less essential material in post-production.'),
+          bilingual('ฉากมีพร็อปจำนวนมาก จึงต้องประสานพิธีกร ผู้เข้าแข่งขัน เสียง ภาพบนจอ และลำดับเกมให้ตรงกัน บางช่วง LED และ CG ขึ้นเร็วหรือช้ากว่าคิว', 'The prop-heavy set required coordination among host, contestants, sound, screen graphics, and game order. Some LED and CG cues appeared too early or too late.'),
+          bilingual('รายงานเสนอให้สื่อสารคิวและช่วงเปลี่ยนเกมให้ชัดขึ้น เพื่อให้ทุกฝ่ายทำงานทันจังหวะเดียวกัน', 'The report recommends clearer cue and transition communication so each team works to the same rhythm.'),
         ],
       },
     ],
   },
   'first-thing-first': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 3; First Thing First proposal หน้า PDF 2–17; สคริปต์ หน้า PDF 1–2; รายงานการผลิตหน้า PDF 8–14', 'Portfolio overview PDF p. 3; First Thing First proposal PDF pp. 2–17; script PDF pp. 1–2; production report PDF pp. 8–14'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 3, First Thing First proposal หน้า PDF 2–17, สคริปต์ หน้า PDF 1–2, รายงานการผลิตหน้า PDF 8–14', 'Portfolio overview PDF p. 3, First Thing First proposal PDF pp. 2–17, script PDF pp. 1–2, production report PDF pp. 8–14'),
     sections: [
       {
-        heading: bilingual('แนวคิดรายการ', 'Show concept'),
+        heading: bilingual('ความท้าทายของงานนี้', 'Production challenges'),
         bullets: [
-          bilingual('“ครั้งแรก” เป็นแกนบทสนทนา: ก้าวแรกในอาชีพ ผลงานแรก ความรู้สึก ความผิดพลาด และบทเรียน', '“Firsts” anchor the conversation: a first career step, first work, feelings, mistakes, and lessons.'),
-          bilingual('เป้าหมายคือให้ผู้ชมรู้จักคนเบื้องหลังผลงานและได้แรงบันดาลใจจากการเริ่มต้น ไม่ใช่แค่ฟังประวัติ', 'The aim is to reveal the person behind the work and inspire viewers through beginnings, not just recount a biography.'),
-          bilingual('ข้อเสนอระบุแขกรับเชิญ “มัส” หรือ Marshwasow ซึ่งนำเรื่องผลงานแรกและเส้นทางในวงการมาคุยในบรรยากาศเป็นกันเอง', 'The proposal features “Mas”/Marshwasow discussing first works and an artistic path in an informal setting.'),
-        ],
-      },
-      {
-        heading: bilingual('ลำดับรายการ', 'Show flow'),
-        bullets: [
-          bilingual('แผนความยาว 25 นาที: เนื้อหา 22 นาทีและช่วงพักโฆษณารวม 3 นาที', 'The 25-minute plan allocates 22 minutes to content and 3 minutes to breaks.'),
-          bilingual('เริ่ม interlude และ VTR แนะนำแขก → พูดคุยเรื่อง “ครั้งแรก” เป็นช่วง → เปิดให้แขกแนะนำผลงาน → พิธีกรปิดรายการ', 'Interlude and guest VTR → segmented first-experience conversation → guest work promotion → host close.'),
-          bilingual('น้ำเสียงการสัมภาษณ์ตั้งใจให้อบอุ่นและจริงใจเหมือนฟังเพื่อนเล่า เพื่อเปิดมุมส่วนตัวโดยไม่กดดันแขก', 'The interview is designed to feel warm and sincere, like listening to a friend, so the guest can share without pressure.'),
-        ],
-      },
-      {
-        heading: bilingual('ภาพ ฉาก และกราฟิก', 'Set and graphic identity'),
-        bullets: [
-          bilingual('น้ำตาลให้ความอบอุ่น เหลืองเพิ่มพลัง และดำเสริมความน่าเชื่อถือ', 'Brown brings warmth, yellow adds energy, and black lends credibility.'),
-          bilingual('ฉากจัดให้เหมือนห้องนั่งเล่น: เก้าอี้สีน้ำตาล โต๊ะโทนดิน แก้วกาแฟ ดอกไม้/ต้นไม้ ชั้นวาง และกรอบภาพสีอ่อน', 'The homelike set uses brown chairs, an earth-tone table, coffee cups, flowers/plants, a shelf, and soft framed images.'),
-          bilingual('proposal มีโลโก้ lower third และผังฉากสำหรับตัวตนรายการ ไม่ใช่เพียงบทสัมภาษณ์อย่างเดียว', 'The proposal includes a logo, lower thirds, and a stage layout as part of the show identity.'),
-        ],
-      },
-      {
-        heading: bilingual('โจทย์การผลิต', 'Production constraints'),
-        bullets: [
-          bilingual('ทีมมีจำนวนคนพอดีกับตำแหน่ง ถ้าขาดหนึ่งคนงานจะสะดุด; เวลาซ้อมและเตรียมรายการมีจำกัด', 'Crew size closely matched the roles, so one absence could interrupt work; rehearsal and setup time were limited.'),
+          bilingual('จำนวนคนในทีมพอดีกับตำแหน่งงาน หากขาดคนใดคนหนึ่ง งานส่วนนั้นอาจสะดุด เพราะแทบไม่มีคนสำรอง', 'The crew size matched the required roles closely. If someone was absent, that part of production could stall because there was little backup.'),
+          bilingual('เวลาซ้อมและจัดเตรียมรายการจำกัด จึงต้องแบ่งเวลาให้การเตรียมฉาก อุปกรณ์ และคิวพูดคุยอย่างรอบคอบ', 'Rehearsal and setup time were limited, requiring careful scheduling of the set, equipment, and interview cues.'),
           bilingual('ต้องประคองกล้องตัวที่ 3 ให้ภาพนิ่งและทำงานกับฉากในจังหวะรายการจริง', 'Camera 3 needed steady framing while working within the live show rhythm.'),
-          bilingual('เอกสารแยกแผนรายการออกจากคลิปการผลิตที่มีให้ชม; ไม่อ้างว่ามีรายการฉบับเต็มในโฟลเดอร์', 'The show plan is separate from the available production clip; the folder does not establish that a full episode export is available.'),
         ],
       },
     ],
   },
   'tv-seminar': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 3–4; Proposal สัมมนา หน้า PDF 2–23, 32; คลิปบรรยากาศงาน', 'Portfolio overview PDF pp. 3–4; seminar proposal PDF pp. 2–23 and 32; event footage'),
-    sections: [
-      {
-        heading: bilingual('คำถามหลัก', 'The central question'),
-        bullets: [
-          bilingual('“โทรทัศน์กำลังตกยุค หรือเพียงเปลี่ยนรูปแบบ?” เป็นคำถามตั้งต้นของงาน', '“Is television becoming outdated, or merely changing form?” is the seminar’s opening question.'),
-          bilingual('เปรียบการรอดูตามผังรายการกับการเลือกดูเองบน YouTube, TikTok และสตรีมมิง', 'It contrasts scheduled broadcasts with choosing content on YouTube, TikTok, and streaming services.'),
-          bilingual('ชวนคิดว่าพฤติกรรมของแต่ละเจนเปลี่ยนอย่างไร สถานีโทรทัศน์ปรับตัวได้อย่างไร และโทรทัศน์อาจเป็นแบรนด์คอนเทนต์ในอนาคตหรือไม่', 'It asks how generations watch differently, how broadcasters can adapt, and whether television may become a content brand.'),
-        ],
-      },
-      {
-        heading: bilingual('รูปแบบการสนทนา', 'Discussion format'),
-        bullets: [
-          bilingual('แผนเวทีมีโพลเปิดวง บรรยายสั้น เสวนา การโต้ตอบกับผู้ฟัง และ Q&A', 'The planned program has an opening poll, short talk, panel, audience interaction, and Q&A.'),
-          bilingual('หัวข้อย่อยครอบคลุมสถานะโทรทัศน์ เหตุที่คนรุ่นใหม่เลือกสตรีมมิง ความต่าง TV–streaming และการปรับตัวของผู้ผลิต', 'Topics cover television’s position, why younger audiences choose streaming, TV–streaming differences, and how producers adapt.'),
-          bilingual('วางน้ำเสียงกระชับ สนุก และเข้าถึงง่าย ไม่เป็นเวทีวิชาการที่หนักเกินไป', 'The tone is intended to be concise, lively, and accessible rather than overly academic.'),
-        ],
-      },
-      {
-        heading: bilingual('ผู้ฟังและการออกแบบพื้นที่', 'Audience and event design'),
-        bullets: [
-          bilingual('กลุ่มหลักตาม proposal คือนักศึกษาสื่อ/คนเริ่มทำงานสื่ออายุราว 18–25 ปี; กลุ่มรองคือผู้ผลิตและครีเอเตอร์วัยทำงาน', 'The proposal’s primary audience is media students and early-career people around ages 18–25; producers and working creators form a secondary audience.'),
-          bilingual('แนวคิดจัดฉากหยิบวัสดุเก่ากลับมาใช้เพื่อเชื่อมคำถามเรื่องสื่อเก่าที่เปลี่ยนคุณค่า และลดการใช้วัสดุใหม่', 'The set concept reuses old materials to echo the question of how older media can gain new value while reducing new material use.'),
-          bilingual('คลิปที่มีเป็นบรรยากาศงาน ไม่ใช่บันทึกการเสวนาทั้งหมด', 'The available video captures event atmosphere, not the entire seminar discussion.'),
-        ],
-      },
-      {
-        heading: bilingual('การประเมินที่วางไว้', 'Planned evaluation'),
-        bullets: [
-          bilingual('ข้อเสนอวางการดูความพึงพอใจ จำนวน/คุณภาพคำถาม และการเปลี่ยนมุมมองของผู้เข้าร่วมหลังเสวนา', 'The proposal plans to consider satisfaction, audience questions, and whether views changed after the discussion.'),
-          bilingual('โฟลเดอร์ไม่มีผลประเมินตัวเลขหลังงาน จึงแสดงสิ่งเหล่านี้เป็นแผน ไม่ใช่ผลลัพธ์ที่ยืนยันแล้ว', 'No post-event numeric results were supplied, so these are presented as a plan rather than achieved outcomes.'),
-        ],
-      },
-    ],
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 3–4, Proposal สัมมนา หน้า PDF 2–23, 32, คลิปบรรยากาศงาน', 'Portfolio overview PDF pp. 3–4, seminar proposal PDF pp. 2–23 and 32, event footage'),
+    sections: [],
   },
   'resource-wrong-place': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 4; สารคดีฉบับเต็ม', 'Portfolio overview PDF p. 4; full documentary'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 4, สารคดีฉบับเต็ม', 'Portfolio overview PDF p. 4, full documentary'),
     sections: [
-      {
-        heading: bilingual('แก่นของสารคดี', 'Documentary focus'),
-        bullets: [
-          bilingual('สิ่งที่คนหนึ่งไม่ต้องการอาจยังเป็นทรัพยากรหรือสร้างมูลค่าให้คนเก็บขยะและธุรกิจจัดการขยะ', 'What one person discards may still be a resource or create value for collectors and waste-management businesses.'),
-          bilingual('เป้าหมายของเรื่องคือชวนใช้ทรัพยากรให้คุ้มค่า แยกขยะ และมองผลต่อสิ่งแวดล้อมมากขึ้น ไม่ได้รายงานผลเปลี่ยนพฤติกรรมของผู้ชม', 'The film encourages thoughtful resource use, waste sorting, and environmental awareness; it does not report a measured change in viewer behaviour.'),
-        ],
-      },
       {
         heading: bilingual('เสียงจากพื้นที่จริง', 'Voices from the field'),
         bullets: [
           bilingual('ดร.สนธิ คชวัฒน์ให้มุมผู้เชี่ยวชาญด้านสิ่งแวดล้อม', 'Dr. Sonti Kotchawat contributes an environmental-expert perspective.'),
           bilingual('คุณทวีป ทวีสินอุดมจาก ต.คิดดี โปรดักส์ ให้มุมผู้ทำงานในบริษัทที่เกี่ยวข้องกับขยะ', 'Thaweep Thawisin of T.Kit Dee Products contributes a waste-business perspective.'),
-          bilingual('“น้าอุ้ม” คนขับรถขยะ เล่ามุมของผู้ทำงานหน้างาน; ภาพยนตร์ใช้การสัมภาษณ์ภาคสนามเป็นแกน', '“Na Oom,” a garbage-truck driver, brings the field-worker view; on-location interviews anchor the film.'),
+          bilingual('น้าอุ้ม คนขับรถขยะเล่ามุมมองผู้ทำงานหน้างาน', 'Na Oom, a garbage-truck driver, shares a frontline worker’s perspective.'),
+        ],
+      },
+      {
+        heading: bilingual('ความท้าทายของงานนี้', 'Production challenges'),
+        bullets: [
+          bilingual('เวลาทำงานของน้าอุ้มกับตารางทีมไม่ตรงกัน ติดต่อประสานงานได้ยาก แม้ทีมมีเบอร์โทรศัพท์ จึงไปพบที่บริษัทเพื่อสอบถามช่วงเวลาที่สะดวกก่อนนัดถ่ายทำ', 'Na Oom’s work hours did not align with the team’s schedule. Even with a phone number, coordination was difficult, so the team visited the company to arrange a suitable filming time.'),
+          bilingual('สถานที่ถ่ายทำในบริเวณโรงงานขยะมีกลิ่นแรงและอากาศร้อน เพราะหลายพื้นที่เป็นกลางแจ้ง ทีมต้องทำงานภาคสนามให้ทันภายใต้สภาพแวดล้อมนี้', 'The waste-facility location was hot and had a strong smell, with much of the work outdoors. The crew had to complete the field shoot under those conditions.'),
+          bilingual('ช่วงใกล้ส่งงาน งานค้นข้อมูลบางส่วนยังไม่เสร็จ และมีสมาชิกบางคนมาร่วมถ่ายทำช้า งานหลายหน้าที่จึงกระจุกอยู่กับสมาชิกประมาณสี่คน', 'Near the deadline, some assigned research remained unfinished and some members arrived late to filming. Multiple production duties therefore fell to roughly four crew members.'),
+          bilingual('เวลาตัดต่อจำกัด ทำให้ผลลัพธ์บางส่วนไม่เป็นไปตามที่ทีมคาดหวัง จึงต้องคัดประเด็นและจัดลำดับเนื้อหาให้ชัดที่สุด', 'Editing time was limited, so some parts did not turn out as the team had hoped. They had to prioritise and sequence the material carefully.'),
         ],
       },
     ],
   },
   'street-food': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 4–5; สารคดีฉบับเต็ม', 'Portfolio overview PDF pp. 4–5; full documentary'),
-    sections: [
-      {
-        heading: bilingual('เมืองที่เล่าผ่านอาหาร', 'A city told through food'),
-        bullets: [
-          bilingual('อาหารข้างทางเป็นภาพจำของกรุงเทพฯ และส่วนหนึ่งของ soft power ไทยในมุมของสารคดี', 'The film presents street food as an image of Bangkok and part of Thai soft power.'),
-          bilingual('ร้านเล็กและราคาเข้าถึงง่ายยังมีลูกค้าประจำ ความอบอุ่น และโอกาสสร้างรายได้ให้ผู้ขาย', 'Affordable small stalls also hold regular customers, warmth, and livelihood opportunities for vendors.'),
-        ],
-      },
-      {
-        heading: bilingual('เรื่องเล่าของผู้ขาย', 'The vendor’s perspective'),
-        bullets: [
-          bilingual('ทีมสัมภาษณ์คุณแนท เจ้าของร้านอาหารอีสานข้างทาง เพื่อให้ผู้ขายเล่าจากประสบการณ์ของตัวเอง', 'The team interviews Khun Nat, an Isan roadside-food vendor, to ground the story in a seller’s perspective.'),
-          bilingual('ภาพเมืองและร้านอาหารเชื่อมกับบทสัมภาษณ์ เสียงพากย์ และคำบรรยาย; โฟลเดอร์มีสารคดีฉบับเสร็จแล้ว', 'City and stall footage join interviews, narration, and subtitles; a finished documentary is available in the folder.'),
-          bilingual('เอกสารที่มีไม่ระบุตัวเลขรายได้หรือผลต่ออุตสาหกรรม จึงเล่าเป็นมุมชีวิตและโอกาส ไม่อ้างขนาดผลกระทบ', 'The supplied material gives no income or industry-impact figures, so the portfolio presents lived experience and opportunity without sizing an impact.'),
-        ],
-      },
-    ],
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 4–5, สารคดีฉบับเต็ม', 'Portfolio overview PDF pp. 4–5, full documentary'),
+    sections: [],
   },
   'piew-piew-turtle': {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 5; พิวพิวเต่าคุณหนู หน้า PDF 1–10 (ภาพปกหน้าแรกตัดข้อมูลนักศึกษาออก)', 'Portfolio overview PDF p. 5; Piew Piew strategy PDF pp. 1–10 (student details removed from the first-page cover)'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 5, พิวพิวเต่าคุณหนู หน้า PDF 1–10 (ภาพปกหน้าแรกตัดข้อมูลนักศึกษาออก)', 'Portfolio overview PDF p. 5, Piew Piew strategy PDF pp. 1–10 (student details removed from the first-page cover)'),
     sections: [
       {
-        heading: bilingual('ช่องที่มีตัวตนชัด', 'A distinct channel identity'),
+        heading: bilingual('สารหลักและบุคลิกของช่อง', 'Channel message and personality'),
         bullets: [
-          bilingual('แนวคิดช่อง TikTok ด้าน Exotic Pet Lifestyle มี “พิวพิว” เต่าซูคาต้าเป็นตัวเอก ชื่อและบุคลิก “คุณหนู” ทำให้ช่องจำง่าย', 'An exotic-pet lifestyle TikTok concept centres on Piew Piew, a sulcata tortoise; the “princess” personality gives the channel a memorable identity.'),
-          bilingual('คอนเทนต์ผสมหนึ่งวันกับเต่า วิธีดูแลเบื้องต้น การเล่าเรื่อง และ ASMR เสียงกิน/เดิน/ขยับตัว', 'Formats combine a day with the tortoise, beginner care, storytelling, and close-up eating/walking/movement ASMR.'),
-          bilingual('จุดวางตำแหน่งคือมุมเจ้าของสัตว์เลี้ยงที่เป็นกันเอง ให้ทั้งความผ่อนคลายและข้อมูลที่เข้าใจง่าย', 'Positioning blends an approachable owner perspective with relaxing sound and simple information.'),
+          bilingual('พิวพิวเป็นเต่าซูคาต้าที่เลี้ยงอยู่จริง ชื่อ “เต่าคุณหนู” มาจากนิสัยที่ชอบให้ป้อนอาหาร พาไปเดิน และดูแลใกล้ชิด ทำให้ชื่อช่องมีบุคลิกน่ารักและจำง่าย', 'Piew Piew is the owner’s sulcata tortoise. The “princess tortoise” name reflects her preference for being fed, taken on walks, and cared for closely, giving the channel a memorable character.'),
+          bilingual('สไลด์เลือก TikTok เพราะคลิปสั้นและคลิปสัตว์เลี้ยงเหมาะกับการค้นพบคอนเทนต์เฉพาะกลุ่มและการรับชมเพื่อผ่อนคลาย นี่เป็นเหตุผลเชิงกลยุทธ์ ไม่ใช่ผลยอดเข้าชมที่วัดแล้ว', 'The deck chooses TikTok because short pet clips may reach niche audiences and offer relaxing viewing. This is a strategic rationale, not a measured reach result.'),
+          bilingual('Key Message คือ “โลกช้า ๆ ของเต่าที่ทำให้คุณหยุดพัก ผ่านคอนเทนต์อบอุ่นที่สร้างความผูกพัน” สโลแกนคือ “คลิปผ่อนคลายทำให้ใจคุณช้าลง” และ 3 คำประจำแบรนด์คือ “น่ารัก คุณหนู มีเอกลักษณ์”', 'The key message presents a slow tortoise world that invites a pause and builds connection through warm content. The slogan says relaxing clips slow the viewer’s mind, and the three brand words are “cute, princess-like, distinctive.”'),
+          bilingual('รูปแบบที่วางไว้มี 1 Day with Sulcata, How-to สำหรับผู้เลี้ยงมือใหม่, เรื่องเล่าพฤติกรรมพิวพิว และ ASMR เสียงกิน เดิน ขูดพื้น หรือเล่นน้ำ', 'Planned formats include 1 Day with Sulcata, beginner how-to clips, stories about Piew Piew’s behaviour, and ASMR of eating, walking, scratching, or playing in water.'),
         ],
       },
       {
-        heading: bilingual('หกเสาหลักคอนเทนต์', 'Six content pillars'),
+        heading: bilingual('ตำแหน่งแบรนด์และมุมตลาด', 'Positioning and market view'),
         bullets: [
-          bilingual('พื้นที่เลี้ยงและการดูแลในบ้าน', 'Home space and care'),
-          bilingual('พืชที่ปลอดภัยสำหรับเต่า', 'Plants that are safe for tortoises'),
-          bilingual('แนะนำผลิตภัณฑ์เกี่ยวกับการเลี้ยง', 'Pet-care product recommendations'),
-          bilingual('กิจกรรมและการพาเต่าออกไปข้างนอก', 'Outings and activities'),
-          bilingual('ข้อควรระวังในการดูแล', 'Care cautions'),
-          bilingual('เรื่องเล่าและประวัติของพิวพิว', 'Piew Piew’s story and history'),
+          bilingual('Brand Positioning Statement มุ่งคนรักสัตว์ Exotic ที่อยากดูความน่ารัก พฤติกรรม และฟังเสียงเต่าซูคาต้าชัด ๆ โดยผสม Storytelling, ASMR และ How-to เพื่อให้ทั้งความสนุกและการผ่อนคลาย', 'The positioning statement targets Exotic pet lovers who want to see the tortoise’s behaviour and hear her clearly. It combines storytelling, ASMR, and how-to content for both enjoyment and relaxation.'),
+          nested('SWOT ในสไลด์เป็นการประเมินโอกาสและข้อจำกัดของช่อง', 'The deck’s SWOT assesses the channel’s opportunities and limits.', [
+            bilingual('จุดแข็งคือ ASMR ของสัตว์ Exotic ยังเป็นช่องเฉพาะ เจ้าของรู้จักพิวพิวจริงและถ่ายคอนเทนต์ที่บ้านได้สม่ำเสมอ', 'Strengths are a relatively open Exotic pet ASMR niche, genuine owner insight, and the ability to film regularly at home.'),
+            bilingual('จุดอ่อนคือจังหวะของเต่าอาจช้า คลิปอาจซ้ำ และคุณภาพเสียงต้องดีพอให้ ASMR เป็นจุดขาย', 'Weaknesses are a slow pace, possible repetition, and the need for clear audio to make ASMR distinctive.'),
+            bilingual('โอกาสคือแนะนำอุปกรณ์หรือทดลอง affiliate ส่วนความเสี่ยงคือกระแสสัตว์เลี้ยงเปลี่ยนเร็วและจำนวนคู่แข่งอาจเพิ่ม', 'Opportunities include equipment recommendations or affiliate links. Risks include changing pet trends and more competitors.'),
+          ]),
+          bilingual('Red Ocean ในแผนคือคอนเทนต์เต่าตลกหรือไวรัล ความรู้ทั่วไป ร้านขายอุปกรณ์ และคลิปสัตว์เลี้ยงเพื่อผ่อนคลายแบบกว้าง ๆ ขณะที่ Blue Ocean เสนอเสียง ASMR ใกล้ตัว ความผูกพัน การเลี้ยงจริง และบรรยากาศช้า ๆ อบอุ่น', 'The plan’s Red Ocean includes viral tortoise clips, general advice, pet-equipment sellers, and broad relaxing animal content. Its proposed Blue Ocean is close-up ASMR, owner connection, real care experience, and a slow, cozy mood.'),
+          bilingual('Positioning Map แยกแกนความบันเทิงหรือความรู้กับความผ่อนคลายแบบ ASMR และแยกคอนเทนต์ไวรัลออกจากเนื้อหาที่สร้างความผูกพัน', 'The positioning map contrasts entertainment or instruction with relaxing ASMR, and quick viral content with material that builds a closer bond.'),
         ],
       },
       {
-        heading: bilingual('วิธีคิดเรื่องเล่า', 'Story formats'),
+        heading: bilingual('เนื้อหาหกด้านที่วางไว้', 'Six planned content pillars'),
         bullets: [
-          bilingual('ตัวอย่างใช้ Hero’s Journey เล่าจากปัญหาในการดูแล ไปสู่การหาคำแนะนำและปรับวิธีเลี้ยง', 'A Hero’s Journey example moves from a care concern through seeking advice to changing the routine.'),
-          bilingual('มีกรอบ Hook–Story–Offer และ Before–After–Bridge เพื่อจับความสนใจ เล่าเหตุการณ์ และชวนติดตาม', 'Hook–Story–Offer and Before–After–Bridge frame the opening, event, and follow-up.'),
-          bilingual('เสียง ASMR ต้องได้ยินรายละเอียดชัด ไม่เช่นนั้นจุดต่างของช่องจะอ่อนลงตามการวิเคราะห์ในแผน', 'The strategy notes that ASMR sound must be clear for the channel’s distinctiveness to work.'),
+          bilingual('การเลี้ยงเต่าในคอนโดที่มีพื้นที่จำกัด และการเตรียมพื้นที่เมื่อเต่าโตขึ้น', 'Keeping a tortoise in a small condominium and planning space as it grows.'),
+          bilingual('ต้นไม้หรือดอกไม้ที่ปลูกง่ายและเป็นอาหารเต่าได้ โดยข้อมูลการให้อาหารต้องตรวจจากผู้เชี่ยวชาญก่อนนำไปใช้จริง', 'Easy-to-grow plants or flowers proposed as tortoise food, with feeding advice to be checked by a specialist before practical use.'),
+          bilingual('การแนะนำสินค้าและอุปกรณ์สำหรับเต่าบก', 'Product and equipment recommendations for land tortoises.'),
+          bilingual('กิจกรรมและการพาเต่าไปเที่ยวสถานที่ต่าง ๆ', 'Activities and visits to different places with the tortoise.'),
+          bilingual('ข้อควรระวังและสิ่งที่คนเริ่มเลี้ยงเต่าบกต้องเตรียมรับมือ', 'Care cautions and what first-time land tortoise owners should prepare for.'),
+          bilingual('ประวัติและวิวัฒนาการของเต่าบก เช่น ชื่อวิทยาศาสตร์ กลุ่มของซูคาต้า ซากฟอสซิล และความต่างระหว่างเต่าบกกับเต่าน้ำ', 'Land tortoise history and evolution, including scientific names, sulcata classification, fossils, and differences between land and aquatic turtles.'),
         ],
       },
       {
-        heading: bilingual('กลยุทธ์และปฏิทิน', 'Strategy and calendar'),
+        heading: bilingual('ตัวอย่างโครงเรื่องจากสไลด์', 'Story frameworks from the deck'),
         bullets: [
-          bilingual('SWOT และ Red–Blue Ocean มองความเฉพาะกลุ่มเป็นจุดเด่น แต่ระวังคลิปจังหวะช้า ซ้ำกัน และคู่แข่งเพิ่ม', 'SWOT and Red–Blue Ocean framing treat the niche as a strength while noting slow/repetitive pacing and more competition as risks.'),
-          bilingual('แผนสำรวจโอกาสแนะนำอุปกรณ์/affiliate แต่ไม่ได้แสดงรายได้จริงของช่อง', 'The plan considers product recommendations or affiliate opportunities, without reporting actual channel revenue.'),
-          bilingual('Content Calendar วางหัวข้อและเวลาโพสต์ช่วง 28 เม.ย.–12 พ.ค. เป็นตารางที่เสนอ ไม่ใช่หลักฐานว่าทุกคลิปเผยแพร่ตามนั้น', 'The content calendar schedules posts from 28 April to 12 May; it is a plan, not proof that every clip was published as scheduled.'),
+          nested('Hero’s Journey ใช้เรื่องกระดองพิวพิวที่ดูผิดปกติเป็นตัวอย่างโครงเรื่อง ไม่ใช่คำวินิจฉัยจากผลงาน', 'The Hero’s Journey example follows concern about Piew Piew’s shell. It is a story outline, not a diagnosis made by the portfolio.', [
+            bilingual('เรื่องเริ่มจากการเลี้ยงในร่ม สังเกตกระดองนูน ลองพาไปรับแดด แล้วปรึกษาสัตวแพทย์ ก่อนปรับอาหารและวิธีเลี้ยงตามคำแนะนำในเรื่อง', 'The story moves from indoor care to noticing a raised shell, trying more sunlight, consulting a veterinarian, and changing diet and care as described in the example.'),
+          ]),
+          bilingual('Hook–Story–Offer ใช้โจทย์ผมร่วงและฝุ่นในห้องเป็นตัวอย่างการเปิดปัญหา เล่าประสบการณ์ แล้วนำเสนอเครื่องดูดฝุ่นพร้อมชวนผู้ชมคอมเมนต์ ตัวอย่างนี้สาธิตวิธีเล่าเรื่อง ไม่ใช่โฆษณาที่พิสูจน์ยอดขาย', 'Hook–Story–Offer uses hair shedding and room dust as an example. It opens with a problem, tells an experience, introduces a cordless vacuum, and invites comments. This demonstrates the format, not a verified sales result.'),
+          bilingual('Before–After–Bridge ตัวอย่างแรกเล่าปัญหากลิ่นตัวพิวพิวก่อนเสนอเจลอาบน้ำสัตว์ Exotic ตัวอย่างที่สองเล่าความกลัวการสูญเสียสัตว์เลี้ยง ก่อนเชื่อมไปสู่การดูแลและใช้เวลาที่มีร่วมกันอย่างดีที่สุด', 'The first Before–After–Bridge example moves from Piew Piew’s bathing problem to an Exotic pet wash. The second moves from fear of losing a pet to caring well and making the most of their time together.'),
+          bilingual('ตัวอย่างสินค้าหรือคำแนะนำด้านสุขภาพในสไลด์เป็นแนวทางเขียนคอนเทนต์ ไม่ใช่การรับรองประสิทธิภาพหรือคำแนะนำสัตวแพทย์', 'Product and animal-health references in these examples are writing concepts, not validated product claims or veterinary advice.'),
+        ],
+      },
+      {
+        heading: bilingual('Content Calendar ที่เสนอ', 'Proposed content calendar'),
+        bullets: [
+          bilingual('28 เม.ย. 20:00 น. แนะนำสินค้าเต่าบก ความยาวที่วางไว้ 1:30 นาที', '28 April at 20:00, land tortoise product recommendations, planned duration 1:30.'),
+          bilingual('1 พ.ค. 20:00 น. พาเต่าไปเที่ยว ความยาวที่วางไว้ 2:00 นาที', '1 May at 20:00, an outing with the tortoise, planned duration 2:00.'),
+          bilingual('4 พ.ค. 21:00 น. ประวัติเต่าบกตอนที่ 1 ความยาวที่วางไว้ 2:00 นาที', '4 May at 21:00, land tortoise history part 1, planned duration 2:00.'),
+          bilingual('6 พ.ค. 20:00 น. สิ่งที่ต้องรับมือก่อนเลี้ยงเต่า ความยาวที่วางไว้ 1:30 นาที', '6 May at 20:00, what to prepare for before keeping a tortoise, planned duration 1:30.'),
+          bilingual('8 พ.ค. 21:00 น. ประวัติเต่าบกตอนที่ 2 ความยาวที่วางไว้ 2:00 นาที', '8 May at 21:00, land tortoise history part 2, planned duration 2:00.'),
+          bilingual('11 พ.ค. 20:00 น. ต้นไม้และดอกไม้ที่เต่ากินได้และปลูกง่าย ความยาวที่วางไว้ 1:30 นาที', '11 May at 20:00, easy-to-grow plants and flowers proposed as tortoise food, planned duration 1:30.'),
+          bilingual('12 พ.ค. 21:00 น. ประวัติเต่าบกตอนที่ 3 ความยาวที่วางไว้ 2:00 นาที', '12 May at 21:00, land tortoise history part 3, planned duration 2:00.'),
+          bilingual('ตารางเว้นบางวันไว้พัก ตัดคลิป และคิดวิธีถ่าย แผนตั้งใจให้ตอนประวัติเต่าบกต่อเนื่องแต่มีหัวข้ออื่นคั่น ตารางนี้เป็นแผนเผยแพร่ ไม่ยืนยันว่าคลิปทั้งหมดถูกโพสต์ตามกำหนด', 'Several days are left open for rest, editing, and planning shoots. The history series is intended to stay regular while other topics appear between episodes. This is a publishing plan, not confirmation that every clip went live.'),
         ],
       },
     ],
   },
   lightclean: {
-    source: bilingual('รายละเอียดผลงาน หน้า PDF 5–6; หลอดไฟกลมดิ๊ก proposal หน้า PDF 1–8; คลิปโฆษณา', 'Portfolio overview PDF pp. 5–6; LightClean proposal PDF pp. 1–8; advertising video'),
+    source: bilingual('รายละเอียดผลงาน หน้า PDF 5–6, หลอดไฟกลมดิ๊ก proposal หน้า PDF 1–8, คลิปโฆษณา', 'Portfolio overview PDF pp. 5–6, LightClean proposal PDF pp. 1–8, advertising video'),
     sections: [
       {
-        heading: bilingual('แนวคิดผลิตภัณฑ์', 'Product concept'),
+        heading: bilingual('โจทย์และคำตอบที่เสนอ', 'The brief and proposed response'),
         bullets: [
-          bilingual('เริ่มจากโจทย์คนที่ไม่อยากทำความสะอาดบ้านหรือคอยเปิด–ปิดอุปกรณ์บ่อย ๆ แล้วเสนอ LightClean หรือ “น้องกลมดิ๊ก” เป็นหลอดไฟ UV-C ในโฆษณาแนวตลก', 'The brief starts with the hassle of household cleaning and repeated switching, then presents LightClean or “Nong Klom Dik” as a UV-C lamp in a comedy ad.'),
-          bilingual('เป้าหมายใน proposal คือความสะดวกและลดภาระงานบ้าน; ไม่มีผลทดสอบยืนยันว่ามีผลิตภัณฑ์ที่ทำงานได้จริง', 'The proposal aims for convenience and less household work; it does not provide evidence of a tested working product.'),
+          bilingual('โจทย์ตั้งต้นคือคนที่ไม่อยากเสียเวลาเดินเปิดปิดไฟหรือทำความสะอาดบ้านบ่อย ๆ ทีมจึงเสนอ LightClean หรือ “น้องกลมดิ๊ก” เป็นแนวคิดหลอดไฟ UV-C และใช้คลิปโฆษณาเล่าผลิตภัณฑ์', 'The brief starts with the hassle of switching lights and cleaning often. The team proposes LightClean, or “Nong Klom Dik,” as a UV-C lamp concept and presents it through an advertisement.'),
+          nested('สไลด์ใช้กรอบ SLOTH อธิบายคุณค่าที่ตั้งใจให้ผลิตภัณฑ์มี', 'The SLOTH framework describes intended product value.', [
+            bilingual('S และ O มุ่งลดการเดินไปเปิดปิดไฟและเวลาในการทำความสะอาดบ้าน', 'S and O focus on fewer trips to a switch and less time spent cleaning.'),
+            bilingual('L และ T คือการสั่งงานผ่านรีโมตและความสะดวกโดยไม่ต้องเดินไปเปิดไฟ', 'L and T describe remote operation and the convenience of not walking to the switch.'),
+            bilingual('H คือการรวมหลายฟังก์ชันไว้ในผลิตภัณฑ์เดียวตามข้อเสนอ', 'H proposes several functions in one product.'),
+          ]),
+          bilingual('ทั้งหมดเป็นกรอบคิดและประโยชน์ที่ทีมเสนอ ไม่ใช่ข้อมูลจากการทดสอบหลอดไฟจริง', 'These are proposed benefits and design ideas, not results from testing a working lamp.'),
         ],
       },
       {
-        heading: bilingual('การใช้งานตามข้อเสนอ', 'How the proposal imagines use'),
+        heading: bilingual('การทำงานและระบบที่วางแผน', 'Planned functions and systems'),
         bullets: [
-          bilingual('ฟังก์ชันที่เสนอ: แสง UV-C สำหรับพื้นที่โดยรอบ รีโมตเปิด–ปิด ตั้งเวลา และการปรับระดับแสง', 'Proposed functions: UV-C light for the surrounding area, remote on/off control, a timer, and adjustable intensity.'),
-          bilingual('สไลด์ต่อยอดเป็นเซ็นเซอร์สภาพแวดล้อม/ความชื้น การเชื่อมต่อ IoT และ AI ที่ช่วยปรับการทำงาน; ทั้งหมดยังเป็นโมดูลในแนวคิด', 'The slides extend the idea to environmental/humidity sensing, IoT connection, and AI-assisted adjustment; these remain concept modules.'),
-          bilingual('proposal ระบุข้อควรระวังเรื่องการสัมผัส UV-C โดยตรง จึงไม่ควรอ่านโฆษณาเป็นหลักฐานด้านประสิทธิภาพหรือความปลอดภัย', 'The proposal cautions against direct UV-C exposure; the ad should not be read as evidence of performance or safety.'),
+          bilingual('สไลด์เสนอให้หลอดไฟฉาย UV-C ไปยังพื้นที่โดยรอบเพื่อจัดการเชื้อบนพื้นผิวหรือในอากาศ โดยยังไม่มีผลการวัดประสิทธิภาพในผลงาน', 'The slides propose UV-C exposure for surrounding surfaces and air, but the project provides no measured disinfection results.'),
+          bilingual('ต้นแบบที่อธิบายในสไลด์มีรีโมตเปิดปิด ปรับระดับแสง และตั้งเวลา เพื่อลดการเดินไปกดสวิตช์', 'The described prototype includes remote power and brightness controls and a timer to reduce trips to the switch.'),
+          bilingual('โมดูล IoT ที่เสนอเก็บข้อมูลสภาพแวดล้อม เช่น ความชื้น แล้วส่งต่อให้อุปกรณ์อื่นวิเคราะห์', 'The proposed IoT module gathers environmental data such as humidity and sends it to other devices for analysis.'),
+          bilingual('โมดูล AI ที่เสนอใช้ข้อมูลจากเซ็นเซอร์เพื่อปรับแสงตามสภาพพื้นที่ ส่วนแนวคิด Big Data ใช้รูปแบบการใช้พลังงานมาช่วยแนะนำการประหยัด', 'The proposed AI module uses sensor information to adjust lighting. The Big Data idea would analyze energy use and recommend savings.'),
+          bilingual('แผนยังกล่าวถึงการลดแสงเมื่อมีคนอยู่ในพื้นที่ แต่ไม่ได้แสดงระบบตรวจคนหรือการทดสอบความปลอดภัยที่ทำงานจริง', 'The plan also mentions dimming light when someone is present, without showing a working occupancy safeguard or safety test.'),
         ],
       },
       {
-        heading: bilingual('วิธีนำเสนอเป็นโฆษณา', 'Advertising approach'),
+        heading: bilingual('ข้อจำกัดและความปลอดภัย', 'Limits and safety'),
         bullets: [
-          bilingual('ชิ้นงานวิดีโอเล่าโจทย์การทำความสะอาดแบบขำ ๆ และแสดงแนวคิดผลิตภัณฑ์ ไม่ได้ถ่ายอุปกรณ์ใช้งานจริง', 'The video treats household cleaning humorously and illustrates the concept; it does not document real hardware in operation.'),
-          bilingual('เอกสารบันทึกการใช้ InVideo AI ทำวิดีโอ และใช้ ChatGPT ช่วยค้นข้อมูลโมดูล/ประโยชน์สำหรับการนำเสนอ', 'The deck documents using InVideo AI for the video and ChatGPT to research modules and benefits for the presentation.'),
+          bilingual('ข้อเสนออ้างความสะดวก การใช้สารเคมีน้อยลง และการลดการแพร่กระจายเชื้อ แต่ไม่มีการทดลองที่ยืนยันประสิทธิภาพ การประหยัดพลังงาน หรือความปลอดภัยของต้นแบบ', 'The proposal claims convenience, less chemical use, and reduced germ spread. It includes no test confirming effectiveness, energy savings, or the safety of a prototype.'),
+          bilingual('สไลด์เตือนว่า UV-C ที่สัมผัสโดยตรงอาจเป็นอันตรายต่อผิวหนังและดวงตา และระบุว่าต้องคุมระยะเวลาใช้งานตามคำแนะนำ', 'The deck warns that direct UV-C exposure may harm skin and eyes and says exposure time must be controlled according to guidance.'),
+          bilingual('วิดีโอคือการสื่อสารแนวคิดผลิตภัณฑ์ จึงไม่ควรใช้เป็นหลักฐานว่าหลอดไฟนี้ฆ่าเชื้อได้จริงหรือใช้ในห้องที่มีคนอยู่ได้อย่างปลอดภัย', 'The video communicates a product idea. It should not be treated as evidence that this lamp disinfects effectively or can safely operate around people.'),
+        ],
+      },
+      {
+        heading: bilingual('การผลิตคลิปโฆษณา', 'Making the advertisement'),
+        bullets: [
+          bilingual('สไลด์บันทึกว่าใช้ InVideo AI ช่วยสร้างภาพวิดีโอโฆษณาแทนการถ่ายอุปกรณ์จริงในสถานที่จริง และต้องปรับข้อความสั่งงานจนได้ภาพที่ต้องการ', 'The deck says InVideo AI generated the advertising visuals instead of filming a real device on location. Prompts were adjusted until the desired images were obtained.'),
+          bilingual('ทีมใช้ ChatGPT ช่วยหาข้อมูลโมดูลและประโยชน์สำหรับสไลด์หรือ Infographic โดยข้อมูลเหล่านั้นยังเป็นส่วนของข้อเสนอ', 'The team also used ChatGPT to research modules and benefits for slides or an infographic. Those points remain part of the proposal.'),
         ],
       },
     ],
   },
   'mv-tha-chan-khit-thueng-thoe': {
-    source: bilingual('Coverpage/Screenshot 2569-09-26 at 22.59.56.png; Shotlist.pages และ Breakdown.pages (ภาพตัวอย่างในไฟล์); มิวสิกวิดีโอฉบับเต็มและคลิปเบื้องหลัง', 'Coverpage screenshot; Shotlist.pages and Breakdown.pages (embedded previews); full music video and behind-the-scenes clip'),
+    source: bilingual('Coverpage/Screenshot 2569-09-26 at 22.59.56.png, Shotlist.pages และ Breakdown.pages (ภาพตัวอย่างในไฟล์), มิวสิกวิดีโอฉบับเต็มและคลิปเบื้องหลัง', 'Coverpage screenshot, Shotlist.pages and Breakdown.pages (embedded previews), full music video and behind-the-scenes clip'),
     sections: [
       {
-        heading: bilingual('เรื่องเล่าผ่านความทรงจำ', 'A story through memory'),
+        heading: bilingual('ลำดับเหตุการณ์ที่วางใน Shotlist', 'Sequence planned in the shot list'),
         bullets: [
-          bilingual('ภาพเปิดใช้รูปคู่ในกล้องเป็นทางเข้าสู่ความทรงจำ ก่อนเห็นการเก็บเสื้อผ้าและสิ่งของ', 'A couple’s photograph in a camera opens the memory sequence, followed by belongings being packed away.'),
-          bilingual('อีกคนเดินเข้ามา ทั้งคู่กอดกัน แล้วเรื่องย้อนถึงช่วงที่เคยมีความสุข', 'Another person enters and the two embrace before the story revisits happier moments.'),
-          bilingual('ภาพกลับสู่ตัวละครในรถที่จมกับความทรงจำเรื่องการจากลา', 'The story returns to a character in a car, absorbed in memories of a goodbye.'),
+          bilingual('เรื่องเปิดที่ฝ่ายชายดูรูปคู่ในกล้องถ่ายรูป ก่อนภาพกว้างเผยว่าเขากำลังเก็บเสื้อผ้าและของในห้อง ฝ่ายหญิงเดินเข้ามายืนอยู่ด้านหลัง', 'The story opens with the man looking at a couple’s photograph in a camera. A wider view reveals him packing clothes and belongings while the woman stands behind him.'),
+          bilingual('ทั้งคู่กอดกันในจังหวะที่รู้ว่าความสัมพันธ์กำลังจบ แล้วตัดย้อนถึงช่วงที่เคยมีความสุขร่วมกัน', 'They embrace knowing the relationship is ending, followed by a return to moments when they were happy together.'),
+          bilingual('ในรถ ทั้งสองพูดถึงความสัมพันธ์ด้วยความอึดอัดและเศร้า ก่อนกอดลาครั้งสุดท้าย ภาพเปลี่ยนมาที่ฝ่ายหญิงร้องไห้', 'In the car they discuss the relationship with sadness and tension, embrace one last time, and the shot turns to the woman crying.'),
+          bilingual('หลังแยกทาง Shotlist วางภาพฝ่ายชายกินข้าวคนเดียว ฝ่ายหญิงมองออกหน้าต่าง และฝ่ายชายมองท้องฟ้า เพื่อสื่อความเหงาและช่องว่างที่เหลืออยู่', 'After the separation, the shot list shows the man eating alone, the woman looking out a window, and the man looking at the sky to convey loneliness and absence.'),
         ],
       },
       {
-        heading: bilingual('แผนภาพและมุมกล้อง', 'Shot design'),
+        heading: bilingual('Camera Angle และระยะภาพ', 'Camera angles and shot sizes'),
         bullets: [
-          bilingual('Shotlist วาง ECU ของรูปถ่าย → ภาพกว้างของห้อง/การเก็บของ → CU ตอนกอด → ภาพระยะกลางในรถ', 'The shot list moves from an extreme close-up of the photo → a wide room/packing view → a close embrace → a medium car shot.'),
-          bilingual('มุม high angle, eye level และ over-the-shoulder สลับรายละเอียดทางอารมณ์กับบริบทของตัวละคร', 'High-angle, eye-level, and over-the-shoulder views alternate intimate details with the characters’ surroundings.'),
+          bilingual('ฉากรูปถ่ายกำหนด Extreme Close-Up จากมุมสูง เพื่อให้ผู้ชมเห็นความทรงจำในกล้องชัด จากนั้นใช้ Wide Shot ระดับสายตาเผยสภาพห้องและการเก็บของ', 'An extreme close-up from a high angle makes the photograph clear. An eye-level wide shot then reveals the room and the packing.'),
+          bilingual('ช่วงกอดใช้ Close-Up แบบมองข้ามไหล่เพื่อเก็บอารมณ์ ก่อนย้อนอดีตด้วย Close-Up ระดับสายตา', 'The embrace uses an over-the-shoulder close-up for emotion, followed by an eye-level close-up for the happier memory.'),
+          bilingual('ฉากในรถใช้ Medium Shot ระดับสายตารับความอึดอัดของทั้งคู่ แล้วเปลี่ยนเป็น Medium Close-Up มองข้ามไหล่เมื่อแยกจากกัน', 'The car scene uses an eye-level medium shot for their tension and an over-the-shoulder medium close-up for the goodbye.'),
+          bilingual('หลังจากนั้น Medium Close-Up ระดับสายตาแยกตัวละครให้อยู่ลำพัง ส่วนช็อตมองฟ้าใช้ Close-Up มุมต่ำเพื่อเน้นพื้นที่ว่างและความเหงา', 'Later eye-level medium close-ups isolate each character. A low-angle close-up of the sky emphasizes emptiness and loneliness.'),
+          bilingual('Shotlist ระบุขาตั้งกล้องในบางช็อต และหมายเหตุว่าฉากภาพถ่ายอาจใช้มือถือแทนกล้องถ่ายรูป รวมถึงอาจเปิดกระจกรถถ่ายหากฟิล์มรถมืด', 'The shot list calls for a tripod in some shots. Notes allow a phone instead of a still camera for the photograph and an open car window if the tint makes filming too dark.'),
         ],
       },
       {
-        heading: bilingual('วัสดุการผลิตที่มีอยู่', 'Available production material'),
+        heading: bilingual('Breakdown สำหรับวันถ่าย', 'Shoot-day breakdown'),
         bullets: [
-          bilingual('Breakdown ที่เห็นจากภาพตัวอย่างมี storyboard, เวลา, สถานที่, อุปกรณ์ประกอบ และลำดับช็อตสำหรับวันถ่าย', 'The visible breakdown preview includes storyboard frames, timing, locations, props, and the day’s shot order.'),
-          bilingual('โฟลเดอร์มีมิวสิกวิดีโอฉบับเสร็จ คลิปเบื้องหลังสั้นประมาณ 14 วินาที และภาพตัวอย่างจาก Shotlist/Breakdown', 'The folder includes the finished music video, a roughly 14-second behind-the-scenes clip, and Shotlist/Breakdown previews.'),
-          bilingual('เอกสารที่อ่านได้ไม่แจกแจงหน้าที่รายบุคคล จึงไม่อ้างบทบาทเฉพาะของเจ้าของ Portfolio', 'The readable materials do not assign individual roles, so the portfolio does not claim a specific one.'),
+          bilingual('Breakdown จัดลำดับฉากด้วยภาพอ้างอิง เวลา สถานที่ ภายในหรือภายนอกอาคาร นักแสดง อุปกรณ์ เสื้อผ้า และหมายเหตุ เพื่อให้ทีมเตรียมงานในวันถ่าย', 'The breakdown organises scenes with reference images, timing, locations, interior or exterior status, cast, props, wardrobe, and notes for shoot preparation.'),
+          bilingual('สถานที่ในแผนมีห้องนอนที่ Kave Condo ฉากในรถ มหาวิทยาลัยกรุงเทพ และดาดฟ้า Kave Condo โดยแยกงานภายในอาคารกับฉากกลางแจ้ง', 'Planned locations include a Kave Condo bedroom, a car, Bangkok University, and the Kave Condo rooftop, separating interiors from exterior scenes.'),
+          bilingual('อุปกรณ์ประกอบที่ระบุมีรูปคู่ในกล้องหรือมือถือ ข้าวกล่อง และ iPad สำหรับฉากแชท ส่วนเสื้อผ้าส่วนใหญ่ระบุให้เป็นชุดส่วนตัวของนักแสดง', 'Listed props include a couple’s photograph in a camera or phone, a takeaway meal, and an iPad for the chat scene. Most wardrobe entries call for the cast’s own clothes.'),
+          bilingual('ตารางวางภาพการเก็บของและกอดลา ภาพอดีตตอนยังอยู่ด้วยกัน ฉากรอข้อความตอบกลับ และการตัดสินใจแยกทาง', 'The schedule covers packing and farewell, happier memories, waiting for a reply, and deciding to separate.'),
         ],
       },
     ],
   },
   'seoul-milk-critique': {
-    source: bilingual('รายงาน Soul Milk ฉบับเต็ม หน้า PDF 3–21; ประเด็นผู้ชมและคำชี้แจงเป็นข้อมูลที่รายงานรวบรวม', 'Full Seoul Milk report PDF pp. 3–21; audience reaction and brand statements are reported by that document'),
+    source: bilingual('รายงาน Soul Milk ฉบับเต็ม หน้า PDF 3–21, ประเด็นผู้ชมและคำชี้แจงเป็นข้อมูลที่รายงานรวบรวม', 'Full Seoul Milk report PDF pp. 3–21, audience reaction and brand statements are reported by that document'),
     sections: [
       {
         heading: bilingual('โฆษณาที่รายงานวิพากษ์', 'The ad under review'),
@@ -391,9 +363,9 @@ export const expandedDetails = {
       {
         heading: bilingual('เสียงตอบรับและคำชี้แจง', 'Reactions and response'),
         bullets: [
-          bilingual('รายงานรวบรวมเสียงไม่สบายใจต่อภาพผู้หญิงกลายเป็นวัว การแอบถ่าย และการไม่ไวต่อปัญหา Molka; มีการกล่าวถึงการคว่ำบาตร', 'The report collects discomfort over women-as-cows, covert filming, and Molka insensitivity, including calls for a boycott.'),
-          bilingual('อีกมุมหนึ่งในรายงานไม่ต้องการเหมารวมผู้ชายทุกคนเป็นผู้กระทำผิด; ปฏิกิริยาที่รวบรวมไม่ได้เป็นเสียงเดียวทั้งหมด', 'Another reported view objects to generalizing all men as offenders; the collected reactions are not unanimous.'),
-          bilingual('เอกสารระบุว่าแบรนด์ลบคลิปและขอโทษ พร้อมชี้แจงว่าเจตนาคือสื่อธรรมชาติสะอาด ไม่ใช่ดูถูกผู้หญิง; ส่วนนี้เป็นข้อมูลตามรายงาน ไม่ใช่การตรวจเหตุการณ์ภายนอกซ้ำ', 'The document says the brand removed the ad and apologized, explaining an intended clean-nature message rather than contempt for women; this is the report’s account, not an independent event check.'),
+          bilingual('รายงานรวบรวมเสียงไม่สบายใจต่อภาพผู้หญิงกลายเป็นวัว การแอบถ่าย และการไม่ไวต่อปัญหา Molka รวมถึงการเรียกร้องให้คว่ำบาตร', 'The report collects discomfort over women-as-cows, covert filming, and Molka insensitivity, including calls for a boycott.'),
+          bilingual('อีกมุมหนึ่งในรายงานไม่ต้องการเหมารวมผู้ชายทุกคนเป็นผู้กระทำผิด ปฏิกิริยาที่รวบรวมจึงไม่ได้เป็นเสียงเดียวทั้งหมด', 'Another reported view objects to generalizing all men as offenders. The collected reactions are not unanimous.'),
+          bilingual('เอกสารระบุว่าแบรนด์ลบคลิปและขอโทษ โดยชี้แจงว่าเจตนาคือสื่อธรรมชาติสะอาด ไม่ใช่ดูถูกผู้หญิง ส่วนนี้เป็นข้อมูลตามรายงาน ยังไม่ได้ตรวจเหตุการณ์ภายนอกซ้ำ', 'The document says the brand removed the ad and apologised, explaining that it intended a clean-nature message rather than contempt for women. This is the report’s account and was not independently verified.'),
         ],
       },
       {
@@ -409,13 +381,13 @@ export const expandedDetails = {
           bilingual('Big Idea: “เพราะความบริสุทธิ์คือความรับผิดชอบที่ยิ่งใหญ่” เปลี่ยนสารจากอุปลักษณ์เพศไปสู่ความโปร่งใสของการผลิต', 'Big idea: “Purity is a great responsibility,” shifting from a gendered metaphor to transparent production.'),
           bilingual('ภาพโฆษณาที่เสนอเริ่มจากยอมรับความผิดพลาด แล้วพาไปดูคนทำงานฟาร์ม การดูแลวัว การตรวจคุณภาพ และเส้นทางผลิตภัณฑ์', 'The proposed ad acknowledges a past mistake, then shows farm workers, animal care, quality checks, and the product journey.'),
           bilingual('สไลด์ต่อยอดเรื่องบริจาคนม ลดพลาสติก/ใช้บรรจุภัณฑ์รีไซเคิล และเปิดเผยข้อมูลกระบวนการผลิต', 'The deck also proposes milk donation, less plastic or recyclable packaging, and published production information.'),
-          bilingual('ช่องทางที่เสนอคือ TikTok, Instagram, X และ YouTube พร้อม #SeoulMilkNewStart; ทั้งหมดเป็นข้อเสนอของนักศึกษา ไม่ใช่สิ่งที่แบรนด์ทำแล้ว', 'Suggested channels are TikTok, Instagram, X, and YouTube with #SeoulMilkNewStart; these are student proposals, not verified brand actions.'),
+          bilingual('ช่องทางที่เสนอคือ TikTok, Instagram, X และ YouTube พร้อม #SeoulMilkNewStart ทั้งหมดเป็นข้อเสนอของนักศึกษา ไม่ใช่สิ่งที่แบรนด์ทำแล้ว', 'Suggested channels are TikTok, Instagram, X, and YouTube with #SeoulMilkNewStart. These are student proposals, not verified brand actions.'),
         ],
       },
     ],
   },
   'tee-noi-vs-lucky-suki': {
-    source: bilingual('PR037_Final หน้า PDF 1–28; หน้า PDF 29 ซึ่งมีรายชื่อและรหัสนักศึกษาไม่แสดงบนเว็บ', 'PR037_Final PDF pp. 1–28; p. 29 with the group roster and student IDs is not shown'),
+    source: bilingual('PR037_Final หน้า PDF 1–28, หน้า PDF 29 ซึ่งมีรายชื่อและรหัสนักศึกษาไม่แสดงบนเว็บ', 'PR037_Final PDF pp. 1–28, p. 29 with the group roster and student IDs is not shown'),
     sections: [
       {
         heading: bilingual('โจทย์และวิธีอ่านข้อมูล', 'Question and data approach'),
@@ -429,10 +401,10 @@ export const expandedDetails = {
         heading: bilingual('สิ่งที่เปรียบเทียบได้', 'Comparative findings'),
         bullets: [
           nested('Facebook เป็นช่องทางหลักที่สไลด์นับได้ของทั้งสองแบรนด์', 'Facebook is the largest counted channel for both brands in the deck.', [
-            bilingual('ตี๋น้อย 2,399 ข้อความ (77.3%); ลัคกี้ 102 ข้อความ (44.9%) ตามหน้าสรุปรายช่องทาง', 'The channel slides report 2,399 Teenoi mentions (77.3%) and 102 Lucky mentions (44.9%).'),
-            bilingual('Instagram, TikTok และ X มีสัดส่วนรองลงมา; จำนวนรวมบางหน้าของตี๋น้อยไม่ตรงกับภาพแดชบอร์ด จึงไม่สรุปยอดรวมใหม่', 'Instagram, TikTok, and X follow; some Teenoi channel counts do not reconcile with the dashboard, so no revised total is calculated.'),
+            bilingual('หน้าสรุปรายช่องทางระบุตี๋น้อย 2,399 ข้อความ คิดเป็น 77.3% และลัคกี้ 102 ข้อความ คิดเป็น 44.9%', 'The channel slides report 2,399 Teenoi mentions at 77.3% and 102 Lucky mentions at 44.9%.'),
+            bilingual('Instagram, TikTok และ X มีสัดส่วนรองลงมา จำนวนรวมบางหน้าของตี๋น้อยไม่ตรงกับภาพแดชบอร์ด จึงไม่คำนวณยอดรวมใหม่', 'Instagram, TikTok, and X follow. Some Teenoi channel counts do not reconcile with the dashboard, so no revised total is calculated.'),
           ]),
-          bilingual('sentiment ในสไลด์: ตี๋น้อยบวก 45.28% / กลาง 46.09% / ลบ 8.63%; ลัคกี้บวก 51.54% / กลาง 45.82% / ลบ 2.64%', 'Deck-reported sentiment: Teenoi 45.28% positive / 46.09% neutral / 8.63% negative; Lucky 51.54% positive / 45.82% neutral / 2.64% negative.'),
+          bilingual('สไลด์รายงาน sentiment ของตี๋น้อยเป็นบวก 45.28% กลาง 46.09% และลบ 8.63% ส่วนลัคกี้เป็นบวก 51.54% กลาง 45.82% และลบ 2.64%', 'The deck reports Teenoi sentiment at 45.28% positive, 46.09% neutral, and 8.63% negative. Lucky is 51.54% positive, 45.82% neutral, and 2.64% negative.'),
           bilingual('สไลด์ตีความว่าคนพูดถึงโปรโมชัน ของแถม สมาชิก น้ำซุป และบริการของตี๋น้อย ขณะเดียวกันมีคำวิจารณ์เรื่องความสะอาด การดูแลลูกค้า คิว และระบบ', 'The deck interprets Teenoi discussion around promotions, extras, membership, broth, and service, alongside complaints about cleanliness, customer care, queues, and systems.'),
         ],
       },
@@ -441,7 +413,7 @@ export const expandedDetails = {
         bullets: [
           bilingual('ทีมเลือกเสียงกลางที่ยังมีมากของลัคกี้เป็นโอกาสสร้างความสนใจและเปลี่ยนเป็นความรู้สึกเชิงบวก โดยให้ Facebook เป็นพื้นที่สร้างบทสนทนาหลัก', 'The team treats Lucky’s large neutral share as an opening to build interest and positive feeling, with Facebook as the main conversation space.'),
           bilingual('กลุ่มเป้าหมายที่เสนอ: ผู้หญิง Gen Z/วัยเริ่มทำงาน 18–30 ปีเป็นหลัก และนักศึกษา/คนทำงานช่วงต้น 20–35 ปีเป็นกลุ่มรอง', 'Proposed audiences: primarily Gen Z and early-career women aged 18–30, with students and early-career people aged 20–35 as a secondary group.'),
-          bilingual('เป้าหมายในแผนคือปริมาณข้อความที่กล่าวถึงแบรนด์บน Facebook จาก 102 เป็น 200+ ภายใน 3 เดือน, sentiment บวกมากกว่า 65%, ลบน้อยกว่า 1%; เป็นเป้าหมาย ไม่ใช่ผลจริง', 'The plan targets Facebook mention volume rising from 102 to 200+ within three months, positive sentiment above 65%, and negative sentiment below 1%; these are targets, not outcomes.'),
+          bilingual('แผนตั้งเป้าให้ข้อความที่กล่าวถึงแบรนด์บน Facebook เพิ่มจาก 102 เป็นมากกว่า 200 ภายในสามเดือน พร้อม sentiment บวกเกิน 65% และลบน้อยกว่า 1% ตัวเลขนี้เป็นเป้าหมาย ไม่ใช่ผลจริง', 'The plan targets Facebook mentions rising from 102 to more than 200 within three months, positive sentiment above 65%, and negative sentiment below 1%. These are targets, not outcomes.'),
         ],
       },
       {
@@ -450,38 +422,38 @@ export const expandedDetails = {
           bilingual('DIY Soup Bar: จ่ายเพิ่ม 29 บาทเพื่อปรุงน้ำซุปเองภายในเวลา 2 ชั่วโมงตามกติกาที่ทีมเสนอ', 'DIY Soup Bar: a proposed ฿29 add-on for custom broth during a two-hour dining period.'),
           bilingual('Lucky Lover Table: โต๊ะ/ประสบการณ์สำหรับคนกินคนเดียวเพื่อลดความเก้อเขิน', 'Lucky Lover Table: a table and experience designed to make solo dining feel comfortable.'),
           bilingual('Lucky Coupon Challenge: ชวนโพสต์วิดีโอสาธารณะเพื่อสุ่มรับคูปองและกระตุ้นคอนเทนต์จากผู้ใช้', 'Lucky Coupon Challenge: invite public user videos for a chance at a coupon and more user-generated content.'),
-          bilingual('แผนสามสัปดาห์ไล่จาก awareness → engagement → conversion ด้วย TikTok/Facebook Reels, hook สั้น และการตอบคอมเมนต์', 'The proposed three-week sequence moves from awareness → engagement → conversion using TikTok/Facebook Reels, short hooks, and comment replies.'),
+          bilingual('แผนสามสัปดาห์เริ่มสร้างการรับรู้ ต่อด้วยการมีส่วนร่วม แล้วจึงชวนให้ตัดสินใจ ผ่าน TikTok และ Facebook Reels ใช้คำเปิดสั้น ๆ พร้อมตอบคอมเมนต์', 'The proposed three-week plan begins with awareness, builds engagement, then encourages conversion through TikTok and Facebook Reels, short hooks, and comment replies.'),
           bilingual('สไลด์ 28 หน้าที่เผยแพร่ได้อยู่ในหน้ารายละเอียดนี้เพื่อดูภาพกราฟและงานออกแบบนำเสนอฉบับเต็ม', 'All 28 shareable slides are available in this detail view for the source charts and presentation design.'),
         ],
       },
     ],
   },
   katsumidori: {
-    source: bilingual('PR037_ปาทังกี้_katsumidori หน้า PDF 1 (ภาพปก) และ 2–9; หน้า PDF 10 ซึ่งมีรายชื่อและรหัสนักศึกษาไม่แสดงบนเว็บ', 'Katsumidori PR deck PDF p. 1 (cover) and pp. 2–9; p. 10 with the group roster and student IDs is not shown'),
+    source: bilingual('PR037_ปาทังกี้_katsumidori หน้า PDF 1 (ภาพปก) และ 2–9, หน้า PDF 10 ซึ่งมีรายชื่อและรหัสนักศึกษาไม่แสดงบนเว็บ', 'Katsumidori PR deck PDF p. 1 (cover) and pp. 2–9, p. 10 with the group roster and student IDs is not shown'),
     sections: [
       {
         heading: bilingual('ปัญหาและ insight', 'Problem and insight'),
         bullets: [
           bilingual('สไลด์เก็บคำเกี่ยวกับแบรนด์ คิว และเมนู “พุดดิ้งแมว” แล้วชี้เสียงบ่นเรื่องจองคิวแล้วรอหรือพบว่าคิวเต็ม', 'The deck tracks brand, queue, and “cat pudding” terms, then highlights complaints about waiting despite booking or finding slots full.'),
           bilingual('มีเสียงเล่าว่ารอเกือบ 2–3 ชั่วโมง แต่เอกสารไม่ได้วัดเวลาเฉลี่ย จึงไม่ใช้ตัวเลขนี้แทนลูกค้าทั้งหมด', 'Some comments mention waits approaching 2–3 hours, but the deck does not measure an average, so this is not treated as typical for all customers.'),
-          bilingual('insight ของทีมคือ “คนไม่ได้กลัวการรอ แต่กลัวการรอที่สูญเปล่า” และเห็นช่องว่างระหว่างกระแสรีวิวกับประสบการณ์คิวจริง', 'The team’s insight is “people do not fear waiting; they fear wasted waiting,” with a gap between viral reviews and the queue experience.'),
+          bilingual('insight ของทีมคือ “คนไม่ได้กลัวการรอ แต่กลัวการรอที่สูญเปล่า” และเห็นช่องว่างระหว่างกระแสรีวิวกับประสบการณ์คิวจริง', 'The team’s insight is that people fear wasted waiting time. The slides identify a gap between viral reviews and the actual queue experience.'),
         ],
       },
       {
         heading: bilingual('Big Idea และข้อเสนอ', 'Big idea and offer'),
         bullets: [
           bilingual('“Every Minute Matters” เปลี่ยนบัตรคิวให้เป็นสิทธิ์รับคูปอง เพื่อให้เวลารอกลายเป็นส่วนหนึ่งของประสบการณ์', '“Every Minute Matters” turns the queue ticket into coupon eligibility so waiting adds value to the experience.'),
-          nested('ขั้นส่วนลดที่เสนอ: ใช้จ่าย 500 บาทรับ 5%; 1,000 บาทรับ 12%', 'Proposed discount tiers: spend ฿500 for 5%; ฿1,000 for 12%.', [
+          nested('ขั้นส่วนลดที่เสนอคือใช้จ่าย 500 บาทรับ 5% และใช้จ่าย 1,000 บาทรับ 12%', 'The proposal offers 5% off a ฿500 spend and 12% off a ฿1,000 spend.', [
             bilingual('แผนจำกัดหนึ่งใบเสร็จต่อหนึ่งสิทธิ์ ใช้กับเมนู After You × Katsumidori ที่ร่วมรายการ และไม่รวมใบเสร็จ', 'The plan limits use to one receipt per right and the participating After You × Katsumidori menu, with no receipt combining.'),
           ]),
-          bilingual('การร่วมมือกับ After You และการลุ้นรางวัลเป็นแนวคิดในสไลด์; กลไกรางวัลไม่ได้ระบุครบ จึงไม่เติมกติกาเอง', 'An After You collaboration and prize draw are deck proposals; the prize mechanics are incomplete, so no extra rules are inferred.'),
+          bilingual('การร่วมมือกับ After You และการลุ้นรางวัลเป็นแนวคิดในสไลด์ กลไกรางวัลไม่ได้ระบุครบ จึงไม่เติมกติกาเอง', 'An After You collaboration and prize draw are deck proposals. The prize mechanics are incomplete, so no extra rules are inferred.'),
         ],
       },
       {
         heading: bilingual('กลุ่มคนที่แผนอยากสื่อสาร', 'Proposed audience profiles'),
         bullets: [
-          bilingual('Trend Reviewer: persona อายุ 18–24 ปี เน้นคนดูรีวิว/แชร์ประสบการณ์; สไลด์ระบุผู้หญิง 88.97% และ mid-tier influencer 37.9%', 'Trend Reviewer: an age-18–24 persona focused on reviews and sharing; the deck reports 88.97% women and 37.9% mid-tier influencers.'),
-          bilingual('Lifestyle Spender: persona อายุ 25–34 ปี ชอบไลฟ์สไตล์และการไปห้าง; สไลด์ระบุผู้หญิง 80.15% และการไปห้าง 17.8%', 'Lifestyle Spender: an age-25–34 lifestyle and mall-going persona; the deck reports 80.15% women and 17.8% mall interest.'),
+          bilingual('Trend Reviewer เป็น persona อายุ 18–24 ปี เน้นดูรีวิวและแชร์ประสบการณ์ สไลด์ระบุผู้หญิง 88.97% และ mid-tier influencer 37.9%', 'Trend Reviewer is an age-18–24 persona focused on reviews and sharing. The deck reports 88.97% women and 37.9% mid-tier influencers.'),
+          bilingual('Lifestyle Spender เป็น persona อายุ 25–34 ปี ชอบไลฟ์สไตล์และการไปห้าง สไลด์ระบุผู้หญิง 80.15% และความสนใจไปห้าง 17.8%', 'Lifestyle Spender is an age-25–34 lifestyle and mall-going persona. The deck reports 80.15% women and 17.8% mall interest.'),
           bilingual('Organic Reviewer: อายุ 22–28 ปี รายได้ 15,000–25,000 บาท ใช้ X/Instagram และเล่าประสบการณ์เองตามภาพ persona ในสไลด์', 'Organic Reviewer: an age-22–28 persona earning ฿15,000–25,000, sharing firsthand experiences on X/Instagram as described in the deck.'),
         ],
       },
@@ -489,21 +461,21 @@ export const expandedDetails = {
         heading: bilingual('ขอบเขตของตัวเลขและผลงาน', 'Data and outcome boundary'),
         bullets: [
           bilingual('สไลด์มีสัดส่วน persona กับเงื่อนไขข้อเสนอ แต่ไม่ให้ขนาดตัวอย่าง ช่วงเก็บข้อมูล หรือวิธีคำนวณที่พอใช้ทำกราฟแนวโน้ม', 'The slides include persona percentages and proposed offer terms, but no sample size, data window, or method sufficient for a trend chart.'),
-          bilingual('บอร์ดข้อมูลในหน้านี้จึงแยก “ตัวเลขตามสไลด์” ออกจาก “กลไกแคมเปญที่เสนอ”; ไม่ใช่แดชบอร์ดผลแคมเปญจริง', 'The board in this detail view separates “deck-reported figures” from “proposed campaign mechanics”; it is not an outcome dashboard.'),
+          bilingual('บอร์ดข้อมูลในหน้านี้แยก “ตัวเลขตามสไลด์” ออกจาก “กลไกแคมเปญที่เสนอ” จึงไม่ใช่แดชบอร์ดผลแคมเปญจริง', 'The board in this detail view separates deck-reported figures from proposed campaign mechanics. It is not an outcome dashboard.'),
           bilingual('สไลด์ต้นฉบับที่เผยแพร่ได้ 8 หน้าอยู่ถัดลงไปสำหรับอ่าน persona และแนวคิดออกแบบโดยตรง', 'Eight shareable source slides follow for direct review of the personas and design idea.'),
         ],
       },
     ],
   },
   'mv-lam-pam-symbolism': {
-    source: bilingual('วิเคราะห์สัญญะใน MV หน้า PDF 3–19; ไม่แสดงรายชื่อกลุ่มจากหน้า PDF 1', 'Lam Pam analysis PDF pp. 3–19; the group roster from p. 1 is not shown'),
+    source: bilingual('วิเคราะห์สัญญะใน MV หน้า PDF 3–19, ไม่แสดงรายชื่อกลุ่มจากหน้า PDF 1', 'Lam Pam analysis PDF pp. 3–19, the group roster from p. 1 is not shown'),
     sections: [
       {
         heading: bilingual('สารหลักและตัวละคร', 'Key message and character reading'),
         bullets: [
           bilingual('รายงานอ่านเรื่องเป็นความรักที่ฝ่ายหนึ่งจริงจัง แต่อีกฝ่ายยังผูกพันกับคนรักเก่า', 'The report reads the story as a sincere love for someone still attached to a former partner.'),
-          bilingual('บทวิเคราะห์วาง BOWKYLION เป็นฝ่ายรักจริงและ Jeff เป็นฝ่ายยังมีอดีตค้างอยู่; นี่คือการตีความตัวละครของรายงาน', 'The analysis casts BOWKYLION as the sincere lover and Jeff as the one still tied to the past; this is the report’s character reading.'),
-          bilingual('ผู้เล่าเลือกไม่ถาม ไม่รบกวน และไม่รั้ง แม้ต้องเจ็บ; คณะละครสัตว์ทำให้ความรู้สึกส่วนตัวกลายเป็นการแสดงต่อหน้าคนอื่น', 'The speaker chooses not to question, intrude, or hold on despite the hurt; the circus turns private feeling into a public performance.'),
+          bilingual('บทวิเคราะห์วาง BOWKYLION เป็นฝ่ายรักจริงและ Jeff เป็นฝ่ายยังมีอดีตค้างอยู่ นี่คือการตีความตัวละครของรายงาน', 'The analysis casts BOWKYLION as the sincere lover and Jeff as the one still tied to the past. This is the report’s character reading.'),
+          bilingual('ผู้เล่าเลือกไม่ถาม ไม่รบกวน และไม่รั้ง แม้ต้องเจ็บ คณะละครสัตว์ทำให้ความรู้สึกส่วนตัวกลายเป็นการแสดงต่อหน้าคนอื่น', 'The speaker chooses not to question, intrude, or hold on despite the hurt. The circus turns private feeling into a public performance.'),
         ],
       },
       {
@@ -513,8 +485,8 @@ export const expandedDetails = {
           bilingual('การแสดงและการแกล้งไม่รู้ทำให้ความเจ็บปวดถูกซ่อนไว้หลังบทบาท', 'Performance and feigned ignorance conceal pain behind a role.'),
           bilingual('ตัวตลกกับหน้ากากซ่อนความเศร้าใต้รอยยิ้ม', 'Clowns and masks hide sadness beneath a smile.'),
           bilingual('สีแดงมีทั้งรัก ความโกรธ และเส้นแบ่งระหว่างสิ่งที่ปิดบังกับสิ่งที่เปิดเผย', 'Red carries love, anger, and the border between hidden and revealed feelings.'),
-          bilingual('สปอตไลต์คือสายตาที่จ้องมอง; แสงตัดเงาแทนความจริงที่ขัดกับภาพลวง', 'The spotlight is public scrutiny; sharp light and shadow contrast truth with illusion.'),
-          bilingual('เชือกหุ่นเชิดแทนการควบคุมและความไม่เท่าเทียม; การตัดเชือกคือการปล่อยตัวเอง', 'Puppet strings stand for control and imbalance; cutting them signals release.'),
+          bilingual('สปอตไลต์คือสายตาที่จ้องมอง แสงตัดเงาแทนความจริงที่ขัดกับภาพลวง', 'The spotlight is public scrutiny. Sharp light and shadow contrast truth with illusion.'),
+          bilingual('เชือกหุ่นเชิดแทนการควบคุมและความไม่เท่าเทียม การตัดเชือกคือการปล่อยตัวเอง', 'Puppet strings stand for control and imbalance. Cutting them signals release.'),
           bilingual('ดอกกุหลาบจากผู้ชมแทนการยอมรับ แต่กุหลาบที่คนรักเก่าไม่โยนคือรักที่ไม่ส่งกลับมา', 'Audience roses suggest approval, while the rose withheld by the ex represents love not returned.'),
           bilingual('การเดินลงไปหยิบกุหลาบเองสื่อการต้องร้องขอความรักที่อีกฝ่ายไม่มอบให้โดยสมัครใจ', 'Stepping down to take a rose evokes having to ask for love that is not freely offered.'),
         ],
@@ -539,14 +511,14 @@ export const expandedDetails = {
     ],
   },
   'jane-interview': {
-    source: bilingual('Report เรื่องเจน หน้า PDF 1–8; สรุปเฉพาะประเด็นที่เหมาะกับการเผยแพร่', 'Jane interview report PDF pp. 1–8; summarized at a public-appropriate level'),
+    source: bilingual('Report เรื่องเจน หน้า PDF 1–8, สรุปเฉพาะประเด็นที่เหมาะกับการเผยแพร่', 'Jane interview report PDF pp. 1–8, summarized at a public-appropriate level'),
     sections: [
       {
         heading: bilingual('เส้นเรื่องของบทสัมภาษณ์', 'The profile’s story arc'),
         bullets: [
           bilingual('งานเขียนเริ่มจากความทรงจำวัยเด็กกับครอบครัว แล้วติดตามการตัดสินใจเรียนมหาวิทยาลัยและย้ายมาใช้ชีวิตในกรุงเทพฯ', 'The profile begins with childhood family memories, then follows a university decision and a move to Bangkok.'),
           bilingual('ใช้เส้นเรื่อง “การเติบโตและรับผิดชอบมากขึ้น” เชื่อมเหตุการณ์ แทนการถอดคำถาม–คำตอบเรียงตามลำดับ', 'Growing responsibility ties the episodes together instead of presenting a question-and-answer transcript.'),
-          bilingual('รายงานกล่าวถึงการสูญเสียสัตว์เลี้ยงในฐานะจุดเปลี่ยนของมุมมองชีวิต โดยหน้า Portfolio สรุปไว้ระดับภาพรวม', 'The report treats the loss of a pet as a change in outlook; this portfolio keeps that episode at a high level.'),
+          bilingual('รายงานกล่าวถึงการสูญเสียสัตว์เลี้ยงในฐานะจุดเปลี่ยนของมุมมองชีวิต โดยหน้า Portfolio สรุปไว้ระดับภาพรวม', 'The report treats the loss of a pet as a change in outlook. This portfolio keeps that episode at a high level.'),
         ],
       },
       {
