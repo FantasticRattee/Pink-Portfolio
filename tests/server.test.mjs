@@ -1,5 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { mkdtemp, rm, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { createStaticServer, getListenConfig } from '../server.mjs';
 
 test('deployment config binds to all interfaces and uses the platform port', () => {
@@ -31,5 +35,23 @@ test('local preview serves byte ranges so full videos can seek', async () => {
     assert.equal((await response.arrayBuffer()).byteLength, 100);
   } finally {
     await new Promise((resolve) => server.close(resolve));
+  }
+});
+
+test('PDF files open inline and support byte-range loading', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'pink-portfolio-pdf-'));
+  await writeFile(path.join(root, 'work.pdf'), '%PDF-1.4\n');
+  const server = createStaticServer(pathToFileURL(`${root}/`));
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  try {
+    const url = `http://127.0.0.1:${server.address().port}/work.pdf`;
+    const response = await fetch(url, { headers: { Range: 'bytes=0-3' } });
+    assert.equal(response.status, 206);
+    assert.equal(response.headers.get('content-type'), 'application/pdf');
+    assert.equal(response.headers.get('content-range'), 'bytes 0-3/9');
+    assert.equal(await response.text(), '%PDF');
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+    await rm(root, { recursive: true, force: true });
   }
 });

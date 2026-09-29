@@ -127,6 +127,15 @@ Source: S4, `Breakdown.pages`, `Shotlist.pages`, and the supplied finished MV.
 
 Source: User's Railway browser annotation on the project information panel, 29 September 2026.
 
+### FR-013 — Source PDF works in project details
+
+- When opening **Seoul Milk**, present a document-choice popup for `Soul milk.pdf` (presentation) and `รายงาน Soul milk ฉบับเต็ม.pdf` (full report). Let the viewer choose and switch between the two. The chooser must support Escape, a close button, keyboard focus, and Thai/English labels.
+- Make the source PDF the primary readable media for **ตี๋น้อย × ลัคกี้สุกี้** (`PR037_Final.pdf`), **Every Minute Matters / Katsumidori** (`PR037_ปาทังกี้_katsumidori.pdf`), **MV ลามปาม** (`วิเคราะห์สัญญะใน MV.pdf`), and **เรื่องราวของเจน** (`Report เรื่องเจน.pdf`). Keep the existing text details below the PDF and provide a direct open-in-new-tab link when the embedded viewer is unavailable or too small.
+- Publish searchable PDF copies derived from the supplied files. Remove roster pages consisting of student names and IDs from the Seoul presentation, Teenoi/Lucky deck, Katsumidori deck, and MV analysis. Redact the student ID on the Seoul full report cover without leaving extractable text. Keep the remaining work pages and do not change the private originals. Clearly label these as public copies.
+- Serve the files with `application/pdf` and byte ranges, and make the PDF reader usable on desktop and narrow screens without hiding the close or document-switch controls.
+
+Source: User's Railway request naming the six source PDFs, 29 September 2026, and the existing public-repository privacy boundary.
+
 ## Non-functional requirements and constraints
 
 ### NFR-001 — Bilingual and readable
@@ -151,6 +160,7 @@ Implement and verify changes in the local `site` checkout, review the staged pub
 - **AC-006:** On desktop and narrow viewports, every revised project detail can scroll to its final section without overlap, and the revised video and image assets load.
 - **AC-007:** Local tests pass, staged public files pass the pre-push review, GitHub `main` matches the committed local revision, Railway's Active deployment matches that GitHub commit, and the public page and changed media are checked after deployment.
 - **AC-008:** All 15 detail information panels use white with readable dark text in Thai and English. Analytical boards and slide controls remain legible, each dialog scrolls to its final content without media/text overlap, and focused controls stay visible at the annotated, desktop, and mobile viewports.
+- **AC-009:** The five named projects open their requested PDF works. Seoul Milk offers two choices before opening a PDF. All six public PDF links return `application/pdf`, support byte ranges, render first and last pages, and retain searchable work text while the exact source student IDs and identifying PDF metadata are absent. Popup selection, Escape, focus return, document switching, external links, Thai/English, and mobile reading are checked in a browser.
 
 ## Source verification during implementation
 

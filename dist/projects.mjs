@@ -268,6 +268,10 @@ export const projects = [
     id: 'seoul-milk-critique',
     cardShape: 'landscape',
     image: 'assets/seoul-milk-critique.jpg',
+    pdfDocuments: [
+      { src: 'assets/pdfs/seoul-milk-presentation.pdf', sourceName: 'Soul milk.pdf', label: { th: 'ผลงานนำเสนอ', en: 'Presentation' } },
+      { src: 'assets/pdfs/seoul-milk-full-report.pdf', sourceName: 'รายงาน Soul milk ฉบับเต็ม.pdf', label: { th: 'รายงานฉบับเต็ม', en: 'Full report' } },
+    ],
     title: { th: 'วิเคราะห์โฆษณา Seoul Milk', en: 'A Critique of the Seoul Milk Ad' },
     category: { th: 'วิเคราะห์และวิพากษ์สื่อ', en: 'Media analysis & critique' },
     teaser: {
@@ -284,6 +288,7 @@ export const projects = [
     id: 'tee-noi-vs-lucky-suki',
     cardShape: 'landscape',
     image: 'assets/tee-noi-vs-lucky-suki.jpg',
+    pdfDocuments: [{ src: 'assets/pdfs/tee-noi-lucky-suki.pdf', sourceName: 'PR037_Final.pdf', label: { th: 'ผลงานนำเสนอ', en: 'Presentation' } }],
     title: { th: 'ตี๋น้อย × ลัคกี้สุกี้', en: 'Suki Teenoi × Lucky Suki' },
     category: { th: 'วิเคราะห์สื่อสังคม · แบรนด์', en: 'Social listening · Brand analysis' },
     teaser: {
@@ -300,6 +305,7 @@ export const projects = [
     id: 'katsumidori',
     cardShape: 'landscape',
     image: 'assets/covers/katsumidori-slide-cover.jpg',
+    pdfDocuments: [{ src: 'assets/pdfs/katsumidori.pdf', sourceName: 'PR037_ปาทังกี้_katsumidori.pdf', label: { th: 'ผลงานนำเสนอ', en: 'Presentation' } }],
     title: { th: 'Every Minute Matters', en: 'Every Minute Matters' },
     category: { th: 'กลยุทธ์แบรนด์ · Katsumidori', en: 'Brand strategy · Katsumidori' },
     teaser: {
@@ -315,6 +321,7 @@ export const projects = [
   {
     id: 'mv-lam-pam-symbolism',
     image: 'assets/mv-lam-pam-symbolism.jpg',
+    pdfDocuments: [{ src: 'assets/pdfs/mv-lam-pam-analysis.pdf', sourceName: 'วิเคราะห์สัญญะใน MV.pdf', label: { th: 'รายงานวิเคราะห์', en: 'Analysis report' } }],
     title: { th: 'MV ลามปาม', en: 'MV Lam Pam' },
     category: { th: 'วิเคราะห์สัญญะ · มิวสิกวิดีโอ', en: 'Semiotic analysis · Music video' },
     teaser: {
@@ -339,6 +346,7 @@ export const projects = [
     id: 'jane-interview',
     cardTitleOverlay: true,
     image: 'assets/jane-interview.jpg',
+    pdfDocuments: [{ src: 'assets/pdfs/jane-story.pdf', sourceName: 'Report เรื่องเจน.pdf', label: { th: 'รายงานเรื่องเจน', en: 'Jane report' } }],
     title: { th: 'เรื่องราวของเจน', en: 'Jane’s Story' },
     category: { th: 'เรื่องเล่าจากบทสัมภาษณ์', en: 'Interview-based feature' },
     teaser: {

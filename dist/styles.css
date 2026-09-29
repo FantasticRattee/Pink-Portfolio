@@ -324,6 +324,36 @@ button:focus-visible, a:focus-visible, .stage:focus-visible {
 .slide-thumbnails button.is-active, .slide-thumbnails button:hover { border-color: var(--blue); opacity: 1; }
 .slide-thumbnails img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 
+.detail-dialog.has-pdf { width: min(1280px, calc(100% - 24px)); height: min(96dvh, 950px); max-height: min(96dvh, 950px); overflow-y: auto; scrollbar-color: #bcc4ce #f3f5f7; }
+.detail-dialog.has-pdf .detail-shell { display: flex; flex-direction: column; height: auto; min-height: 100%; }
+.detail-dialog.has-pdf .detail-media-panel { width: 100%; height: min(78dvh, 760px); min-height: 520px; max-height: none; flex: 0 0 auto; background: #f7f8fa; }
+.detail-dialog.has-pdf .detail-image-wrap { display: flex; flex-direction: column; background: #f7f8fa; }
+.detail-dialog.has-pdf .detail-content { width: 100%; height: auto; overflow: visible; padding: 34px clamp(26px, 6vw, 84px) 34px; flex: 0 0 auto; }
+.detail-dialog.has-pdf .detail-content h2 { margin-top: 15px; }
+.pdf-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 76px 15px 24px; background: #fff; border-bottom: 1px solid #e5e7eb; color: #101115; }
+.pdf-toolbar-identity { min-width: 0; display: grid; gap: 3px; }
+.pdf-toolbar-identity strong { font-size: .95rem; overflow-wrap: anywhere; }
+.pdf-toolbar-identity small { color: #5f6368; font-size: .73rem; line-height: 1.4; }
+.pdf-toolbar a { flex: 0 0 auto; color: #2450d8; text-decoration: none; border: 1px solid #c8d6ff; border-radius: 8px; padding: 9px 12px; font-size: .82rem; font-weight: 700; }
+.pdf-toolbar a:hover { background: #f2f5ff; }
+.pdf-tabs { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 24px; border-bottom: 1px solid #e5e7eb; background: #fff; }
+.pdf-tabs button { border: 1px solid #d4d8df; border-radius: 8px; padding: 8px 12px; background: #fff; color: #34363c; cursor: pointer; font-size: .82rem; }
+.pdf-tabs button.is-active, .pdf-tabs button:hover { border-color: #8fa9ff; background: #eef2ff; color: #2347b8; }
+.pdf-frame { display: block; flex: 1; width: 100%; min-height: 0; border: 0; background: #fff; }
+
+.pdf-choice-dialog { width: min(560px, calc(100% - 32px)); max-width: none; border: 1px solid #e5e7eb; border-radius: 16px; padding: 34px; background: #fff; color: #101115; box-shadow: 0 28px 75px rgba(16,17,21,.24); }
+.pdf-choice-dialog::backdrop { background: rgba(16,17,21,.55); backdrop-filter: blur(10px); }
+.pdf-choice-close { position: absolute; top: 17px; right: 17px; width: 38px; height: 38px; border: 1px solid #cbd0d7; border-radius: 50%; background: #fff; color: #101115; cursor: pointer; font-size: 1.55rem; line-height: 1; }
+.pdf-choice-close:hover { background: #eef2f8; }
+.pdf-choice-project { margin: 0 48px 10px 0; color: #5f6368; font-size: .75rem; font-weight: 700; letter-spacing: .08em; }
+.pdf-choice-dialog h2 { margin: 0 48px 8px 0; font-size: clamp(1.75rem, 3vw, 2.3rem); letter-spacing: -.05em; }
+.pdf-choice-description { margin: 0 0 24px; color: #34363c; line-height: 1.55; }
+.pdf-choice-options { display: grid; gap: 10px; }
+.pdf-choice-option { display: grid; gap: 5px; width: 100%; text-align: left; padding: 17px 18px; border: 1px solid #dce1e7; border-radius: 12px; background: #fff; color: #101115; cursor: pointer; }
+.pdf-choice-option:hover { border-color: #8fa9ff; background: #f5f7ff; }
+.pdf-choice-option strong { font-size: 1.02rem; }
+.pdf-choice-option span { color: #5f6368; font-size: .84rem; overflow-wrap: anywhere; }
+
 @media (max-width: 700px) {
   .topbar { min-height: 58px; }
   .topbar-label { display: none; }
@@ -352,6 +382,11 @@ button:focus-visible, a:focus-visible, .stage:focus-visible {
   .persona-grid { grid-template-columns: 1fr; }
   .offer-row { grid-template-columns: 1fr 1.2fr 44px; gap: 9px; }
   .offer-row > span { font-size: .78rem; }
+  .detail-dialog.has-pdf { width: calc(100% - 16px); }
+  .detail-dialog.has-pdf .detail-media-panel { height: 72dvh; min-height: 440px; }
+  .pdf-toolbar { align-items: flex-start; flex-direction: column; gap: 10px; padding: 14px 72px 14px 16px; }
+  .pdf-tabs { padding: 9px 16px; }
+  .pdf-choice-dialog { padding: 28px 20px 20px; }
 }
 
 @media (max-width: 460px) {

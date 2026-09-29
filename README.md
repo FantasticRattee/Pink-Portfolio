@@ -1,6 +1,6 @@
 # Pink Portfolio
 
-A bilingual portfolio of 15 film, show, documentary, strategy, and media-analysis projects. Browse the carousel with a pointer, swipe, wheel, or arrow keys; select a project for its video, slides, and details.
+A bilingual portfolio of 15 film, show, documentary, strategy, and media-analysis projects. Browse the carousel with a pointer, swipe, wheel, or arrow keys; select a project for its video, source PDF, and details. Seoul Milk offers a choice between its presentation and full report.
 
 ## Run locally
 
@@ -10,7 +10,7 @@ Requires Node.js 18 or newer. No package installation or build step is needed.
 npm start
 ```
 
-Open <http://127.0.0.1:4173/>. Run `npm test` for the carousel, content, and video-range checks.
+Open <http://127.0.0.1:4173/>. Run `npm test` for the carousel, content, PDF links, and media-range checks.
 
 ## Production
 
@@ -18,4 +18,4 @@ The [public portfolio](https://pink-portfolio-production.up.railway.app/) is dep
 
 For the required Local → GitHub → Railway update procedure, read [AGENTS.md](AGENTS.md). [project-context.md](project-context.md) records the site's content and deployment mapping.
 
-The `dist/` directory contains the site and web-ready media. Original source PDFs, raw video, and private application files are not part of this repository. Covers derived from source slides omit student identifiers.
+The `dist/` directory contains the site and web-ready media. Original source PDFs, raw video, and private application files are not part of this repository. Public PDF copies in `dist/assets/pdfs/` omit student-ID roster pages or redact an ID on a report cover while retaining work content. Covers derived from source slides also omit student identifiers.

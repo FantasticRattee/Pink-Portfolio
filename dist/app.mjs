@@ -31,6 +31,11 @@ const ui = {
     nextAria: 'ผลงานถัดไป',
     closeAria: 'ปิดรายละเอียด',
     stageAria: 'ผลงาน เลื่อนด้วยปุ่มลูกศรซ้ายและขวา',
+    choosePdf: 'เลือกไฟล์ผลงาน',
+    choosePdfDescription: 'Seoul Milk มีทั้งสไลด์ผลงานและรายงานฉบับเต็ม เลือกไฟล์ที่ต้องการอ่าน',
+    closePdfChoice: 'ปิดหน้าต่างเลือกเอกสาร',
+    openPdf: 'เปิด PDF ในแท็บใหม่',
+    publicPdf: 'PDF สำหรับเผยแพร่ โดยปิดรหัสนักศึกษาในไฟล์ที่มีข้อมูลดังกล่าว',
   },
   en: {
     topbar: 'PORTFOLIO / 15 PROJECTS',
@@ -60,6 +65,11 @@ const ui = {
     nextAria: 'Next project',
     closeAria: 'Close project details',
     stageAria: 'Projects. Use the left and right arrow keys to browse.',
+    choosePdf: 'Choose a document',
+    choosePdfDescription: 'Seoul Milk has a presentation and a full report. Choose the document to read.',
+    closePdfChoice: 'Close document chooser',
+    openPdf: 'Open PDF in a new tab',
+    publicPdf: 'Public PDF copy with student IDs removed where present',
   },
 };
 
@@ -84,6 +94,12 @@ const detailContribution = document.querySelector('#detailContribution');
 const contributionSection = document.querySelector('#contributionSection');
 const progressFill = document.querySelector('#progressFill');
 const languageButton = document.querySelector('#languageButton');
+const pdfChoiceDialog = document.querySelector('#pdfChoiceDialog');
+const pdfChoiceProject = document.querySelector('#pdfChoiceProject');
+const pdfChoiceTitle = document.querySelector('#pdfChoiceTitle');
+const pdfChoiceDescription = document.querySelector('#pdfChoiceDescription');
+const pdfChoiceOptions = document.querySelector('#pdfChoiceOptions');
+const pdfChoiceClose = document.querySelector('#pdfChoiceClose');
 
 let language = 'th';
 let activeIndex = 0;
@@ -93,6 +109,7 @@ let suppressClickUntil = 0;
 let lastWheelMove = 0;
 let wheelTotal = 0;
 let lastTrigger = null;
+let selectedPdfIndex = 0;
 
 const numberLabel = (index) => `${String(index + 1).padStart(2, '0')} / ${String(projects.length).padStart(2, '0')}`;
 
@@ -223,15 +240,57 @@ function render() {
   progressFill.style.transform = `scaleX(${(activeIndex + 1) / projects.length})`;
 }
 
+function showSelectedDetails(index) {
+  showProjectDetails(index);
+  detailContent.scrollTop = 0;
+  dialog.scrollTop = 0;
+  if (!dialog.open) dialog.showModal();
+}
+
+function showPdfChooser(index, trigger) {
+  const project = projects[index];
+  lastTrigger = trigger || lastTrigger;
+  pdfChoiceProject.textContent = project.title[language];
+  pdfChoiceTitle.textContent = ui[language].choosePdf;
+  pdfChoiceDescription.textContent = ui[language].choosePdfDescription;
+  pdfChoiceClose.setAttribute('aria-label', ui[language].closePdfChoice);
+  pdfChoiceOptions.replaceChildren();
+  project.pdfDocuments.forEach((pdfDocument, documentIndex) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'pdf-choice-option';
+    const label = document.createElement('strong');
+    label.textContent = pdfDocument.label[language];
+    const filename = document.createElement('span');
+    filename.textContent = pdfDocument.sourceName;
+    button.append(label, filename);
+    button.addEventListener('click', () => {
+      pdfChoiceDialog.close();
+      selectedPdfIndex = documentIndex;
+      showSelectedDetails(index);
+    });
+    pdfChoiceOptions.append(button);
+  });
+  if (dialog.open) {
+    detailImageWrap.querySelector('video')?.pause();
+    dialog.close();
+  }
+  if (!pdfChoiceDialog.open) pdfChoiceDialog.showModal();
+  pdfChoiceOptions.querySelector('button')?.focus();
+}
+
 function move(step) {
   cards.forEach(({ stopPreview }) => stopPreview());
   activeIndex = stepIndex(activeIndex, step, projects.length);
   hoveredIndex = null;
   render();
   if (dialog.open) {
-    showProjectDetails(activeIndex);
-    detailContent.scrollTop = 0;
-    dialog.scrollTop = 0;
+    selectedPdfIndex = 0;
+    if (projects[activeIndex].pdfDocuments?.length > 1) {
+      showPdfChooser(activeIndex, cards[activeIndex].card);
+    } else {
+      showSelectedDetails(activeIndex);
+    }
   }
   else if (document.activeElement?.classList?.contains('project-card')) {
     cards[activeIndex].card.focus({ preventScroll: true });
@@ -242,6 +301,52 @@ function showProjectMedia(project, mediaIndex = 0) {
   detailImageWrap.querySelector('video')?.pause();
   detailImageWrap.replaceChildren();
   videoChooser.replaceChildren();
+  if (project.pdfDocuments?.length) {
+    videoChooser.hidden = true;
+    const selected = project.pdfDocuments[mediaIndex] || project.pdfDocuments[0];
+    const toolbar = document.createElement('div');
+    toolbar.className = 'pdf-toolbar';
+    const identity = document.createElement('div');
+    identity.className = 'pdf-toolbar-identity';
+    const filename = document.createElement('strong');
+    filename.textContent = selected.sourceName;
+    const note = document.createElement('small');
+    note.textContent = `${selected.label[language]} · ${ui[language].publicPdf}`;
+    identity.append(filename, note);
+    const open = document.createElement('a');
+    open.href = selected.src;
+    open.target = '_blank';
+    open.rel = 'noopener';
+    open.textContent = ui[language].openPdf;
+    open.setAttribute('aria-label', `${ui[language].openPdf}: ${selected.sourceName}`);
+    toolbar.append(identity, open);
+    detailImageWrap.append(toolbar);
+
+    if (project.pdfDocuments.length > 1) {
+      const tabs = document.createElement('div');
+      tabs.className = 'pdf-tabs';
+      project.pdfDocuments.forEach((pdfDocument, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = pdfDocument.label[language];
+        button.classList.toggle('is-active', index === mediaIndex);
+        button.setAttribute('aria-pressed', index === mediaIndex ? 'true' : 'false');
+        button.addEventListener('click', () => {
+          selectedPdfIndex = index;
+          showProjectMedia(project, index);
+        });
+        tabs.append(button);
+      });
+      detailImageWrap.append(tabs);
+    }
+
+    const frame = document.createElement('iframe');
+    frame.className = 'pdf-frame';
+    frame.src = selected.src;
+    frame.title = `${selected.sourceName} — ${project.title[language]}`;
+    detailImageWrap.append(frame);
+    return;
+  }
   const mediaItems = project.fullVideos?.length
     ? project.fullVideos
     : project.previewVideo
@@ -292,7 +397,8 @@ function showProjectMedia(project, mediaIndex = 0) {
 function showProjectDetails(index) {
   const project = projects[index];
   dialog.classList.toggle('is-analytical', ['seoul-milk-critique', 'tee-noi-vs-lucky-suki', 'katsumidori', 'mv-lam-pam-symbolism'].includes(project.id));
-  showProjectMedia(project);
+  dialog.classList.toggle('has-pdf', Boolean(project.pdfDocuments?.length));
+  showProjectMedia(project, selectedPdfIndex);
   detailNumber.textContent = numberLabel(index);
   detailCategory.textContent = project.category[language];
   detailTitle.textContent = project.title[language];
@@ -323,7 +429,7 @@ function showProjectDetails(index) {
 function renderProjectExtras(project) {
   detailExtras.replaceChildren();
   if (project.id === 'katsumidori') detailExtras.append(createKatsumidoriBoard());
-  if (project.id === 'tee-noi-vs-lucky-suki') detailExtras.append(createSlideViewer(project, slideDecks[project.id]));
+  if (project.id === 'tee-noi-vs-lucky-suki' && !project.pdfDocuments?.length) detailExtras.append(createSlideViewer(project, slideDecks[project.id]));
   const expanded = expandedDetails[project.id];
   if (expanded) {
     const article = document.createElement('div');
@@ -367,7 +473,7 @@ function renderProjectExtras(project) {
     source.textContent = `${ui[language].source}: ${expanded.source[language]}`;
     detailExtras.append(source);
   }
-  if (project.id === 'katsumidori') detailExtras.append(createSlideViewer(project, slideDecks[project.id]));
+  if (project.id === 'katsumidori' && !project.pdfDocuments?.length) detailExtras.append(createSlideViewer(project, slideDecks[project.id]));
   detailExtras.hidden = detailExtras.childElementCount === 0;
   if (!detailExtras.hidden) {
     const close = document.createElement('button');
@@ -528,11 +634,13 @@ function openProject(index, trigger) {
   activeIndex = index;
   hoveredIndex = null;
   lastTrigger = trigger || document.activeElement;
+  selectedPdfIndex = 0;
   render();
-  showProjectDetails(index);
-  detailContent.scrollTop = 0;
-  dialog.scrollTop = 0;
-  if (!dialog.open) dialog.showModal();
+  if (projects[index].pdfDocuments?.length > 1) {
+    showPdfChooser(index, lastTrigger);
+  } else {
+    showSelectedDetails(index);
+  }
 }
 
 function setLanguage(next) {
@@ -557,6 +665,7 @@ function setLanguage(next) {
   stage.setAttribute('aria-label', ui[language].stageAria);
   render();
   if (dialog.open) showProjectDetails(activeIndex);
+  if (pdfChoiceDialog.open) showPdfChooser(activeIndex, lastTrigger);
 }
 
 document.querySelector('#previousButton').addEventListener('click', () => move(-1));
@@ -565,12 +674,22 @@ document.querySelector('#detailPrevious').addEventListener('click', () => move(-
 document.querySelector('#detailNext').addEventListener('click', () => move(1));
 document.querySelector('#detailButton').addEventListener('click', (event) => openProject(hoveredIndex ?? activeIndex, event.currentTarget));
 document.querySelector('#closeDialog').addEventListener('click', () => dialog.close());
+pdfChoiceClose.addEventListener('click', () => pdfChoiceDialog.close());
 languageButton.addEventListener('click', () => setLanguage(language === 'th' ? 'en' : 'th'));
 
 dialog.addEventListener('close', () => {
-  if (dialog.open) return;
+  if (dialog.open || pdfChoiceDialog.open) return;
   detailImageWrap.querySelector('video')?.pause();
   if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
+});
+
+pdfChoiceDialog.addEventListener('close', () => {
+  if (dialog.open) return;
+  if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
+});
+
+pdfChoiceDialog.addEventListener('click', (event) => {
+  if (event.target === pdfChoiceDialog) pdfChoiceDialog.close();
 });
 
 dialog.addEventListener('click', (event) => {
@@ -578,8 +697,9 @@ dialog.addEventListener('click', (event) => {
 });
 
 document.addEventListener('keydown', (event) => {
+  if (pdfChoiceDialog.open) return;
   if (event.altKey || event.ctrlKey || event.metaKey) return;
-  if (['INPUT', 'TEXTAREA', 'SELECT', 'VIDEO'].includes(event.target?.tagName) || event.target?.isContentEditable) return;
+  if (['INPUT', 'TEXTAREA', 'SELECT', 'VIDEO', 'IFRAME'].includes(event.target?.tagName) || event.target?.isContentEditable) return;
   if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }
   if (event.key === 'ArrowRight') { event.preventDefault(); move(1); }
   if (!dialog.open && document.activeElement === stage && (event.key === 'Enter' || event.key === ' ')) {
