@@ -2,6 +2,7 @@ import { projects } from './projects.mjs';
 import { cardCenterOffset, offsetFromActive, stepIndex, swipeStep } from './carousel.mjs';
 import { expandedDetails, katsumidoriBoard, slideDecks } from './detail-content.mjs';
 import { createPdfReader } from './pdf-reader.mjs';
+import { getProjectMediaTabs, getActiveMediaTab } from './media-tabs.mjs';
 
 const ui = {
   th: {
@@ -79,6 +80,7 @@ const track = document.querySelector('#stageTrack');
 const dialog = document.querySelector('#detailDialog');
 const closeDialog = document.querySelector('#closeDialog');
 let activePdfReader = null;
+let activeGalleryHeader = null;
 const detailImageWrap = document.querySelector('#detailImageWrap');
 const detailContent = document.querySelector('#detailContent');
 const videoChooser = document.querySelector('#videoChooser');
@@ -113,6 +115,7 @@ let lastWheelMove = 0;
 let wheelTotal = 0;
 let lastTrigger = null;
 let selectedPdfIndex = 0;
+let selectedMediaTabId = null;
 
 const numberLabel = (index) => `${String(index + 1).padStart(2, '0')} / ${String(projects.length).padStart(2, '0')}`;
 
@@ -274,7 +277,7 @@ function showPdfChooser(index, trigger) {
     });
     pdfChoiceOptions.append(button);
   });
-  clearPdfReader();
+  clearProjectMedia();
   if (dialog.open) {
     detailImageWrap.querySelector('video')?.pause();
     dialog.close();
@@ -286,6 +289,7 @@ function showPdfChooser(index, trigger) {
 function move(step) {
   cards.forEach(({ stopPreview }) => stopPreview());
   activeIndex = stepIndex(activeIndex, step, projects.length);
+  selectedMediaTabId = null;
   hoveredIndex = null;
   render();
   if (dialog.open) {
@@ -301,29 +305,130 @@ function move(step) {
   }
 }
 
-function clearPdfReader() {
-  if (!activePdfReader) return;
-  activePdfReader.destroy();
+function clearProjectMedia() {
+  detailImageWrap.querySelectorAll('video').forEach((video) => video.pause());
+  activePdfReader?.destroy();
   dialog.querySelector('.detail-shell').prepend(closeDialog);
-  activePdfReader.header.remove();
-  detailImageWrap.replaceChildren();
+  dialog.querySelector('.detail-media-panel').append(videoChooser);
+  activePdfReader?.header.remove();
+  activeGalleryHeader?.remove();
   activePdfReader = null;
+  activeGalleryHeader = null;
+  detailImageWrap.replaceChildren();
+}
+
+function renderMediaTabs(project, activeTab) {
+  const tabs = getProjectMediaTabs(project);
+  videoChooser.replaceChildren();
+  videoChooser.hidden = tabs.length < 2;
+  videoChooser.setAttribute('role', 'tablist');
+  videoChooser.setAttribute('aria-label', language === 'th' ? 'สื่อและไฟล์ประกอบผลงาน' : 'Project media and supporting files');
+  tabs.forEach((tab) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.id = `media-tab-${project.id}-${tab.id}`;
+    button.dataset.tabId = tab.id;
+    button.setAttribute('role', 'tab');
+    button.setAttribute('aria-controls', 'detailImageWrap');
+    button.textContent = tab.label?.[language] || (project.fullVideos?.length ? ui[language].fullVideo : ui[language].excerpt);
+    const selected = activeTab?.id === tab.id;
+    button.classList.toggle('is-active', selected);
+    button.setAttribute('aria-selected', String(selected));
+    button.setAttribute('aria-pressed', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    const select = (id) => {
+      selectedMediaTabId = id;
+      showSelectedDetails(activeIndex);
+      videoChooser.querySelector('[aria-selected="true"]')?.focus({ preventScroll: true });
+    };
+    button.addEventListener('click', () => select(tab.id));
+    button.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const current = tabs.findIndex((item) => item.id === tab.id);
+      const index = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1
+        : (current + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      select(tabs[index].id);
+    });
+    videoChooser.append(button);
+  });
+  detailImageWrap.setAttribute('role', 'tabpanel');
+  if (activeTab) detailImageWrap.setAttribute('aria-labelledby', `media-tab-${project.id}-${activeTab.id}`);
+  else detailImageWrap.removeAttribute('aria-labelledby');
+}
+
+function renderBehindScenes(tab) {
+  const gallery = document.createElement('div');
+  gallery.className = 'behind-scenes-gallery';
+  for (const group of tab.groups) {
+    const section = document.createElement('section');
+    section.className = 'behind-scenes-group';
+    section.dataset.groupId = group.id;
+    const heading = document.createElement('h3');
+    heading.textContent = group.label[language];
+    section.append(heading);
+    for (const item of group.items) {
+      const figure = document.createElement('figure');
+      figure.className = 'behind-scenes-item';
+      figure.dataset.sourceName = item.sourceName;
+      if (item.type === 'video') {
+        const video = document.createElement('video');
+        video.src = item.src;
+        video.poster = item.poster;
+        video.width = item.width;
+        video.height = item.height;
+        video.controls = true;
+        video.preload = 'none';
+        video.playsInline = true;
+        video.setAttribute('aria-label', item.sourceName);
+        figure.append(video);
+      } else {
+        const link = document.createElement('a');
+        link.href = item.src;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        const image = document.createElement('img');
+        image.src = item.src;
+        image.alt = item.sourceName;
+        image.width = item.width;
+        image.height = item.height;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        link.append(image);
+        figure.append(link);
+      }
+      const caption = document.createElement('figcaption');
+      caption.textContent = item.sourceName;
+      figure.append(caption);
+      section.append(figure);
+    }
+    gallery.append(section);
+  }
+  detailImageWrap.append(gallery);
+  activeGalleryHeader = document.createElement('header');
+  activeGalleryHeader.className = 'media-tabs-header';
+  activeGalleryHeader.append(videoChooser, closeDialog);
+  dialog.querySelector('.detail-shell').prepend(activeGalleryHeader);
 }
 
 function showProjectMedia(project, mediaIndex = 0) {
-  clearPdfReader();
-  dialog.querySelector('.detail-shell').prepend(closeDialog);
-  detailImageWrap.querySelector('video')?.pause();
-  detailImageWrap.replaceChildren();
+  clearProjectMedia();
   videoChooser.replaceChildren();
-  if (project.pdfDocuments?.length) {
+  const activeTab = getActiveMediaTab(project, selectedMediaTabId);
+  const supportingDocument = activeTab?.kind === 'pdf' ? activeTab.document : null;
+  if (project.pdfDocuments?.length || supportingDocument) {
     videoChooser.hidden = true;
-    const selected = project.pdfDocuments[mediaIndex] || project.pdfDocuments[0];
+    const selected = supportingDocument || project.pdfDocuments[mediaIndex] || project.pdfDocuments[0];
     activePdfReader = createPdfReader({ pdfDocument: selected, language, scrollRoot: dialog, closeButton: closeDialog });
     detailImageWrap.append(activePdfReader.element);
+    detailImageWrap.removeAttribute('role');
+    detailImageWrap.removeAttribute('aria-labelledby');
     dialog.querySelector('.detail-shell').prepend(activePdfReader.header);
-
-    if (project.pdfDocuments.length > 1) {
+    if (supportingDocument) {
+      renderMediaTabs(project, activeTab);
+      activePdfReader.header.append(videoChooser);
+    } else if (project.pdfDocuments.length > 1) {
       const tabs = document.createElement('div');
       tabs.className = 'pdf-tabs';
       project.pdfDocuments.forEach((pdfDocument, index) => {
@@ -344,17 +449,12 @@ function showProjectMedia(project, mediaIndex = 0) {
     dialog.scrollTop = 0;
     return;
   }
-  const mediaItems = project.fullVideos?.length
-    ? project.fullVideos
-    : project.previewVideo
-      ? [{ src: project.previewVideo, label: project.previewLabel }]
-      : [];
-  videoChooser.hidden = mediaItems.length < 2;
-
-  if (mediaItems.length) {
-    const selected = mediaItems[mediaIndex] || mediaItems[0];
-    const mediaLabel = selected.label?.[language]
-      || (project.fullVideos?.length ? ui[language].fullVideo : ui[language].excerpt);
+  renderMediaTabs(project, activeTab);
+  if (activeTab?.kind === 'gallery') {
+    renderBehindScenes(activeTab);
+  } else if (activeTab?.kind === 'video') {
+    const selected = activeTab.video;
+    const mediaLabel = selected.label?.[language] || (project.fullVideos?.length ? ui[language].fullVideo : ui[language].excerpt);
     const video = document.createElement('video');
     video.src = selected.src;
     video.poster = project.image || '';
@@ -366,18 +466,6 @@ function showProjectMedia(project, mediaIndex = 0) {
     label.className = 'detail-media-label';
     label.textContent = mediaLabel;
     detailImageWrap.append(video, label);
-
-    if (mediaItems.length > 1) {
-      mediaItems.forEach((item, index) => {
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.textContent = item.label?.[language] || `${ui[language].fullVideo} ${index + 1}`;
-        button.classList.toggle('is-active', index === mediaIndex);
-        button.setAttribute('aria-pressed', index === mediaIndex ? 'true' : 'false');
-        button.addEventListener('click', () => showProjectMedia(project, index));
-        videoChooser.append(button);
-      });
-    }
   } else if (project.image) {
     const image = document.createElement('img');
     image.src = project.image;
@@ -394,7 +482,9 @@ function showProjectMedia(project, mediaIndex = 0) {
 function showProjectDetails(index) {
   const project = projects[index];
   dialog.classList.toggle('is-analytical', ['seoul-milk-critique', 'tee-noi-vs-lucky-suki', 'katsumidori', 'mv-lam-pam-symbolism'].includes(project.id));
-  dialog.classList.toggle('has-pdf', Boolean(project.pdfDocuments?.length));
+  const mediaTab = getActiveMediaTab(project, selectedMediaTabId);
+  dialog.classList.toggle('has-pdf', Boolean(project.pdfDocuments?.length || mediaTab?.kind === 'pdf'));
+  dialog.classList.toggle('is-gallery', mediaTab?.kind === 'gallery');
   dialog.classList.toggle('is-pdf-only', Boolean(project.pdfOnly));
   detailContent.hidden = Boolean(project.pdfOnly);
   showProjectMedia(project, selectedPdfIndex);
@@ -655,6 +745,7 @@ function openProject(index, trigger) {
   hoveredIndex = null;
   lastTrigger = trigger || document.activeElement;
   selectedPdfIndex = 0;
+  selectedMediaTabId = null;
   render();
   if (projects[index].pdfDocuments?.length > 1) {
     showPdfChooser(index, lastTrigger);
@@ -699,7 +790,7 @@ languageButton.addEventListener('click', () => setLanguage(language === 'th' ? '
 
 dialog.addEventListener('close', () => {
   if (dialog.open || pdfChoiceDialog.open) return;
-  clearPdfReader();
+  clearProjectMedia();
   detailImageWrap.querySelector('video')?.pause();
   if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
 });
@@ -713,13 +804,17 @@ pdfChoiceDialog.addEventListener('click', (event) => {
   if (event.target === pdfChoiceDialog) pdfChoiceDialog.close();
 });
 
+detailImageWrap.addEventListener('play', (event) => {
+  detailImageWrap.querySelectorAll('video').forEach((video) => { if (video !== event.target) video.pause(); });
+}, true);
+
 dialog.addEventListener('click', (event) => {
   if (event.target === dialog) dialog.close();
 });
 
 document.addEventListener('keydown', (event) => {
   if (pdfChoiceDialog.open) return;
-  if (event.target?.closest('.pdf-reader, .pdf-reader-header')) return;
+  if (event.target?.closest('.pdf-reader, .pdf-reader-header, #videoChooser')) return;
   if (event.altKey || event.ctrlKey || event.metaKey) return;
   if (['INPUT', 'TEXTAREA', 'SELECT', 'VIDEO', 'IFRAME'].includes(event.target?.tagName) || event.target?.isContentEditable) return;
   if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }

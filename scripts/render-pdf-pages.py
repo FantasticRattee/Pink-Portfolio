@@ -19,8 +19,8 @@ LARGE_EDGE = 2000
 QUALITY = 90
 
 pdfs = sorted(PDF_DIR.glob('*.pdf'))
-if len(pdfs) != 6:
-    raise SystemExit(f'Expected six public PDFs, found {len(pdfs)}')
+if not pdfs:
+    raise SystemExit('No public PDFs found')
 manifest = {}
 for pdf in pdfs:
     stem = pdf.stem

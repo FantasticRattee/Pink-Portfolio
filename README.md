@@ -25,3 +25,5 @@ The `dist/` directory contains the site and web-ready media. Original source PDF
 PDF works display every original page in a continuous, touch-friendly reader with responsive page images, zoom/fit controls, and reduced-motion support. Jane and Seoul Milk show PDF pages only; the other PDF projects retain their information after the document. The optional PDF link opens the searchable original public copy.
 
 To regenerate page images after updating a public PDF, install Poppler (`pdftoppm`) and Python packages `Pillow` and `pypdf`, then run `python3 scripts/render-pdf-pages.py` from this repository. Run the tests afterwards to check source hashes and complete page coverage.
+
+Behind-the-scenes galleries are available through the original media-tab style for Kafak, My Love Scene, SIAM Arcade, First Thing First, and Resource Wrong Place. SIAM includes a production-report tab, and First Thing First includes a script tab. Galleries preserve full image proportions and clip durations/audio, using one continuous scroll with sticky tabs.

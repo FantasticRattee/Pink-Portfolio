@@ -40,6 +40,8 @@ test('document page assets cover the exact public PDFs without stale or missing 
     'seoul-milk-full-report.pdf': 23,
     'seoul-milk-presentation.pdf': 16,
     'tee-noi-lucky-suki.pdf': 28,
+    'siam-arcade-production-report.pdf': 29,
+    'first-thing-first-script.pdf': 2,
   };
   assert.deepEqual(Object.keys(pdfPages).sort(), Object.keys(counts).map((name) => `assets/pdfs/${name}`).sort());
   for (const [name, count] of Object.entries(counts)) {

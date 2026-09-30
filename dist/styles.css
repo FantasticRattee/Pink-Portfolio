@@ -426,3 +426,29 @@ button:focus-visible, a:focus-visible, .stage:focus-visible {
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+.detail-dialog.is-gallery { width: min(1280px, calc(100% - 24px)); height: min(96dvh, 950px); max-height: min(96dvh, 950px); overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.detail-dialog.is-gallery .detail-shell { display: flex; flex-direction: column; height: auto; min-height: 100%; }
+.detail-dialog.is-gallery .detail-media-panel { height: auto; min-height: 0; max-height: none; flex: 0 0 auto; background: #f5f5f7; }
+.detail-dialog.is-gallery .detail-image-wrap { display: block; overflow: visible; background: #f5f5f7; }
+.detail-dialog.is-gallery .detail-content { height: auto; overflow: visible; width: 100%; padding: 34px clamp(26px, 6vw, 84px); }
+.media-tabs-header { position: sticky; top: 0; z-index: 3; flex: 0 0 auto; background: #181b23; }
+.media-tabs-header .video-chooser { border: 0; min-height: 68px; align-items: center; padding: 12px 76px 12px 20px; }
+.media-tabs-header .dialog-close { right: 16px; top: 13px; z-index: 4; box-shadow: none; }
+.behind-scenes-gallery { width: min(100%, 960px); margin-inline: auto; padding: 24px clamp(10px, 3vw, 30px) 32px; }
+.behind-scenes-group { display: grid; gap: 20px; margin-bottom: 36px; }
+.behind-scenes-group:last-child { margin-bottom: 0; }
+.behind-scenes-group h3 { margin: 0; color: #34363c; font-size: 1.1rem; }
+.behind-scenes-item { margin: 0; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 14px rgba(16,17,21,.08); }
+.behind-scenes-item a { display: block; }
+.detail-dialog.is-gallery .detail-image-wrap .behind-scenes-item img,
+.detail-dialog.is-gallery .detail-image-wrap .behind-scenes-item video { position: static; inset: auto; display: block; width: 100%; height: auto; object-fit: contain; }
+.behind-scenes-item figcaption { padding: 12px 14px; color: #5f6368; font-size: .8rem; overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .detail-dialog.is-gallery { width: 100%; height: 100dvh; max-height: 100dvh; border: 0; }
+  .video-chooser button { min-height: 44px; }
+  .media-tabs-header .video-chooser { padding: max(12px, env(safe-area-inset-top)) 70px 12px 12px; }
+  .media-tabs-header .dialog-close { right: 14px; top: max(12px, env(safe-area-inset-top)); }
+  .behind-scenes-gallery { padding: 20px 8px; }
+  .behind-scenes-group { gap: 14px; margin-bottom: 26px; }
+}

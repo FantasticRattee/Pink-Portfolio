@@ -159,6 +159,18 @@ Source: User's project-by-project revision request, 30 September 2026, and the m
 
 Source: User's browser comments and screenshot, plus the two explicit scope/continuous-scroll answers, 30 September 2026.
 
+### FR-016 — Behind-the-scenes and supporting-file tabs
+
+- Add tabs using the existing video-selector style beneath each primary clip. Keep the primary clip as the default and preserve Thai/English controls. Gallery selection shows the source media in one orderly vertical scroll with sticky tabs and close control; switching tabs pauses every previous video. Reports/scripts use the continuous PDF reader.
+- **กาฝาก:** add **เบื้องหลัง**. Group order: solo portraits (2 files), on set (6 files including the MOV), group moments (3 files including the MP4), then the five generic behind-the-scenes images. The misspelled `เบื้อหลังรูปเดี่ยว.jpg` is the second solo file; preserve the source association.
+- **My Love Scene:** add **เบื้องหลัง**, with `เบื้องหลัง 1.jpg` through `เบื้องหลัง 7.jpg` in numeric order.
+- **SIAM Arcade:** add **เบื้องหลัง** and **รายงานสรุปผล**. Gallery order: group photo, two guest-VTR clips, then CG images. The user confirmed inclusion of all three CG files: `เบื้องหลัง CG.jpg`, `เบื้องหลัง CG(1).jpg`, and `เบื้องหลัง CG(2).jpg`. The report tab uses the supplied 29-page `รายงานสรุปผล.pdf`, with 13 institution student numbers truly redacted on roster pages 2–3 and metadata removed in the public copy; names, role information, and other work content remain.
+- **First Thing First:** add **เบื้องหลัง** and **สคริปต์รายการ**. Gallery order: group MP4, Camera 3 MOV, then solo JPG and MOV. Use the two-page `สคริปต์.pdf` in the script tab. `เบื้องหลังคุมกล้อง3.mov` is the source corresponding to the user's dictated “คลุมกล้อง3”.
+- **ทรัพยากรผิดที่ผิดเวลา:** add **เบื้องหลัง**, with the group HEIF image followed by `เบื้องหลัง 1.jpg` and `เบื้องหลัง 2.jpg` from the documentary source folder.
+- Preserve full image proportions and whole clip durations with audio. Publish stripped-metadata web derivatives, not original MOV/HEIF files. Source filenames caption the files. Use keyboard tab navigation, and retain the existing PDF-only behavior for Jane/Seoul Milk and video choices for other projects.
+
+Source: “Requirement ที่ 2 30/09/2026”, received 1 October 2026, and the source inventory in the parent folder's `map.md`.
+
 ## Non-functional requirements and constraints
 
 ### NFR-001 — Bilingual and readable

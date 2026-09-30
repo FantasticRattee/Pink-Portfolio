@@ -1,0 +1,477 @@
+export const supportingProjectTabs = {
+  "kafak": [
+    {
+      "id": "behind-scenes",
+      "kind": "gallery",
+      "label": {
+        "th": "เบื้องหลัง",
+        "en": "Behind the scenes"
+      },
+      "groups": [
+        {
+          "id": "solo",
+          "label": {
+            "th": "เบื้องหลังรูปเดี่ยว",
+            "en": "Solo portraits"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังรูปเดี่ยว.webp",
+              "sourceName": "เบื้องหลังรูปเดี่ยว.jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้อหลังรูปเดี่ยว.webp",
+              "sourceName": "เบื้อหลังรูปเดี่ยว.jpg",
+              "width": 1616,
+              "height": 1080
+            }
+          ]
+        },
+        {
+          "id": "onset",
+          "label": {
+            "th": "เบื้องหลังในกอง",
+            "en": "On set"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังในกอง1-5.webp",
+              "sourceName": "เบื้องหลังในกอง(1).heif",
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังในกอง1.webp",
+              "sourceName": "เบื้องหลังในกอง(1).jpg",
+              "width": 1108,
+              "height": 1477
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังในกอง2.webp",
+              "sourceName": "เบื้องหลังในกอง(2).jpg",
+              "width": 1477,
+              "height": 1108
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังในกอง-4.webp",
+              "sourceName": "เบื้องหลังในกอง.heif",
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังในกอง.webp",
+              "sourceName": "เบื้องหลังในกอง.jpg",
+              "width": 1477,
+              "height": 1108
+            },
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/kafak/onset.mp4",
+              "sourceName": "เบื้องหลังในกอง.mov",
+              "width": 1080,
+              "height": 1920,
+              "poster": "assets/behind-scenes/kafak/onset-poster.webp",
+              "duration": 13.116667
+            }
+          ]
+        },
+        {
+          "id": "group",
+          "label": {
+            "th": "เบื้องหลังรูปรวม",
+            "en": "Group moments"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังรูปรวม1.webp",
+              "sourceName": "เบื้องหลังรูปรวม(1).jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลังรูปรวม.webp",
+              "sourceName": "เบื้องหลังรูปรวม.jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/kafak/group.mp4",
+              "sourceName": "เบื้องหลังรูปรวม.mp4",
+              "width": 960,
+              "height": 540,
+              "poster": "assets/behind-scenes/kafak/group-poster.webp",
+              "duration": 8.823333
+            }
+          ]
+        },
+        {
+          "id": "other",
+          "label": {
+            "th": "เบื้องหลัง",
+            "en": "Behind the scenes"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลัง1.webp",
+              "sourceName": "เบื้องหลัง(1).jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลัง2.webp",
+              "sourceName": "เบื้องหลัง(2).jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลัง3.webp",
+              "sourceName": "เบื้องหลัง(3).jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลัง4.webp",
+              "sourceName": "เบื้องหลัง(4).jpg",
+              "width": 1616,
+              "height": 1080
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/kafak/เบื้องหลัง.webp",
+              "sourceName": "เบื้องหลัง.jpg",
+              "width": 1616,
+              "height": 1080
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "my-love-scene": [
+    {
+      "id": "behind-scenes",
+      "kind": "gallery",
+      "label": {
+        "th": "เบื้องหลัง",
+        "en": "Behind the scenes"
+      },
+      "groups": [
+        {
+          "id": "sequence",
+          "label": {
+            "th": "เบื้องหลัง",
+            "en": "Behind the scenes"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-1.webp",
+              "sourceName": "เบื้องหลัง 1.jpg",
+              "width": 1108,
+              "height": 1477
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-2.webp",
+              "sourceName": "เบื้องหลัง 2.jpg",
+              "width": 1501,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-3.webp",
+              "sourceName": "เบื้องหลัง 3.jpg",
+              "width": 1108,
+              "height": 1477
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-4.webp",
+              "sourceName": "เบื้องหลัง 4.jpg",
+              "width": 2000,
+              "height": 1501
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-5.webp",
+              "sourceName": "เบื้องหลัง 5.jpg",
+              "width": 1108,
+              "height": 1477
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-6.webp",
+              "sourceName": "เบื้องหลัง 6.jpg",
+              "width": 1501,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/my-love-scene/เบื้องหลัง-7.webp",
+              "sourceName": "เบื้องหลัง 7.jpg",
+              "width": 1501,
+              "height": 2000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "siam-arcade": [
+    {
+      "id": "behind-scenes",
+      "kind": "gallery",
+      "label": {
+        "th": "เบื้องหลัง",
+        "en": "Behind the scenes"
+      },
+      "groups": [
+        {
+          "id": "group",
+          "label": {
+            "th": "เบื้องหลังรูปรวม",
+            "en": "Group moments"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/siam-arcade/group-still.webp",
+              "sourceName": "เบื้องหลังรูปรวม.jpg",
+              "width": 1706,
+              "height": 960
+            }
+          ]
+        },
+        {
+          "id": "vtr",
+          "label": {
+            "th": "เบื้องหลังถ่าย VTR แขก",
+            "en": "Guest VTR filming"
+          },
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/siam-arcade/vtr-guest-2.mp4",
+              "sourceName": "เบื้องหลังถ่าย VTR แขก(1).mov",
+              "width": 1080,
+              "height": 1920,
+              "poster": "assets/behind-scenes/siam-arcade/vtr-guest-2-poster.webp",
+              "duration": 8.103333
+            },
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/siam-arcade/vtr-guest.mp4",
+              "sourceName": "เบื้องหลังถ่าย VTR แขก.mov",
+              "width": 1080,
+              "height": 1920,
+              "poster": "assets/behind-scenes/siam-arcade/vtr-guest-poster.webp",
+              "duration": 4.220883
+            }
+          ]
+        },
+        {
+          "id": "cg",
+          "label": {
+            "th": "เบื้องหลัง CG",
+            "en": "CG production"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/siam-arcade/cg-1.webp",
+              "sourceName": "เบื้องหลัง CG.jpg",
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/siam-arcade/cg-2.webp",
+              "sourceName": "เบื้องหลัง CG(1).jpg",
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/siam-arcade/cg-3.webp",
+              "sourceName": "เบื้องหลัง CG(2).jpg",
+              "width": 1500,
+              "height": 2000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "kind": "pdf",
+      "label": {
+        "th": "รายงานสรุปผล",
+        "en": "Production report"
+      },
+      "document": {
+        "src": "assets/pdfs/siam-arcade-production-report.pdf",
+        "sourceName": "รายงานสรุปผล.pdf",
+        "label": {
+          "th": "รายงานสรุปผล",
+          "en": "Production report"
+        }
+      }
+    }
+  ],
+  "first-thing-first": [
+    {
+      "id": "behind-scenes",
+      "kind": "gallery",
+      "label": {
+        "th": "เบื้องหลัง",
+        "en": "Behind the scenes"
+      },
+      "groups": [
+        {
+          "id": "group",
+          "label": {
+            "th": "เบื้องหลังรูปรวม",
+            "en": "Group moments"
+          },
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/first-thing-first/group.mp4",
+              "sourceName": "เบื้องหลังรูปรวม.mp4",
+              "width": 960,
+              "height": 540,
+              "poster": "assets/behind-scenes/first-thing-first/group-poster.webp",
+              "duration": 5.933333
+            }
+          ]
+        },
+        {
+          "id": "camera",
+          "label": {
+            "th": "เบื้องหลังคุมกล้อง3",
+            "en": "Camera 3"
+          },
+          "items": [
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/first-thing-first/camera-operator.mp4",
+              "sourceName": "เบื้องหลังคุมกล้อง3.mov",
+              "width": 1080,
+              "height": 1920,
+              "poster": "assets/behind-scenes/first-thing-first/camera-operator-poster.webp",
+              "duration": 6.966667
+            }
+          ]
+        },
+        {
+          "id": "solo",
+          "label": {
+            "th": "เบื้องหลังรูปเดี่ยว",
+            "en": "Solo portraits"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/first-thing-first/solo-still.webp",
+              "sourceName": "เบื้องหลังรูปเดี่ยว.jpg",
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "video",
+              "src": "assets/behind-scenes/first-thing-first/solo.mp4",
+              "sourceName": "เบื้องหลังรูปเดี่ยว.mov",
+              "width": 1080,
+              "height": 1920,
+              "poster": "assets/behind-scenes/first-thing-first/solo-poster.webp",
+              "duration": 4.336667
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "script",
+      "kind": "pdf",
+      "label": {
+        "th": "สคริปต์รายการ",
+        "en": "Show script"
+      },
+      "document": {
+        "src": "assets/pdfs/first-thing-first-script.pdf",
+        "sourceName": "สคริปต์.pdf",
+        "label": {
+          "th": "สคริปต์รายการ",
+          "en": "Show script"
+        }
+      }
+    }
+  ],
+  "resource-wrong-place": [
+    {
+      "id": "behind-scenes",
+      "kind": "gallery",
+      "label": {
+        "th": "เบื้องหลัง",
+        "en": "Behind the scenes"
+      },
+      "groups": [
+        {
+          "id": "group",
+          "label": {
+            "th": "เบื้องหลังรูปรวม",
+            "en": "Group moments"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/resource-wrong-place/เบื้องหลังรูปรวม.webp",
+              "sourceName": "เบื้องหลังรูปรวม.heif",
+              "width": 1500,
+              "height": 2000
+            }
+          ]
+        },
+        {
+          "id": "sequence",
+          "label": {
+            "th": "เบื้องหลัง",
+            "en": "Behind the scenes"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/resource-wrong-place/เบื้องหลัง-1.webp",
+              "sourceName": "เบื้องหลัง 1.jpg",
+              "width": 2000,
+              "height": 1500
+            },
+            {
+              "type": "image",
+              "src": "assets/behind-scenes/resource-wrong-place/เบื้องหลัง-2.webp",
+              "sourceName": "เบื้องหลัง 2.jpg",
+              "width": 1477,
+              "height": 1108
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
