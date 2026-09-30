@@ -47,12 +47,16 @@ test('every project has more than a short summary in its detail view', () => {
   }
 });
 
-test('all project details use the approved bilingual bullet format', () => {
+test('project details use bilingual bullets or ordered production pages', () => {
   for (const project of projects) {
     const detail = expandedDetails[project.id];
     for (const section of detail.sections) {
-      assert.ok(section.bullets?.length, `${project.id}: ${section.heading.th} needs bullets`);
-      for (const bullet of section.bullets) {
+      assert.ok(section.bullets?.length || section.images?.length, `${project.id}: ${section.heading.th} needs bullets or source pages`);
+      for (const page of section.images || []) {
+        assert.ok(page.src && page.alt.th && page.alt.en, `${project.id}: missing page source or translation`);
+        assert.ok(page.width > 0 && page.height > 0, `${project.id}: missing page dimensions`);
+      }
+      for (const bullet of section.bullets || []) {
         assert.ok(bullet.th && bullet.en, `${project.id}: missing bullet translation`);
         for (const child of bullet.children || []) {
           assert.ok(child.th && child.en, `${project.id}: missing sub-bullet translation`);

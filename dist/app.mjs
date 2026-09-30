@@ -22,7 +22,7 @@ const ui = {
     slide: 'สไลด์',
     deckPrevious: 'สไลด์ก่อนหน้า',
     deckNext: 'สไลด์ถัดไป',
-    persona: 'โปรไฟล์ persona ตามสไลด์',
+    persona: 'โปรไฟล์ persona',
     proposedOffer: 'เงื่อนไขส่วนลดที่เสนอ',
     spendAtLeast: 'ยอดใช้จ่ายตั้งแต่',
     discount: 'ส่วนลด',
@@ -56,7 +56,7 @@ const ui = {
     slide: 'Slide',
     deckPrevious: 'Previous slide',
     deckNext: 'Next slide',
-    persona: 'Deck persona profiles',
+    persona: 'Persona profiles',
     proposedOffer: 'Proposed discount rules',
     spendAtLeast: 'Spend at least',
     discount: 'Discount',
@@ -464,6 +464,25 @@ function renderProjectExtras(project) {
           list.append(item);
         }
         block.append(list);
+      }
+      if (section.images?.length) {
+        const pages = document.createElement('div');
+        pages.className = 'production-pages';
+        for (const page of section.images) {
+          const link = document.createElement('a');
+          link.href = page.src;
+          link.target = '_blank';
+          link.rel = 'noopener';
+          const image = document.createElement('img');
+          image.src = page.src;
+          image.alt = page.alt[language];
+          image.width = page.width;
+          image.height = page.height;
+          image.loading = 'lazy';
+          link.append(image);
+          pages.append(link);
+        }
+        block.append(pages);
       }
       article.append(block);
     }

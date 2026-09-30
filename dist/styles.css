@@ -279,6 +279,9 @@ button:focus-visible, a:focus-visible, .stage:focus-visible {
 .detail-article-block li { padding-left: 15px; border-left: 2px solid #c8d6ff; color: var(--detail-body); font-size: 1rem; line-height: 1.55; }
 .detail-article-block ul.detail-sub-bullets { display: block; list-style: disc; margin: 8px 0 2px 12px; padding-left: 18px; }
 .detail-article-block ul.detail-sub-bullets li { border-left: 0; padding: 0 0 6px 0; color: var(--detail-muted); font-size: .95rem; }
+.production-pages { display: grid; gap: 16px; }
+.production-pages a { display: block; border: 1px solid var(--detail-line); }
+.production-pages img { display: block; width: 100%; height: auto; }
 .detail-source-note { margin: 26px 0 0; color: var(--detail-muted); font-size: .78rem; line-height: 1.45; }
 .extras-close { display: block; margin: clamp(42px, 6vw, 72px) 0 0 auto; border: 1px solid #cbd0d7; border-radius: 8px; background: #fff; color: var(--detail-body); padding: 12px 17px; cursor: pointer; font-size: .875rem; }
 .extras-close:hover { background: #eef2f8; border-color: #aeb8c7; }

@@ -68,7 +68,7 @@ export const projects = [
     title: { th: 'SIAM Arcade', en: 'SIAM Arcade' },
     category: { th: 'รายการวาไรตี้ · เกมโชว์', en: 'Variety · Game show' },
     teaser: {
-      th: 'เกมส์โชว์สุดมันส์ในบรรยากาศงานวัดไทยร่วมสมัย',
+      th: 'เกมโชว์สุดมันส์ในบรรยากาศงานวัดไทยร่วมสมัย',
       en: 'An energetic game show in a contemporary Thai fairground',
     },
     description: {
@@ -218,14 +218,14 @@ export const projects = [
     image: 'assets/lightclean.jpg',
     previewVideo: 'assets/videos/lightclean.mp4',
     fullVideos: [{ src: 'assets/full/lightclean.mp4', label: { th: 'คลิปโฆษณาฉบับเต็ม', en: 'FULL ADVERTISEMENT' } }],
-    title: { th: 'กลมดิ๊ก / LightClean', en: 'Klom Dik / LightClean' },
+    title: { th: 'กลมดิ๊ก (LightClean)', en: 'Klom Dik (LightClean)' },
     category: { th: 'แนวคิดผลิตภัณฑ์ · โฆษณา', en: 'Product concept · Advertisement' },
     teaser: {
       th: 'คลิปโฆษณาหลอดไฟ',
       en: 'An advertisement for a lamp concept',
     },
     description: {
-      th: 'คลิปโฆษณาแนวคิดหลอดไฟ UV-C “น้องกลมดิ๊ก” ในข้อเสนอผลิตภัณฑ์ หลอดไฟถูกวางให้ควบคุมการเปิดปิดและปรับแสงด้วยรีโมต ตั้งเวลา และใช้ข้อมูลความชื้นกับปริมาณเชื้อโรคในอากาศที่เสนอให้เซ็นเซอร์วัดเพื่อปรับการทำงาน แนวคิดมุ่งให้การดูแลความสะอาดสะดวกขึ้นโดยลดการใช้สารเคมีและแรงงาน คุณสมบัติด้านการฆ่าเชื้อ ประหยัดพลังงาน และความปลอดภัยเป็นข้อเสนอในสไลด์ ไม่ใช่ผลทดสอบของอุปกรณ์จริง',
+      th: 'คลิปโฆษณาแนวคิดหลอดไฟ UV-C “น้องกลมดิ๊ก” ในข้อเสนอผลิตภัณฑ์ หลอดไฟถูกวางให้ควบคุมการเปิดปิดและปรับแสงด้วยรีโมต ตั้งเวลา และใช้ข้อมูลความชื้นกับปริมาณเชื้อโรคในอากาศที่เสนอให้เซ็นเซอร์วัดเพื่อปรับการทำงาน แนวคิดมุ่งให้การดูแลความสะอาดสะดวกขึ้นโดยลดการใช้สารเคมีและแรงงาน คุณสมบัติด้านการฆ่าเชื้อ ประหยัดพลังงาน และความปลอดภัยเป็นแนวคิดผลิตภัณฑ์ ไม่ใช่ผลทดสอบของอุปกรณ์จริง',
       en: 'An advertisement for “Nong Klom Dik,” a proposed UV-C lamp. The concept includes remote power and brightness controls, a timer, and sensor inputs for humidity and airborne pathogen levels to adjust its operation. It aims to make cleaning more convenient while reducing chemical use and effort. Claims about disinfection, energy savings, and safety are proposals, not results verified on a working device.',
     },
     contribution: {
@@ -243,7 +243,10 @@ export const projects = [
     cardShape: 'landscape',
     image: 'assets/covers/mv-tha-chan-cover.png',
     previewVideo: 'assets/videos/mv-tha-chan-khit-thueng-thoe.mp4',
-    fullVideos: [{ src: 'assets/full/mv-tha-chan-khit-thueng-thoe.mp4', label: { th: 'มิวสิกวิดีโอฉบับเต็ม', en: 'FULL MUSIC VIDEO' } }],
+    fullVideos: [
+      { src: 'assets/full/mv-tha-chan-khit-thueng-thoe.mp4', label: { th: 'มิวสิกวิดีโอฉบับเต็ม', en: 'FULL MUSIC VIDEO' } },
+      { src: 'assets/full/mv-tha-chan-behind-scenes.mp4', label: { th: 'เบื้องหลังการถ่ายทำ', en: 'BEHIND THE SCENES' } },
+    ],
     title: { th: 'ถ้าฉันคิดถึงเธอขึ้นมา', en: 'If I Start Missing You' },
     category: { th: 'มิวสิกวิดีโอ', en: 'Music video' },
     teaser: {
@@ -251,8 +254,8 @@ export const projects = [
       en: 'A music video planned around camera angles',
     },
     description: {
-      th: 'มิวสิกวิดีโอเพลง “ถ้าฉันคิดถึงเธอขึ้นมา” ที่เล่าเรื่องผ่านการแสดงและมุมกล้องที่วางแผนไว้ใน shotlist กับ breakdown ชมมิวสิกวิดีโอฉบับเต็มได้ในหน้ารายละเอียด',
-      en: 'A music video for “If I Start Missing You” that tells its story through performance and camera angles planned in the shot list and production breakdown. The complete music video is available in this detail view.',
+      th: 'มิวสิกวิดีโอเพลง “ถ้าฉันคิดถึงเธอขึ้นมา” ที่เล่าเรื่องผ่านการแสดงและมุมกล้องที่วางแผนไว้ใน shotlist กับ breakdown ชมมิวสิกวิดีโอฉบับเต็มและเบื้องหลังการถ่ายทำได้ในหน้ารายละเอียด',
+      en: 'A music video for “If I Start Missing You” that tells its story through performance and camera angles planned in the shot list and production breakdown. The complete music video and behind-the-scenes footage are available in this detail view.',
     },
     contribution: {
       th: 'เป็นนักแสดงหลักในมิวสิกวิดีโอและมีส่วนร่วมในการทำ breakdown',

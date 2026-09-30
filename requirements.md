@@ -46,7 +46,7 @@ Source: S1–S2 and `My love scene proposal.pdf`, especially PDF pages 2–14.
 
 ### FR-004 — SIAM Arcade
 
-- Change the Thai card teaser to **เกมส์โชว์สุดมันส์ในบรรยากาศงานวัดไทยร่วมสมัย**. Express the same meaning in English.
+- Change the Thai card teaser to **เกมโชว์สุดมันส์ในบรรยากาศงานวัดไทยร่วมสมัย**. Express the same meaning in English.
 - Change the Thai contribution wording to **ดูแลไมค์ของพิธีกรและผู้ร่วมรายการ** wherever that contribution appears.
 - Remove **สามช่วงการแข่งขัน** as a detail heading and replace it with **Mood & Tone**, covering the source's atmosphere and visual design without repeating those same facts in another section.
 - Expand **แนวคิดและรูปแบบ** using the deck and report: Thai culture presented with modern game-show energy, proverb and Thai dessert games, balloon play, temple-fair influences, lively red/yellow/gold palette, retro Thai visuals, and patterned costume/set choices where documented.
@@ -100,7 +100,7 @@ Source: S3, `รายละเอียดผลงาน.pdf`, and the supplie
 
 Source: S3–S4 and `พิวพิวเต่าคุณหนู.pdf`, PDF pages 1–10.
 
-### FR-010 — กลมดิ๊ก / LightClean
+### FR-010 — กลมดิ๊ก (LightClean)
 
 - Describe the work as a **คลิปโฆษณาหลอดไฟ** rather than a comedy-tagged card teaser. Expand **เกี่ยวกับผลงาน** with the **น้องกลมดิ๊ก** UV-C lamp concept and its proposed convenience, remote operation, humidity and pathogen-level sensor inputs, and other functions actually in the proposal.
 - Change the contribution to **เขียนบทและซัพพอร์ตการถ่ายทำ**, as the user specified.
@@ -115,7 +115,7 @@ Source: S4 and `หลอดไฟกลมดิ๊ก proposal.pdf`, PDF pages
 - Offer the completed music video in the detail view, separate from any short hover preview or behind-the-scenes clip.
 - Change the Thai card teaser to **มิวสิกวิดีโอที่ถ่ายตาม Camera Angle**, with a natural equivalent in English.
 - Add the user's specified personal contribution: **เป็นนักแสดงหลักใน MV และมีส่วนร่วมในการทำ Breakdown**.
-- Remove the existing detail headings **เรื่องเล่าผ่านความทรงจำ**, **แผนภาพและมุมกล้อง**, and **วัสดุการผลิตที่มีอยู่**. Replace them with a source-grounded, concise account of the actual Breakdown and Shotlist, including the planned shots, framing, locations, props, and production logic. Do not invent a schedule or assert conflicting shot counts as settled facts.
+- Remove the existing detail headings **เรื่องเล่าผ่านความทรงจำ**, **แผนภาพและมุมกล้อง**, and **วัสดุการผลิตที่มีอยู่**. The 30 September follow-up replaces explanatory summaries with two sections: **Shotlist**, showing its two original document pages in order, then **Breakdown**, showing its three content pages in order. No explanatory bullets accompany these images. Offer the supplied **เบื้องหลัง.mov** separately from the completed MV.
 
 Source: S4, `Breakdown.pages`, `Shotlist.pages`, and the supplied finished MV.
 
@@ -135,6 +135,17 @@ Source: User's Railway browser annotation on the project information panel, 29 S
 - Serve the files with `application/pdf` and byte ranges, and make the PDF reader usable on desktop and narrow screens without hiding the close or document-switch controls.
 
 Source: User's Railway request naming the six source PDFs, 29 September 2026, and the existing public-repository privacy boundary.
+
+### FR-014 — Direct project copy and production documents
+
+- กาฝาก: remove “สไลด์” from “สไลด์หยิบความเข้าใจผิด…”. My Love Scene: change “สไลด์วาง” to “ได้วาง”.
+- SIAM Arcade: spell every instance of “เกมส์” as “เกม”. In the challenges, use “ควรสื่อสารคิวและช่วงเปลี่ยนเกมให้ชัดขึ้น…”. First Thing First: retain steady Camera 3 framing, remove the live-show/set phrase from that challenge.
+- พิวพิว: use “เลือกแพลทฟอร์ม TikTok เพราะคลิปสั้น…” and “คาดว่าการที่ผู้ชมบันทึกคลิป…”. Write **SWOT** with separate, source-complete S/W/O/T. Start **Blue Ocean** on a separate bullet from **Red Ocean**. Use headings **6 pillars** and **ตัวอย่างโครงเรื่อง**. Replace the long list of rest dates with “ตั้งใจจะหยุด 2 วัน เพื่อพัก…” and the source's editing, shoot-planning, history-series cadence, and alternating-content intent.
+- กลมดิ๊ก: title **กลมดิ๊ก (LightClean)**, remove **โจทย์และคำตอบที่เสนอ**, and make the final ChatGPT point simply that the team used it for research and an infographic. Retain the distinction between a product concept and tested performance.
+- Write explanatory prose directly from the supplied information. Do not narrate “สไลด์เลือก”, “ในสไลด์มีข้อมูล”, “ข้อเสนออ้างว่า”, or equivalent English source-attribution filler. Document names, source notes, and actual media labels may still identify the original files.
+- MV: offer the full behind-the-scenes clip, then show only the ordered original pages under **Shotlist** and **Breakdown**, without cropping or explanatory prose. Page images may open at full size for reading. The supplied sources are native Pages documents, so render their two and three content pages rather than inventing replacement tables.
+
+Source: User's project-by-project revision request, 30 September 2026, and the matching source documents/media.
 
 ## Non-functional requirements and constraints
 
