@@ -269,6 +269,7 @@ export const projects = [
   },
   {
     id: 'seoul-milk-critique',
+    pdfOnly: true,
     cardShape: 'landscape',
     image: 'assets/seoul-milk-critique.jpg',
     pdfDocuments: [
@@ -347,6 +348,7 @@ export const projects = [
   },
   {
     id: 'jane-interview',
+    pdfOnly: true,
     cardTitleOverlay: true,
     image: 'assets/jane-interview.jpg',
     pdfDocuments: [{ src: 'assets/pdfs/jane-story.pdf', sourceName: 'Report เรื่องเจน.pdf', label: { th: 'รายงานเรื่องเจน', en: 'Jane report' } }],

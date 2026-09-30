@@ -1,6 +1,7 @@
 import { projects } from './projects.mjs';
 import { cardCenterOffset, offsetFromActive, stepIndex, swipeStep } from './carousel.mjs';
 import { expandedDetails, katsumidoriBoard, slideDecks } from './detail-content.mjs';
+import { createPdfReader } from './pdf-reader.mjs';
 
 const ui = {
   th: {
@@ -76,6 +77,8 @@ const ui = {
 const stage = document.querySelector('#stage');
 const track = document.querySelector('#stageTrack');
 const dialog = document.querySelector('#detailDialog');
+const closeDialog = document.querySelector('#closeDialog');
+let activePdfReader = null;
 const detailImageWrap = document.querySelector('#detailImageWrap');
 const detailContent = document.querySelector('#detailContent');
 const videoChooser = document.querySelector('#videoChooser');
@@ -242,9 +245,9 @@ function render() {
 
 function showSelectedDetails(index) {
   showProjectDetails(index);
+  if (!dialog.open) dialog.showModal();
   detailContent.scrollTop = 0;
   dialog.scrollTop = 0;
-  if (!dialog.open) dialog.showModal();
 }
 
 function showPdfChooser(index, trigger) {
@@ -271,6 +274,7 @@ function showPdfChooser(index, trigger) {
     });
     pdfChoiceOptions.append(button);
   });
+  clearPdfReader();
   if (dialog.open) {
     detailImageWrap.querySelector('video')?.pause();
     dialog.close();
@@ -297,30 +301,27 @@ function move(step) {
   }
 }
 
+function clearPdfReader() {
+  if (!activePdfReader) return;
+  activePdfReader.destroy();
+  dialog.querySelector('.detail-shell').prepend(closeDialog);
+  activePdfReader.header.remove();
+  detailImageWrap.replaceChildren();
+  activePdfReader = null;
+}
+
 function showProjectMedia(project, mediaIndex = 0) {
+  clearPdfReader();
+  dialog.querySelector('.detail-shell').prepend(closeDialog);
   detailImageWrap.querySelector('video')?.pause();
   detailImageWrap.replaceChildren();
   videoChooser.replaceChildren();
   if (project.pdfDocuments?.length) {
     videoChooser.hidden = true;
     const selected = project.pdfDocuments[mediaIndex] || project.pdfDocuments[0];
-    const toolbar = document.createElement('div');
-    toolbar.className = 'pdf-toolbar';
-    const identity = document.createElement('div');
-    identity.className = 'pdf-toolbar-identity';
-    const filename = document.createElement('strong');
-    filename.textContent = selected.sourceName;
-    const note = document.createElement('small');
-    note.textContent = `${selected.label[language]} · ${ui[language].publicPdf}`;
-    identity.append(filename, note);
-    const open = document.createElement('a');
-    open.href = selected.src;
-    open.target = '_blank';
-    open.rel = 'noopener';
-    open.textContent = ui[language].openPdf;
-    open.setAttribute('aria-label', `${ui[language].openPdf}: ${selected.sourceName}`);
-    toolbar.append(identity, open);
-    detailImageWrap.append(toolbar);
+    activePdfReader = createPdfReader({ pdfDocument: selected, language, scrollRoot: dialog, closeButton: closeDialog });
+    detailImageWrap.append(activePdfReader.element);
+    dialog.querySelector('.detail-shell').prepend(activePdfReader.header);
 
     if (project.pdfDocuments.length > 1) {
       const tabs = document.createElement('div');
@@ -334,17 +335,13 @@ function showProjectMedia(project, mediaIndex = 0) {
         button.addEventListener('click', () => {
           selectedPdfIndex = index;
           showProjectMedia(project, index);
+          activePdfReader.header.querySelector('.pdf-tabs button.is-active')?.focus({ preventScroll: true });
         });
         tabs.append(button);
       });
-      detailImageWrap.append(tabs);
+      activePdfReader.header.append(tabs);
     }
-
-    const frame = document.createElement('iframe');
-    frame.className = 'pdf-frame';
-    frame.src = selected.src;
-    frame.title = `${selected.sourceName} — ${project.title[language]}`;
-    detailImageWrap.append(frame);
+    dialog.scrollTop = 0;
     return;
   }
   const mediaItems = project.fullVideos?.length
@@ -398,7 +395,10 @@ function showProjectDetails(index) {
   const project = projects[index];
   dialog.classList.toggle('is-analytical', ['seoul-milk-critique', 'tee-noi-vs-lucky-suki', 'katsumidori', 'mv-lam-pam-symbolism'].includes(project.id));
   dialog.classList.toggle('has-pdf', Boolean(project.pdfDocuments?.length));
+  dialog.classList.toggle('is-pdf-only', Boolean(project.pdfOnly));
+  detailContent.hidden = Boolean(project.pdfOnly);
   showProjectMedia(project, selectedPdfIndex);
+  dialog.setAttribute('aria-labelledby', project.pdfOnly ? 'pdfReaderTitle' : 'detailTitle');
   detailNumber.textContent = numberLabel(index);
   detailCategory.textContent = project.category[language];
   detailTitle.textContent = project.title[language];
@@ -423,7 +423,8 @@ function showProjectDetails(index) {
     paragraph.textContent = role;
     detailContribution.append(paragraph);
   }
-  renderProjectExtras(project);
+  if (project.pdfOnly) detailExtras.replaceChildren();
+  else renderProjectExtras(project);
 }
 
 function renderProjectExtras(project) {
@@ -698,6 +699,7 @@ languageButton.addEventListener('click', () => setLanguage(language === 'th' ? '
 
 dialog.addEventListener('close', () => {
   if (dialog.open || pdfChoiceDialog.open) return;
+  clearPdfReader();
   detailImageWrap.querySelector('video')?.pause();
   if (lastTrigger?.isConnected) lastTrigger.focus({ preventScroll: true });
 });
@@ -717,6 +719,7 @@ dialog.addEventListener('click', (event) => {
 
 document.addEventListener('keydown', (event) => {
   if (pdfChoiceDialog.open) return;
+  if (event.target?.closest('.pdf-reader, .pdf-reader-header')) return;
   if (event.altKey || event.ctrlKey || event.metaKey) return;
   if (['INPUT', 'TEXTAREA', 'SELECT', 'VIDEO', 'IFRAME'].includes(event.target?.tagName) || event.target?.isContentEditable) return;
   if (event.key === 'ArrowLeft') { event.preventDefault(); move(-1); }

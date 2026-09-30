@@ -1,7 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { open } from 'node:fs/promises';
+import { open, readFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { projects } from '../dist/projects.mjs';
+import { pdfPages } from '../dist/pdf-pages.mjs';
 
 const expected = {
   'seoul-milk-critique': ['seoul-milk-presentation.pdf', 'seoul-milk-full-report.pdf'],
@@ -25,6 +27,33 @@ test('requested works open real PDF documents, with two choices for Seoul Milk',
         assert.equal(header.toString(), '%PDF-', `${document.src} must be a PDF`);
       } finally {
         await file.close();
+      }
+    }
+  }
+});
+
+test('document page assets cover the exact public PDFs without stale or missing pages', async () => {
+  const counts = {
+    'jane-story.pdf': 8,
+    'katsumidori.pdf': 9,
+    'mv-lam-pam-analysis.pdf': 19,
+    'seoul-milk-full-report.pdf': 23,
+    'seoul-milk-presentation.pdf': 16,
+    'tee-noi-lucky-suki.pdf': 28,
+  };
+  assert.deepEqual(Object.keys(pdfPages).sort(), Object.keys(counts).map((name) => `assets/pdfs/${name}`).sort());
+  for (const [name, count] of Object.entries(counts)) {
+    const src = `assets/pdfs/${name}`;
+    const source = await readFile(new URL(`../dist/${src}`, import.meta.url));
+    const rendered = pdfPages[src];
+    assert.equal(rendered.sha256, createHash('sha256').update(source).digest('hex'), `${name}: regenerate pages after changing the source PDF`);
+    assert.equal(rendered.pages.length, count, `${name}: every original page must be included`);
+    for (const page of rendered.pages) {
+      assert.ok(page.width > 0 && page.height > 0);
+      for (const image of [page.src, page.smallSrc]) {
+        const bytes = await readFile(new URL(`../dist/${image}`, import.meta.url));
+        assert.equal(bytes.subarray(0, 4).toString(), 'RIFF', image);
+        assert.equal(bytes.subarray(8, 12).toString(), 'WEBP', image);
       }
     }
   }

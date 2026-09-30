@@ -130,7 +130,7 @@ Source: User's Railway browser annotation on the project information panel, 29 S
 ### FR-013 — Source PDF works in project details
 
 - When opening **Seoul Milk**, present a document-choice popup for `Soul milk.pdf` (presentation) and `รายงาน Soul milk ฉบับเต็ม.pdf` (full report). Let the viewer choose and switch between the two. The chooser must support Escape, a close button, keyboard focus, and Thai/English labels.
-- Make the source PDF the primary readable media for **ตี๋น้อย × ลัคกี้สุกี้** (`PR037_Final.pdf`), **Every Minute Matters / Katsumidori** (`PR037_ปาทังกี้_katsumidori.pdf`), **MV ลามปาม** (`วิเคราะห์สัญญะใน MV.pdf`), and **เรื่องราวของเจน** (`Report เรื่องเจน.pdf`). Keep the existing text details below the PDF and provide a direct open-in-new-tab link when the embedded viewer is unavailable or too small.
+- Make the source PDF the primary readable media for **ตี๋น้อย × ลัคกี้สุกี้** (`PR037_Final.pdf`), **Every Minute Matters / Katsumidori** (`PR037_ปาทังกี้_katsumidori.pdf`), **MV ลามปาม** (`วิเคราะห์สัญญะใน MV.pdf`), and **เรื่องราวของเจน** (`Report เรื่องเจน.pdf`). Show document pages directly in the site using the continuous reader in FR-015, with an optional link to the original PDF. Keep the existing text details only for Teenoi/Lucky, Katsumidori, and MV Lam Pam. Jane and Seoul Milk are PDF-only following the 30 September request.
 - Publish searchable PDF copies derived from the supplied files. Remove roster pages consisting of student names and IDs from the Seoul presentation, Teenoi/Lucky deck, Katsumidori deck, and MV analysis. Redact the student ID on the Seoul full report cover without leaving extractable text. Keep the remaining work pages and do not change the private originals. Clearly label these as public copies.
 - Serve the files with `application/pdf` and byte ranges, and make the PDF reader usable on desktop and narrow screens without hiding the close or document-switch controls.
 
@@ -146,6 +146,18 @@ Source: User's Railway request naming the six source PDFs, 29 September 2026, an
 - MV: offer the full behind-the-scenes clip, then show only the ordered original pages under **Shotlist** and **Breakdown**, without cropping or explanatory prose. Page images may open at full size for reading. The supplied sources are native Pages documents, so render their two and three content pages rather than inventing replacement tables.
 
 Source: User's project-by-project revision request, 30 September 2026, and the matching source documents/media.
+
+### FR-015 — Continuous PDF pages for touch and desktop
+
+- Replace the native embedded PDF viewer for every PDF project: Jane, both Seoul Milk documents, Teenoi/Lucky, Katsumidori, and MV Lam Pam. Show all original pages in order, at their original proportions, directly in the website. Do not use an iframe, object, or embedded browser PDF toolbar.
+- Use continuous vertical scrolling with touch on phones/iPads and wheel/trackpad on desktop. There must be one vertical scrolling area, with no fixed-height inner document boundary and no page snapping. Pages fit the available width without default horizontal overflow.
+- Add a subtle entry animation as each page comes into view. Respect reduced motion, and never use animation to prevent reading or scrolling.
+- Keep an unobtrusive page counter and close button available throughout reading, with accessible controls to enlarge the page and return to fit width. Preserve Seoul Milk's two-document chooser and document switching. Offer the original PDF through a small optional link.
+- Display **PDF only** for Jane and both Seoul Milk documents: omit authored summaries, About, Role, expanded articles, source commentary, and project-detail navigation below the document. Other projects retain their existing text information after the PDF pages. Carousel titles and teasers remain.
+- Render pages from the existing public PDF copies, retaining every work page and the original content. Use responsive WebP derivatives and lazy image loading; preserve original extracted text as assistive text. The source PDFs and their privacy redactions remain unchanged.
+- Verify all six documents at phone, tablet, and the annotated 972×735 desktop viewport in Chromium and WebKit, including reaching the final page, touch/wheel scrolling, page counts, zoom/fit, sticky controls, chooser, language, reduced motion, and switching back to non-PDF projects. State that browser/device emulation is not physical iPhone/iPad testing.
+
+Source: User's browser comments and screenshot, plus the two explicit scope/continuous-scroll answers, 30 September 2026.
 
 ## Non-functional requirements and constraints
 
