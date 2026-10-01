@@ -3,13 +3,16 @@ import assert from 'node:assert/strict';
 import * as carousel from '../dist/carousel.mjs';
 import { projects } from '../dist/projects.mjs';
 import { expandedDetails } from '../dist/detail-content.mjs';
+import { getProjectMediaTabs } from '../dist/media-tabs.mjs';
 
 const { offsetFromActive, stepIndex, swipeStep } = carousel;
 
-test('portfolio contains 15 numbered works after removing Kham Im', () => {
-  assert.equal(projects.length, 15);
-  assert.equal(new Set(projects.map((project) => project.id)).size, 15);
+test('portfolio appends Certificates after Jane while keeping the existing work order', () => {
+  assert.equal(projects.length, 16);
+  assert.equal(new Set(projects.map((project) => project.id)).size, 16);
   assert.equal(projects.some((project) => project.id === 'kham-im'), false);
+  assert.equal(projects.at(-2).id, 'jane-interview');
+  assert.equal(projects.at(-1).id, 'certificates');
 });
 
 test('every media-only carousel card has a visual source', () => {
@@ -22,7 +25,7 @@ test('wide source artwork gets a landscape card while portrait work stays portra
   const landscape = [
     'siam-arcade', 'first-thing-first', 'tv-seminar', 'resource-wrong-place',
     'street-food', 'lightclean', 'mv-tha-chan-khit-thueng-thoe',
-    'seoul-milk-critique', 'tee-noi-vs-lucky-suki', 'katsumidori',
+    'seoul-milk-critique', 'tee-noi-vs-lucky-suki', 'katsumidori', 'certificates',
   ];
   assert.deepEqual(projects.filter((project) => project.cardShape === 'landscape').map((project) => project.id), landscape);
   assert.equal(projects.find((project) => project.id === 'jane-interview')?.cardTitleOverlay, true);
@@ -41,6 +44,10 @@ test('mixed card widths leave room for their neighbors across the loop', () => {
 
 test('every project has more than a short summary in its detail view', () => {
   for (const project of projects) {
+    if (project.filesOnly) {
+      assert.ok(getProjectMediaTabs(project).every(tab => tab.groups?.length));
+      continue;
+    }
     const sections = expandedDetails[project.id]?.sections || [];
     assert.ok(sections.length >= 2 || project.description.th.length >= 250,
       `${project.id} needs source-backed detail in its description or sections`);
@@ -50,7 +57,7 @@ test('every project has more than a short summary in its detail view', () => {
 test('project details use bilingual bullets or ordered production pages', () => {
   for (const project of projects) {
     const detail = expandedDetails[project.id];
-    for (const section of detail.sections) {
+    for (const section of detail?.sections || []) {
       assert.ok(section.bullets?.length || section.images?.length, `${project.id}: ${section.heading.th} needs bullets or source pages`);
       for (const page of section.images || []) {
         assert.ok(page.src && page.alt.th && page.alt.en, `${project.id}: missing page source or translation`);
@@ -71,9 +78,9 @@ test('project details use bilingual bullets or ordered production pages', () => 
 });
 
 test('arrow navigation wraps in both directions', () => {
-  assert.equal(stepIndex(0, -1, 15), 14);
-  assert.equal(stepIndex(14, 1, 15), 0);
-  assert.equal(stepIndex(4, 1, 15), 5);
+  assert.equal(stepIndex(0, -1, projects.length), 15);
+  assert.equal(stepIndex(15, 1, projects.length), 0);
+  assert.equal(stepIndex(4, 1, projects.length), 5);
 });
 
 test('a swipe changes one project only after a deliberate drag', () => {
@@ -83,7 +90,7 @@ test('a swipe changes one project only after a deliberate drag', () => {
 });
 
 test('the loop keeps the first and last projects beside each other', () => {
-  assert.equal(offsetFromActive(14, 0, 15), -1);
-  assert.equal(offsetFromActive(0, 14, 15), 1);
-  assert.equal(offsetFromActive(3, 0, 15), 3);
+  assert.equal(offsetFromActive(15, 0, projects.length), -1);
+  assert.equal(offsetFromActive(0, 15, projects.length), 1);
+  assert.equal(offsetFromActive(3, 0, projects.length), 3);
 });

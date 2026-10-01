@@ -290,6 +290,7 @@ export const projects = [
   },
   {
     id: 'tee-noi-vs-lucky-suki',
+    pdfOnly: true,
     cardShape: 'landscape',
     image: 'assets/tee-noi-vs-lucky-suki.jpg',
     pdfDocuments: [{ src: 'assets/pdfs/tee-noi-lucky-suki.pdf', sourceName: 'PR037_Final.pdf', label: { th: 'ผลงานนำเสนอ', en: 'Presentation' } }],
@@ -307,10 +308,11 @@ export const projects = [
   },
   {
     id: 'katsumidori',
+    pdfOnly: true,
     cardShape: 'landscape',
     image: 'assets/covers/katsumidori-slide-cover.jpg',
     pdfDocuments: [{ src: 'assets/pdfs/katsumidori.pdf', sourceName: 'PR037_ปาทังกี้_katsumidori.pdf', label: { th: 'ผลงานนำเสนอ', en: 'Presentation' } }],
-    title: { th: 'Every Minute Matters', en: 'Every Minute Matters' },
+    title: { th: 'วิเคราะห์ Kustsu Midori', en: 'Kustsu Midori Analysis' },
     category: { th: 'กลยุทธ์แบรนด์ · Katsumidori', en: 'Brand strategy · Katsumidori' },
     teaser: {
       th: 'เปลี่ยนเวลารอคิวให้เป็นประสบการณ์ที่มีค่า',
@@ -324,6 +326,7 @@ export const projects = [
   },
   {
     id: 'mv-lam-pam-symbolism',
+    pdfOnly: true,
     image: 'assets/mv-lam-pam-symbolism.jpg',
     pdfDocuments: [{ src: 'assets/pdfs/mv-lam-pam-analysis.pdf', sourceName: 'วิเคราะห์สัญญะใน MV.pdf', label: { th: 'รายงานวิเคราะห์', en: 'Analysis report' } }],
     title: { th: 'MV ลามปาม', en: 'MV Lam Pam' },
@@ -363,5 +366,16 @@ export const projects = [
       en: 'An interview-based profile following childhood memories, family relationships, and the transition into university life. The source document does not clearly identify an individual production role.',
     },
     alt: { th: 'ภาพกระต่ายสีขาวจากรายงานเรื่องราวของเจน', en: 'White rabbit photograph from Jane’s profile report' },
+  },
+  {
+    id: 'certificates',
+    cardShape: 'landscape',
+    filesOnly: true,
+    collectionChoice: true,
+    image: 'assets/certificates/futureskill-content-marketing.webp',
+    title: { th: 'Certificates', en: 'Certificates' },
+    category: { th: 'ใบเซอร์ · กิจกรรม', en: 'Certificates · Activities' },
+    teaser: { th: 'ใบเซอร์และกิจกรรมที่เข้าร่วม', en: 'Certificates and attended activities' },
+    alt: { th: 'ใบเซอร์ FutureSkill', en: 'FutureSkill certificate' },
   },
 ];

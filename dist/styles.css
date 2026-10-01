@@ -452,3 +452,6 @@ button:focus-visible, a:focus-visible, .stage:focus-visible {
   .behind-scenes-gallery { padding: 20px 8px; }
   .behind-scenes-group { gap: 14px; margin-bottom: 26px; }
 }
+
+.media-collection-title { display: block; padding: 16px 76px 0 20px; color: #fff; font-size: 1rem; }
+.media-tabs-header:has(.media-collection-title) .video-chooser { min-height: 56px; }

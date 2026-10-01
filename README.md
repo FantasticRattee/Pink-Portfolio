@@ -1,6 +1,6 @@
 # Pink Portfolio
 
-A bilingual portfolio of 15 film, show, documentary, strategy, and media-analysis projects. Browse the carousel with a pointer, swipe, wheel, or arrow keys; select a project for its video, document pages, and details. Seoul Milk offers a choice between its presentation and full report.
+A bilingual portfolio of 16 works, including film, shows, documentaries, strategy, media analysis, and Certificates. Certificates offers six certificates and six attended activities. Browse the carousel with a pointer, swipe, wheel, or arrow keys; select a project for its video, document pages, and details. Seoul Milk offers a choice between its presentation and full report.
 
 ## Run locally
 
@@ -22,7 +22,7 @@ The `dist/` directory contains the site and web-ready media. Original source PDF
 
 ## Document reader
 
-PDF works display every original page in a continuous, touch-friendly reader with responsive page images, zoom/fit controls, and reduced-motion support. Jane and Seoul Milk show PDF pages only; the other PDF projects retain their information after the document. The optional PDF link opens the searchable original public copy.
+PDF works display every original page in a continuous, touch-friendly reader with responsive page images, zoom/fit controls, and reduced-motion support. All primary PDF works show only their document pages and controls under the latest requirement. Supporting SIAM/First Thing First documents retain their project information. The optional PDF link opens the searchable original public copy.
 
 To regenerate page images after updating a public PDF, install Poppler (`pdftoppm`) and Python packages `Pillow` and `pypdf`, then run `python3 scripts/render-pdf-pages.py` from this repository. Run the tests afterwards to check source hashes and complete page coverage.
 

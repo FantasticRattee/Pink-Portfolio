@@ -473,5 +473,177 @@ export const supportingProjectTabs = {
         }
       ]
     }
+  ],
+  "certificates": [
+    {
+      "id": "certificates",
+      "kind": "gallery",
+      "label": {
+        "th": "ใบเซอร์",
+        "en": "Certificates"
+      },
+      "groups": [
+        {
+          "id": "certificates",
+          "label": {
+            "th": "ใบเซอร์",
+            "en": "Certificates"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/certificates/futureskill-content-marketing.webp",
+              "sourceName": "Futureskill certificates content marketing.pdf",
+              "label": {
+                "th": "FutureSkill",
+                "en": "FutureSkill"
+              },
+              "width": 2000,
+              "height": 1415
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/hacka-thailand-2023.webp",
+              "sourceName": "HACKa THAILAND 2023.jpg",
+              "label": {
+                "th": "HACKa THAILAND 2023",
+                "en": "HACKa THAILAND 2023"
+              },
+              "width": 1141,
+              "height": 803
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/bu-future-trends.webp",
+              "sourceName": "BU x Future trends.jpg",
+              "label": {
+                "th": "BU x Future trends",
+                "en": "BU x Future Trends"
+              },
+              "width": 1116,
+              "height": 779
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/coursera.webp",
+              "sourceName": "Coursera.jpg",
+              "label": {
+                "th": "Coursera",
+                "en": "Coursera"
+              },
+              "width": 1772,
+              "height": 928
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/set-modnee-mee-aom.webp",
+              "sourceName": "SET หมดหนี้มีออม.pdf",
+              "label": {
+                "th": "SET หมดหนี้มีออม",
+                "en": "SET Debt-Free Savings"
+              },
+              "width": 2000,
+              "height": 1415
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/set-personal-finance.webp",
+              "sourceName": "SET การเงินส่วนบุคคล.pdf",
+              "label": {
+                "th": "SET การเงินส่วนบุคคล",
+                "en": "SET Personal Finance"
+              },
+              "width": 2000,
+              "height": 1415
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "activities",
+      "kind": "gallery",
+      "label": {
+        "th": "กิจกรรมที่เข้าร่วม",
+        "en": "Attended activities"
+      },
+      "groups": [
+        {
+          "id": "activities",
+          "label": {
+            "th": "กิจกรรมที่เข้าร่วม",
+            "en": "Attended activities"
+          },
+          "items": [
+            {
+              "type": "image",
+              "src": "assets/certificates/thaipbs-briefing-1.webp",
+              "sourceName": "เข้าร่วมฟังบรีฟ ThaiPBS.jpg",
+              "label": {
+                "th": "เข้าร่วมฟังบรีฟ ThaiPBS 1",
+                "en": "ThaiPBS briefing 1"
+              },
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/thaipbs-briefing-2.webp",
+              "sourceName": "เข้าร่วมฟังบรีฟ ThaiPBS(1).jpg",
+              "label": {
+                "th": "เข้าร่วมฟังบรีฟ ThaiPBS 2",
+                "en": "ThaiPBS briefing 2"
+              },
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/thaipbs-activity-1.webp",
+              "sourceName": "เข้าร่วมกิจกรรม ThaiPBS.jpg",
+              "label": {
+                "th": "เข้าร่วมกิจกรรม ThaiPBS 1",
+                "en": "ThaiPBS activity 1"
+              },
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/thaipbs-activity-2.webp",
+              "sourceName": "เข้าร่วมกิจกราม ThaiPBS.jpg",
+              "label": {
+                "th": "เข้าร่วมกิจกรรม ThaiPBS 2",
+                "en": "ThaiPBS activity 2"
+              },
+              "width": 2000,
+              "height": 1500
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/ptt-briefing-solo.webp",
+              "sourceName": "เข้าร่วมฟังบรีฟ ปตท_(1).jpg",
+              "label": {
+                "th": "เข้าร่วมฟังบรีฟ ปตท. รูปเดี่ยว",
+                "en": "PTT briefing (individual)"
+              },
+              "width": 1500,
+              "height": 2000
+            },
+            {
+              "type": "image",
+              "src": "assets/certificates/ptt-briefing-group.webp",
+              "sourceName": "เข้าร่วมฟังบรีฟ ปตท_.jpg",
+              "label": {
+                "th": "เข้าร่วมฟังบรีฟ ปตท.",
+                "en": "PTT briefing (group)"
+              },
+              "width": 1500,
+              "height": 2000
+            }
+          ]
+        }
+      ]
+    }
   ]
 };

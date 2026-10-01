@@ -130,7 +130,7 @@ Source: User's Railway browser annotation on the project information panel, 29 S
 ### FR-013 — Source PDF works in project details
 
 - When opening **Seoul Milk**, present a document-choice popup for `Soul milk.pdf` (presentation) and `รายงาน Soul milk ฉบับเต็ม.pdf` (full report). Let the viewer choose and switch between the two. The chooser must support Escape, a close button, keyboard focus, and Thai/English labels.
-- Make the source PDF the primary readable media for **ตี๋น้อย × ลัคกี้สุกี้** (`PR037_Final.pdf`), **Every Minute Matters / Katsumidori** (`PR037_ปาทังกี้_katsumidori.pdf`), **MV ลามปาม** (`วิเคราะห์สัญญะใน MV.pdf`), and **เรื่องราวของเจน** (`Report เรื่องเจน.pdf`). Show document pages directly in the site using the continuous reader in FR-015, with an optional link to the original PDF. Keep the existing text details only for Teenoi/Lucky, Katsumidori, and MV Lam Pam. Jane and Seoul Milk are PDF-only following the 30 September request.
+- Make the source PDF the primary readable media for **ตี๋น้อย × ลัคกี้สุกี้** (`PR037_Final.pdf`), **Every Minute Matters / Katsumidori** (`PR037_ปาทังกี้_katsumidori.pdf`), **MV ลามปาม** (`วิเคราะห์สัญญะใน MV.pdf`), and **เรื่องราวของเจน** (`Report เรื่องเจน.pdf`). Show document pages directly in the site using the continuous reader in FR-015, with an optional link to the original PDF. All five primary PDF works display PDF only under FR-017: Seoul Milk, Teenoi/Lucky, Kustsu Midori, MV Lam Pam, and Jane. Supporting SIAM/First Thing First PDF tabs retain their project information.
 - Publish searchable PDF copies derived from the supplied files. Remove roster pages consisting of student names and IDs from the Seoul presentation, Teenoi/Lucky deck, Katsumidori deck, and MV analysis. Redact the student ID on the Seoul full report cover without leaving extractable text. Keep the remaining work pages and do not change the private originals. Clearly label these as public copies.
 - Serve the files with `application/pdf` and byte ranges, and make the PDF reader usable on desktop and narrow screens without hiding the close or document-switch controls.
 
@@ -153,7 +153,7 @@ Source: User's project-by-project revision request, 30 September 2026, and the m
 - Use continuous vertical scrolling with touch on phones/iPads and wheel/trackpad on desktop. There must be one vertical scrolling area, with no fixed-height inner document boundary and no page snapping. Pages fit the available width without default horizontal overflow.
 - Add a subtle entry animation as each page comes into view. Respect reduced motion, and never use animation to prevent reading or scrolling.
 - Keep an unobtrusive page counter and close button available throughout reading, with accessible controls to enlarge the page and return to fit width. Preserve Seoul Milk's two-document chooser and document switching. Offer the original PDF through a small optional link.
-- Display **PDF only** for Jane and both Seoul Milk documents: omit authored summaries, About, Role, expanded articles, source commentary, and project-detail navigation below the document. Other projects retain their existing text information after the PDF pages. Carousel titles and teasers remain.
+- Display **PDF only** for Jane and both Seoul Milk documents: omit authored summaries, About, Role, expanded articles, source commentary, and project-detail navigation below the document. FR-017 extends PDF-only presentation to every primary PDF work. Supporting report/script tabs retain their project information. Carousel titles and teasers remain.
 - Render pages from the existing public PDF copies, retaining every work page and the original content. Use responsive WebP derivatives and lazy image loading; preserve original extracted text as assistive text. The source PDFs and their privacy redactions remain unchanged.
 - Verify all six documents at phone, tablet, and the annotated 972×735 desktop viewport in Chromium and WebKit, including reaching the final page, touch/wheel scrolling, page counts, zoom/fit, sticky controls, chooser, language, reduced motion, and switching back to non-PDF projects. State that browser/device emulation is not physical iPhone/iPad testing.
 
@@ -170,6 +170,25 @@ Source: User's browser comments and screenshot, plus the two explicit scope/cont
 - Preserve full image proportions and whole clip durations with audio. Publish stripped-metadata web derivatives, not original MOV/HEIF files. Source filenames caption the files. Use keyboard tab navigation, and retain the existing PDF-only behavior for Jane/Seoul Milk and video choices for other projects.
 
 Source: “Requirement ที่ 2 30/09/2026”, received 1 October 2026, and the source inventory in the parent folder's `map.md`.
+
+### FR-017 — PDF-only works and the Kustsu Midori title
+
+- **ตี๋น้อย × ลัคกี้สุกี้**, **วิเคราะห์ Kustsu Midori**, **MV ลามปาม**, and **เรื่องราวของเจน** show only original PDF pages and reader controls. Remove authored descriptions, About/Role sections, expanded articles, source commentary, boards, and project-detail navigation from those views. Keep the existing PDF files and carousel media.
+- Change the former **Every Minute Matters** project title to the exact requested **วิเคราะห์ Kustsu Midori**; the English title is **Kustsu Midori Analysis**. Keep its source document filename and internal project ID.
+- Seoul Milk remains PDF-only under its earlier requirement. Existing supporting report/script tabs and other video projects retain their information.
+
+Source: “Requirement ที่ 1 01/10/2026”.
+
+### FR-018 — Certificates after Jane
+
+- Append **Certificates** as work 16 after Jane. Keep the original 15 work IDs/order/media unchanged except the explicit FR-017 changes. Update total counters and verify the 16-to-1 carousel wrap.
+- Opening Certificates shows a popup offering **ใบเซอร์** and **กิจกรรมที่เข้าร่วม**, with English equivalents. Display each selected category's source images in order, with a clean title, category tabs, keyboard/focus/Escape behavior, one vertical scroll, and whole image proportions. Do not add authored project-description sections.
+- Certificate order: **FutureSkill**, **HACKa THAILAND 2023**, **BU x Future trends**, **Coursera**, **SET หมดหนี้มีออม**, **SET การเงินส่วนบุคคล**. The supplied SET file/title says “หมดหนี้มีออม”; this is the source-backed normalization of the request's “หมดหนี้หมดออม”.
+- Activity order: **เข้าร่วมฟังบรีฟ ThaiPBS 1**, **เข้าร่วมฟังบรีฟ ThaiPBS 2**, **เข้าร่วมกิจกรรม ThaiPBS 1**, **เข้าร่วมกิจกรรม ThaiPBS 2**, **เข้าร่วมฟังบรีฟ ปตท. รูปเดี่ยว**, **เข้าร่วมฟังบรีฟ ปตท.**. Match ThaiPBS 1 to Drive's `เข้าร่วมฟังบรีฟ ThaiPBS` (local plain filename, 3,265,032 bytes) and ThaiPBS 2 to Drive's `เข้าร่วมฟังบรีฟ ThaiPBS 2` (local `(1)` filename, 3,509,272 bytes). Keep the `กิจกรรม`/misspelled `กิจกราม` pair and the PTT `(1)` solo/plain group pair in that order. Display clean labels while preserving original source association.
+- Render the three single-page certificate PDFs as source-faithful page images, preserving certificate text, verification marks, signatures, and names. Publish metadata-stripped WebP derivatives of the supplied files; do not modify private originals.
+- The supplied `BU x Future trends.jpg` completes the six-certificate collection. Its web-ready derivative is `dist/assets/certificates/bu-future-trends.webp`, placed third in certificate order and labeled **BU x Future trends** in Thai and **BU x Future Trends** in English. The original remains outside the public repository.
+
+Source: “Requirement ที่ 2 01/10/2026”, parent `map.md`, and visual inspection of the Certificates sources.
 
 ## Non-functional requirements and constraints
 

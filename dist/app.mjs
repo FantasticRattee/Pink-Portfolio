@@ -3,10 +3,11 @@ import { cardCenterOffset, offsetFromActive, stepIndex, swipeStep } from './caro
 import { expandedDetails, katsumidoriBoard, slideDecks } from './detail-content.mjs';
 import { createPdfReader } from './pdf-reader.mjs';
 import { getProjectMediaTabs, getActiveMediaTab } from './media-tabs.mjs';
+import { getProjectChoices, needsProjectChoice } from './project-choice.mjs';
 
 const ui = {
   th: {
-    topbar: 'ผลงาน / 15 ชิ้น',
+    topbar: `ผลงาน / ${projects.length} ชิ้น`,
     eyebrow: 'ภาพยนตร์ • รายการ • ความคิดสร้างสรรค์',
     hint: 'ลากหรือเลื่อนเพื่อสำรวจ · ใช้ปุ่มลูกศรได้',
     view: 'ดูรายละเอียด',
@@ -33,6 +34,8 @@ const ui = {
     nextAria: 'ผลงานถัดไป',
     closeAria: 'ปิดรายละเอียด',
     stageAria: 'ผลงาน เลื่อนด้วยปุ่มลูกศรซ้ายและขวา',
+    chooseCollection: 'เลือกหมวดที่ต้องการดู',
+    chooseCollectionDescription: 'เลือกใบเซอร์หรือกิจกรรมที่เข้าร่วม',
     choosePdf: 'เลือกไฟล์ผลงาน',
     choosePdfDescription: 'Seoul Milk มีทั้งสไลด์ผลงานและรายงานฉบับเต็ม เลือกไฟล์ที่ต้องการอ่าน',
     closePdfChoice: 'ปิดหน้าต่างเลือกเอกสาร',
@@ -40,7 +43,7 @@ const ui = {
     publicPdf: 'PDF สำหรับเผยแพร่ โดยปิดรหัสนักศึกษาในไฟล์ที่มีข้อมูลดังกล่าว',
   },
   en: {
-    topbar: 'PORTFOLIO / 15 PROJECTS',
+    topbar: `PORTFOLIO / ${projects.length} PROJECTS`,
     eyebrow: 'FILM • SHOWS • CREATIVE THINKING',
     hint: 'Drag, scroll, or use the arrow keys to explore',
     view: 'View project',
@@ -67,6 +70,8 @@ const ui = {
     nextAria: 'Next project',
     closeAria: 'Close project details',
     stageAria: 'Projects. Use the left and right arrow keys to browse.',
+    chooseCollection: 'Choose a collection',
+    chooseCollectionDescription: 'View certificates or attended activities.',
     choosePdf: 'Choose a document',
     choosePdfDescription: 'Seoul Milk has a presentation and a full report. Choose the document to read.',
     closePdfChoice: 'Close document chooser',
@@ -257,22 +262,23 @@ function showPdfChooser(index, trigger) {
   const project = projects[index];
   lastTrigger = trigger || lastTrigger;
   pdfChoiceProject.textContent = project.title[language];
-  pdfChoiceTitle.textContent = ui[language].choosePdf;
-  pdfChoiceDescription.textContent = ui[language].choosePdfDescription;
+  pdfChoiceTitle.textContent = project.collectionChoice ? ui[language].chooseCollection : ui[language].choosePdf;
+  pdfChoiceDescription.textContent = project.collectionChoice ? ui[language].chooseCollectionDescription : ui[language].choosePdfDescription;
   pdfChoiceClose.setAttribute('aria-label', ui[language].closePdfChoice);
   pdfChoiceOptions.replaceChildren();
-  project.pdfDocuments.forEach((pdfDocument, documentIndex) => {
+  getProjectChoices(project).forEach((choice) => {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'pdf-choice-option';
     const label = document.createElement('strong');
-    label.textContent = pdfDocument.label[language];
+    label.textContent = choice.label[language];
     const filename = document.createElement('span');
-    filename.textContent = pdfDocument.sourceName;
+    filename.textContent = choice.kind === 'collection' ? `${choice.count} ${language === 'th' ? 'รายการ' : 'items'}` : choice.sourceName;
     button.append(label, filename);
     button.addEventListener('click', () => {
       pdfChoiceDialog.close();
-      selectedPdfIndex = documentIndex;
+      if (choice.kind === 'collection') selectedMediaTabId = choice.id;
+      else selectedPdfIndex = choice.index;
       showSelectedDetails(index);
     });
     pdfChoiceOptions.append(button);
@@ -294,7 +300,7 @@ function move(step) {
   render();
   if (dialog.open) {
     selectedPdfIndex = 0;
-    if (projects[activeIndex].pdfDocuments?.length > 1) {
+    if (needsProjectChoice(projects[activeIndex])) {
       showPdfChooser(activeIndex, cards[activeIndex].card);
     } else {
       showSelectedDetails(activeIndex);
@@ -358,7 +364,7 @@ function renderMediaTabs(project, activeTab) {
   else detailImageWrap.removeAttribute('aria-labelledby');
 }
 
-function renderBehindScenes(tab) {
+function renderBehindScenes(project, tab) {
   const gallery = document.createElement('div');
   gallery.className = 'behind-scenes-gallery';
   for (const group of tab.groups) {
@@ -390,7 +396,7 @@ function renderBehindScenes(tab) {
         link.rel = 'noopener';
         const image = document.createElement('img');
         image.src = item.src;
-        image.alt = item.sourceName;
+        image.alt = item.label?.[language] || item.sourceName;
         image.width = item.width;
         image.height = item.height;
         image.loading = 'lazy';
@@ -399,7 +405,7 @@ function renderBehindScenes(tab) {
         figure.append(link);
       }
       const caption = document.createElement('figcaption');
-      caption.textContent = item.sourceName;
+      caption.textContent = item.label?.[language] || item.sourceName;
       figure.append(caption);
       section.append(figure);
     }
@@ -408,6 +414,13 @@ function renderBehindScenes(tab) {
   detailImageWrap.append(gallery);
   activeGalleryHeader = document.createElement('header');
   activeGalleryHeader.className = 'media-tabs-header';
+  if (project.filesOnly) {
+    const title = document.createElement('strong');
+    title.id = 'collectionReaderTitle';
+    title.className = 'media-collection-title';
+    title.textContent = project.title[language];
+    activeGalleryHeader.append(title);
+  }
   activeGalleryHeader.append(videoChooser, closeDialog);
   dialog.querySelector('.detail-shell').prepend(activeGalleryHeader);
 }
@@ -451,7 +464,7 @@ function showProjectMedia(project, mediaIndex = 0) {
   }
   renderMediaTabs(project, activeTab);
   if (activeTab?.kind === 'gallery') {
-    renderBehindScenes(activeTab);
+    renderBehindScenes(project, activeTab);
   } else if (activeTab?.kind === 'video') {
     const selected = activeTab.video;
     const mediaLabel = selected.label?.[language] || (project.fullVideos?.length ? ui[language].fullVideo : ui[language].excerpt);
@@ -486,20 +499,21 @@ function showProjectDetails(index) {
   dialog.classList.toggle('has-pdf', Boolean(project.pdfDocuments?.length || mediaTab?.kind === 'pdf'));
   dialog.classList.toggle('is-gallery', mediaTab?.kind === 'gallery');
   dialog.classList.toggle('is-pdf-only', Boolean(project.pdfOnly));
-  detailContent.hidden = Boolean(project.pdfOnly);
+  const hideInfo = Boolean(project.pdfOnly || project.filesOnly);
+  detailContent.hidden = hideInfo;
   showProjectMedia(project, selectedPdfIndex);
-  dialog.setAttribute('aria-labelledby', project.pdfOnly ? 'pdfReaderTitle' : 'detailTitle');
+  dialog.setAttribute('aria-labelledby', project.pdfOnly ? 'pdfReaderTitle' : project.filesOnly ? 'collectionReaderTitle' : 'detailTitle');
   detailNumber.textContent = numberLabel(index);
   detailCategory.textContent = project.category[language];
   detailTitle.textContent = project.title[language];
   detailTeaser.textContent = project.teaser[language];
-  detailDescription.textContent = project.description[language];
-  aboutSection.hidden = Boolean(project.hideAbout);
+  detailDescription.textContent = hideInfo ? '' : (project.description?.[language] || '');
+  aboutSection.hidden = hideInfo || Boolean(project.hideAbout);
   const role = project.contribution?.[language];
   const roleBullets = project.contributionBullets?.[language];
-  contributionSection.hidden = !role && !roleBullets?.length;
+  contributionSection.hidden = hideInfo || (!role && !roleBullets?.length);
   detailContribution.replaceChildren();
-  if (roleBullets?.length) {
+  if (!hideInfo && roleBullets?.length) {
     const list = document.createElement('ul');
     list.className = 'detail-role-list';
     roleBullets.forEach((text) => {
@@ -508,12 +522,12 @@ function showProjectDetails(index) {
       list.append(item);
     });
     detailContribution.append(list);
-  } else if (role) {
+  } else if (!hideInfo && role) {
     const paragraph = document.createElement('p');
     paragraph.textContent = role;
     detailContribution.append(paragraph);
   }
-  if (project.pdfOnly) detailExtras.replaceChildren();
+  if (hideInfo) { detailExtras.replaceChildren(); detailExtras.hidden = true; }
   else renderProjectExtras(project);
 }
 
@@ -747,7 +761,7 @@ function openProject(index, trigger) {
   selectedPdfIndex = 0;
   selectedMediaTabId = null;
   render();
-  if (projects[index].pdfDocuments?.length > 1) {
+  if (needsProjectChoice(projects[index])) {
     showPdfChooser(index, lastTrigger);
   } else {
     showSelectedDetails(index);
