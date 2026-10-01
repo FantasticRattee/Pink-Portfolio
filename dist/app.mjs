@@ -136,10 +136,18 @@ function createCard(project, index) {
   media.className = 'card-media';
   if (project.image) {
     const img = document.createElement('img');
+    const fitArtwork = () => {
+      if (img.naturalWidth && img.naturalHeight) {
+        card.style.setProperty('--artwork-ratio', `${img.naturalWidth} / ${img.naturalHeight}`);
+        requestAnimationFrame(render);
+      }
+    };
+    img.addEventListener('load', fitArtwork);
     img.src = project.image;
     img.alt = '';
     img.loading = index < 3 ? 'eager' : 'lazy';
     img.decoding = 'async';
+    if (img.complete) fitArtwork();
     media.append(img);
   } else {
     const fallback = document.createElement('span');
@@ -252,6 +260,11 @@ function render() {
 }
 
 function showSelectedDetails(index) {
+  // Closing a chooser can restore focus to the previous carousel card.
+  // Keep the chosen project as the source for subsequent media-tab actions.
+  activeIndex = index;
+  hoveredIndex = null;
+  render();
   showProjectDetails(index);
   if (!dialog.open) dialog.showModal();
   detailContent.scrollTop = 0;

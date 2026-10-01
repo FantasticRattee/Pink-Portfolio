@@ -190,6 +190,16 @@ Source: “Requirement ที่ 1 01/10/2026”.
 
 Source: “Requirement ที่ 2 01/10/2026”, parent `map.md`, and visual inspection of the Certificates sources.
 
+### FR-019 — Modern minimal gallery refresh
+
+- Use the user-approved warm-white gallery direction: a warm off-white canvas, readable dark type, white surfaces, quiet separators, pill-shaped controls, and a restrained blue action accent.
+- Refine the header/footer, carousel frames, title/action hierarchy, detail dialogs, document/category choice popups, media tabs, gallery captions, and PDF reader chrome as a consistent visual system.
+- Show complete cover artwork at its source aspect ratio. Limit card dimensions to the stage's available height, including its hover enlargement, so tall artwork remains visible on short phone screens.
+- Preserve all 16 projects, their order, copy, assets, full videos, hover previews, source gallery order, PDF-only behavior, document/category choices, and Thai/English controls. Retain touch, keyboard focus, continuous document/gallery scrolling, and reduced-motion support.
+- Verify the selected collection remains active after quickly closing another project, opening Certificates, and switching its category by keyboard.
+
+Source: User's design-improvement request and approved warm-white gallery choice, 1 October 2026.
+
 ## Non-functional requirements and constraints
 
 ### NFR-001 — Bilingual and readable
