@@ -785,7 +785,7 @@ function setLanguage(next) {
   language = next;
   document.documentElement.lang = language;
   document.title = language === 'th' ? 'อรรถพร — Portfolio' : 'Adtaporn — Portfolio';
-  document.querySelector('.wordmark').firstChild.textContent = language === 'th' ? 'อรรถพร' : 'Adtaporn';
+  document.querySelector('.wordmark').textContent = 'Adtaporn - Portfolio';
   document.querySelector('.wordmark').setAttribute('aria-label', language === 'th' ? 'กลับไปหน้าแรก' : 'Back to the beginning');
   document.querySelector('.gallery').setAttribute('aria-label', language === 'th' ? 'ผลงาน' : 'Projects');
   document.querySelector('meta[name="description"]').content = language === 'th'

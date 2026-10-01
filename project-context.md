@@ -5,6 +5,7 @@
 - Portfolio owner: อรรถพร อัสสะบำรุงรัตน์ / Adtaporn Assabamrungrat.
 - The 1 October requirement adds Certificates after Jane, bringing the site to 16 works. The existing 15 works remain in order after the earlier removal of รายการคำอิ่ม. The two restaurant analysis decks remain separate cards.
 - Present Thai and English copy with a TH/EN switch; Thai is the initial language.
+- The top-left home link displays the exact brand **Adtaporn - Portfolio** in both language modes, per the 1 October Railway annotation. Its home-link accessibility label still follows the active language.
 - Use the supplied SENVA Behance screenshot as a visual reference: a quiet pale canvas, image-led panels in a horizontal sequence, and a larger central panel. The direct Behance page returned 403 during inspection, so the original animation timing could not be verified.
 - Support browsing in both directions with scrolling, drag or touch swipe, and left/right arrow keys. Hover enlarges a project; click or Enter opens that project's details.
 - Carousel cards use source-appropriate proportions: eleven wide projects are landscape cards, while five remain portrait. The media fills each card. Jane's Story is the only card with an on-image title, centered near the top at 60% text opacity and no background; other titles, teasers, numbers, and actions stay outside the artwork. The separate caption below the carousel names the selected project and retains the detail button.
